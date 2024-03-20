@@ -24,7 +24,7 @@ const Home = () => {
 
               <div className="contain-content">
                 <img src={logo} alt="SquareLinq.Inc_logo"/>
-
+                
                 
               </div>
             </div>
