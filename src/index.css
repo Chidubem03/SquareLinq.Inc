@@ -1,1 +1,73 @@
+*{
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  padding:0;
+  box-sizing: border-box;
+}
 
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  font-family: inherit;
+}
+
+.home-container{
+  background:  url(./Pages/Images/bgimage.png);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.home-container .contain{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14rem;
+  width: inherit;
+  height: inherit;
+  z-index: 10;
+}
+.contain-first{
+  margin-top: -0.5rem;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contain-second{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contain-second_first{
+  width: 50%;
+  height: 60%;
+  display: flex;
+  justify-content: flex-start;
+}
+.contain-second_second{
+  width: 50%;
+  height: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+ .contain .contain-content{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contain-content img{
+  height: 10rem;
+  width: 10rem;
+
+}

@@ -1,0 +1,36 @@
+import triangle from '../Images/triangle.png';
+import polygon from '../Images/polygon.png';
+import rectangle from '../Images/rectangle.png';
+import ellipse from '../Images/ellipse.png';
+import logo from '../Images/squarelink-logo.png';
+
+
+const Home = () => {
+    return ( 
+        <div className="home-container" >
+           <div className="contain">
+               <div className="contain-first">
+                  <img src={triangle} alt="triangle" />
+                  <img src={polygon} alt="Polygon" />
+               </div>
+               <div className="contain-second">
+                  <div className="contain-second_first">
+                     <img src={rectangle} className='rec' alt="rectangle" />
+                  </div>
+                  <div className="contain-second_second">
+                      <img src={ellipse} alt="ellipse" />
+                  </div>
+               </div>
+
+              <div className="contain-content">
+                <img src={logo} alt="SquareLinq.Inc_logo"/>
+
+                
+              </div>
+            </div>
+        </div>
+        
+    );
+}
+ 
+export default Home;
