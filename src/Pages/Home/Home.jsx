@@ -3,6 +3,7 @@ import polygon from '../Images/polygon.png';
 import rectangle from '../Images/rectangle.png';
 import ellipse from '../Images/ellipse.png';
 import logo from '../Images/squarelink-logo.png';
+import shineLogo from '../Images/shineLogo.png';
 
 
 const Home = () => {
@@ -24,8 +25,13 @@ const Home = () => {
 
               <div className="contain-content">
                 <img src={logo} alt="SquareLinq.Inc_logo"/>
-                
-                
+              <div className="content-text">
+                <img src={shineLogo} alt="" />
+                <span className='text'>It's your place to shine </span><span className="subtext">shine</span>
+                 <span className="first"></span>
+                  <span className="second"></span>
+                   <span className="third"></span>
+              </div>     
               </div>
             </div>
         </div>
