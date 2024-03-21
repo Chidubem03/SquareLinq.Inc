@@ -15,6 +15,7 @@
   font-family: inherit;
 }
 
+@media only  screen and (min-width: 600px){
 .home-container{
   background:  url(./Pages/Images/bgimage.png);
   background-size: cover;
@@ -147,4 +148,5 @@
   top: 30.93rem;
   left: 31rem;
   background-image: linear-gradient(to right, red,red ,red ,rgba(128, 0, 128, 0.872),rgba(128, 0, 128, 0.872),rgba(128, 0, 128, 0.872),rgba(128, 0, 128, 0.872));
+}
 }
