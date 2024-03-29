@@ -2,7 +2,8 @@
   import Home from './Pages/Home/Home';
 
 function App() {
-  return (<Router>
+  return (
+  <Router>
     <div className="App">
         <Switch>
           <Route exact path="/">
