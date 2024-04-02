@@ -14,6 +14,11 @@ body {
   width: 100%;
 }
 
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
 .App {
   max-width: 1400px;
   margin: 0 auto;
@@ -124,23 +129,6 @@ nav > ul > li > a:hover {
     justify-content: center;
     align-items: center;
     float: right;
-  }
-  .images .gmBox {
-    position: relative;
-    width: 200px;
-    left: 350px;
-    top: 100px;
-  }
-  .images .userVisuals {
-    position: relative;
-    width: 250px;
-    left: 150px;
-    top: 100px;
-  }
-  .images .forum {
-    position: relative;
-    width: 300px;
-    left: 350px;
   }
   .sections .second-container {
     position: relative;

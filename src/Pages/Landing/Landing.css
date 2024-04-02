@@ -1,21 +1,37 @@
-.Landing-page {
+.hero {
   padding: 5rem;
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
 }
 
-.Landing-page h1 {
+.hero-text h1 {
   color: white;
   font-size: 10rem;
   font-weight: normal;
 }
 
-.Landing-page p {
+.hero-text p {
   color: white;
   font-size: 1.5rem;
   font-family: Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
   font-weight: 100;
   margin-bottom: 1rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-images {
+  flex: 1;
+  display: flex;
+}
+
+.hero-images .vertical-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

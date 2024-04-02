@@ -20,18 +20,22 @@ import circle2 from "../Images/Cirlcles_2.png";
 import circle3 from "../Images/Circles_1.png";
 import circle4 from "../Images/Circle_1.png";
 import { Link } from "react-router-dom/cjs/react-router-dom";
-import "./Landing.css"
+import "./Landing.css";
 
 const Landing = () => {
   return (
     <div className="sections">
       <div
-        className="Landing-page"
+        className="Landing-page hero"
         style={{ backgroundImage: `url(${LandingBgImage})` }}
       >
-        <div className="writeUps">
-          <h1>Stay<br />linqed</h1>
-          
+        <div className="writeUps hero-text">
+          <h1>
+            Stay
+            <br />
+            linqed
+          </h1>
+
           <p>
             ...and spend quality time with friends, family and colleagues from
             different ethnicities, communities and workgroups all in one place.
@@ -41,12 +45,19 @@ const Landing = () => {
             <img src={openBrowser} alt="OpenSquarelinq" className="opensql" />
           </Link>
         </div>
-        <div className="images">
-          <img src={gmBox} alt="GoodMorning" className="gmBox" />
-          <img src={userVisuals} alt="Visuals" className="userVisuals" />
-          <img src={forum} alt="Forum" className="forum" />
+
+        <div className="images hero-images">
+          <div className="left-image">
+            <img src={userVisuals} alt="Visuals" />
+          </div>
+
+          <div className="vertical-images">
+            <img src={gmBox} alt="GoodMorning" />
+            <img src={forum} alt="Forum" />
+          </div>
         </div>
       </div>
+
       <div className="second-container">
         <img src={rocketImg} alt="Rocket" className="rocketImg" />
         <img src={expressImg} alt="Express" className="expressImg" />
