@@ -14,18 +14,315 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.navbar{
+  position: relative;
+  background-color: rgb(243, 248, 248);
+  max-height: 20vh;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .leftside{
+  position: relative;
+  width: 20%;
+}
+
+.navbar .leftside .Img1{
+  position: relative;
+  top:0;
+  height: 4%;
+  width: 35px;
+}
+.navbar .leftside .Img2{
+  position: relative;
+  top: -8px;
+  height: 5%;
+  width: 85px;
+}
+nav{
+  position: relative;
+  display: flex;
+  width: 40%;
+  padding: 1px;
+}
+nav > ul{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 45px;
+  list-style: none;
+}
+nav > ul > li{
+  text-transform: capitalize; 
+  font-size: 15px;
+}
+nav > ul > li > a{
+  text-decoration: none;
+  color: rgb(183, 175, 175);
+  font-weight: 600;
+}
+nav > ul > li > a:hover {
+  border-bottom: 2px solid rgba(232, 53, 53, 0.863);
+  color: rgb(85, 82, 82);
+  font-weight: 800;
+  font-size: 17px;
+}
+.navbar .rightside{
+  position: relative;
+  width: 20%;
+}
+.navbar .rightside > a > img{
+  position: relative;
+  float: right;
+  width: 150px;
 }
 
 @media only  screen and (min-width: 600px){
 body{
   font-family: 'Times New Roman', Times, serif;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   max-height: 100vh;
   height: 100%;
   max-width: 100vw;
   width: 100%;
 }
+.sections{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 380vh;
+  height: 100%;
+}
+.sections .Landing-page{
+  position: relative;
+  display: flex;
+  padding: 30px;
+  max-height: 80vh;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: 100vw 80vh;
+  background-repeat: no-repeat;
+}
+.Landing-page .writeUps{
+  position: relative;
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  gap: 20px;
+}
+.writeUps-Img{
+  position: relative;
+  left: -70px;
+  width: 250px;
+}
+.writeUps p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 400px;
+  line-height: 25px;
+  color: aliceblue;
+  text-align: left;
+}
+.writeUps .opensql{
+  position: relative;
+  left: -70px;
+  height: 40px;
+  width: 250px;
+}
+.Landing-page .images{
+  position: relative;
+  max-height: 70%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
+.images .gmBox{
+  position: relative;
+  width: 200px;
+  left: 350px;
+  top: 100px;
+}
+.images .userVisuals{
+  position: relative;
+  width: 250px;
+  left: 150px;
+  top: 100px;
+}
+.images .forum{
+  position: relative;
+  width: 300px;
+  left: 350px;
+}
+.sections .second-container{
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+}
+.second-container .rocketImg{
+  position: relative;
+  width: 500px;
+  height: 100%;
+}
+.second-container .expressImg{
+  position: relative;
+  top: 50px;
+  left: -150px;
+  width: 700px;
+  height: 50%;
+}
+.second-container .sittingImg{
+  position: relative;
+  top: 85px;
+  height: 55%;
+  width: 120px;
+}
+.sections .third-container{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+.sections .fourth-container{
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  background: rgb(151, 71, 207);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+.fourth-container > img{
+  width: 50%;
+  height: 15%;
+}
+.fourth-container .FC-groupies{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  width: 50%;
+  justify-content: center;
+}
+.FC-groupies a{
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  align-self: center;
+}
+.FC-groupies a .OpenBtn{
+  position: relative;
+  width: 200px;
+  top: 30px;
+  z-index: 1;
+}
+.FC-groupies .group{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.last-container{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.last-container .img{
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  width: 100%;
+}
+.last-container .img .circle1{
+  position: relative;
+  align-self: flex-start;
+  height: 10%;
+  width: 30px;
+}
+.last-container .img .circle2{
+  position: relative;
+  align-self: flex-end;
+  top: 100px;
+  height: 10%;
+  width: 30px;
+}
+.last-container .img .circle3{
+  position: relative;
+  align-self: center;
+  top: 250px;
+  height: 10%;
+  width: 30px;
+}
+.last-container .img .circle4{
+  position: relative;
+  align-self: flex-start;
+  height: 10%;
+  width: 30px;
+}
+.last-container .subLast{
+  position: relative;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.subLast .joinWaitlist{
+  height: 25%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+}
+.joinWaitlist .joinWtl{
+  position: relative;
+  width: 80%;
+  height: 40%;
+}
+.joinWaitlist .womanSit{
+  position: relative;
+  height: 15%;
+  width: 80px;
+  left: 100px;
+}
+.joinWaitlist form{
+  height: 45%;
+  width: 100%;
+}
+.joinWaitlist form > input{
+  border-radius: 10px;
+  padding: 10px;
+  background: rgb(186, 182, 182);
+}
+.joinWaitlist form .joinBtn{
+  position: relative;
+  height: 25px;
+  width: 30px;
+
+}
+
 .home-container{
   max-height: 100vh;
   height: 100%;
