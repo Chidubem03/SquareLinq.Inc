@@ -98,7 +98,7 @@ body{
   position: relative;
   display: flex;
   flex-direction: column;
-  max-height: 380vh;
+  max-height: 400vh;
   height: 100%;
 }
 .sections .Landing-page{
@@ -241,7 +241,7 @@ body{
 }
 .last-container{
   position: relative;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -249,37 +249,39 @@ body{
 .last-container .img{
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   height: 20%;
   width: 100%;
 }
 .last-container .img .circle1{
   position: relative;
   align-self: flex-start;
-  height: 10%;
-  width: 30px;
+  justify-content: flex-start;
+  top: -60px;
+  width: 15%;
 }
 .last-container .img .circle2{
   position: relative;
   align-self: flex-end;
-  top: 100px;
-  height: 10%;
-  width: 30px;
+  top: 300px;
+  left: 900px;
+  width: 12%;
 }
 .last-container .img .circle3{
   position: relative;
   align-self: center;
-  top: 250px;
-  height: 10%;
-  width: 30px;
+  top: 600px;
+  width: 45%;
 }
 .last-container .img .circle4{
   position: relative;
   align-self: flex-start;
-  height: 10%;
-  width: 30px;
+  height: 100px;
+  width: 10%;
 }
 .last-container .subLast{
   position: relative;
+  top: -200px;
   width: 100%;
   height: 80%;
   display: flex;
@@ -289,11 +291,11 @@ body{
 }
 .subLast .joinWaitlist{
   height: 25%;
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 5px;
 }
 .joinWaitlist .joinWtl{
@@ -301,28 +303,57 @@ body{
   width: 80%;
   height: 40%;
 }
-.joinWaitlist .womanSit{
+.joinWaitlist .womansit{
   position: relative;
-  height: 15%;
-  width: 80px;
-  left: 100px;
+  width: 15%;
+  left: 275px;
+  z-index: 1;
 }
 .joinWaitlist form{
+  position: relative;
+  top: -50px;
   height: 45%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 .joinWaitlist form > input{
-  border-radius: 10px;
-  padding: 10px;
-  background: rgb(186, 182, 182);
+  position: relative;
+  left: 40px;
+  border-radius: 30px;
+  padding: 30px; 
+  background: rgb(223, 219, 219);
+  border: none;
+  width: 100%;
 }
 .joinWaitlist form .joinBtn{
   position: relative;
-  height: 25px;
-  width: 30px;
-
+  width: 15%;
+  height: 60%;
+  left: -70px;
+  align-self: center;
+  z-index: 1;
 }
-
+.subLast .contactUs-container{
+  position: relative;
+  top: 200px;
+  height: 55%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contactUs-container .contactUs{
+  position: relative;
+  align-self: center;
+  width: 60%;
+}
+.contactUs-container .manWalk{
+  position: relative;
+  align-self: center;
+  width: 12%;
+}
 .home-container{
   max-height: 100vh;
   height: 100%;

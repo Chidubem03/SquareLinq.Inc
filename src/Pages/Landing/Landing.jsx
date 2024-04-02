@@ -61,17 +61,19 @@ const Landing = () => {
           </div>
          <div className="subLast">
           <div className="joinWaitlist">
-            <img src={joinWtl} alt="" className='joinWtl'/>
-            <img src={womanSitting} alt="" className='womansit'/>
-            <form action="post">
-              <input type="text" placeholder='Enter your email' />
-              <img src={joinBtn} alt="" className='joinBtn'/>
-            </form>
+             <img src={joinWtl} alt="" className='joinWtl'/>
+                <img src={womanSitting} alt="" className='womansit'/>
+              <form action="post">
+                <input type="text" placeholder='Enter your email...' />
+                  <img src={joinBtn} alt="" className='joinBtn'/>
+              </form>
           </div>
-          <div className="contactUs">
-            <img src={contactUs} alt="" />
-            <img src={manWalk} alt="" />
-            <form action="post"></form>
+          <div className="contactUs-container">
+            <img src={contactUs} alt="" className='contactUs'/>
+            <img src={manWalk} alt="" className='manWalk'/>
+            <form action="post">
+              
+            </form>
           </div>
          </div>
         </div>
