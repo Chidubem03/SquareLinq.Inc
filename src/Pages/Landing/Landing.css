@@ -1,0 +1,21 @@
+.Landing-page {
+  padding: 5rem;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Landing-page h1 {
+  color: white;
+  font-size: 10rem;
+  font-weight: normal;
+}
+
+.Landing-page p {
+  color: white;
+  font-size: 1.5rem;
+  font-family: Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
