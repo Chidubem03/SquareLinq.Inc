@@ -4,7 +4,6 @@ import userVisuals from "../Images/userVisual.png";
 import forum from "../Images/forum.png";
 import LandingBgImage from "../Images/LandingBg.png";
 import rocketImg from "../Images/rocket.png";
-import expressImg from "../Images/Express.png";
 import sitting from "../Images/Sitting.png";
 import thirdBgImage from "../Images/Features.png";
 import beReady from "../Images/Text.png";
@@ -26,7 +25,7 @@ const Landing = () => {
   return (
     <div className="sections">
       <div
-        className="Landing-page hero"
+        className="hero"
         style={{ backgroundImage: `url(${LandingBgImage})` }}
       >
         <div className="writeUps hero-text">
@@ -60,9 +59,10 @@ const Landing = () => {
 
       <div className="second-container">
         <img src={rocketImg} alt="Rocket" className="rocketImg" />
-        <img src={expressImg} alt="Express" className="expressImg" />
+        <h2>Express yourself freely with private messaging and calling, stay linked to close ones no matter where they are</h2>
         <img src={sitting} alt="Sitting" className="sittingImg" />
       </div>
+
       <div
         className="third-container"
         style={{ backgroundImage: `url(${thirdBgImage})` }}

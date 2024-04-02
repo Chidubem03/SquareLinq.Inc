@@ -35,3 +35,31 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.second-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding: 5rem;
+  max-width: 1090px;
+  margin: 0 auto;
+}
+
+.second-container .rocketImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+}
+.second-container .sittingImg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+}
