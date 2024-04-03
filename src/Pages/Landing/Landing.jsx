@@ -157,7 +157,7 @@ const Landing = () => {
             </form>
           </div>
 
-          <div className="contactUs-container contact">
+          { <div className="contactUs-container contact">
             <h4>Contact Us</h4>
 
             <p>
@@ -180,7 +180,7 @@ const Landing = () => {
               />
               <button>Submit</button>
             </form>
-          </div>
+          </div> }
         </div>
       </div>
     </div>
