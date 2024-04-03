@@ -81,7 +81,7 @@ const Landing = () => {
             </h4>
           </div>
         </div>
-        
+
         <div className="row">
           <div className="col">
             <h3>Where hanging out is easy</h3>
@@ -95,12 +95,12 @@ const Landing = () => {
             <img src={iphoneMockupB} alt="" />
           </div>
         </div>
-        
+
         <div className="row">
           <div className="col image">
             <img src={iphoneMockupA} alt="" />
           </div>
-          
+
           <div className="col">
             <h3>Capture, share and experience moments</h3>
             <h4>
@@ -110,54 +110,63 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <div className="fourth-container">
-        <div className="FC-text">
-         <h1>Be ready to discover yourself in the moment</h1>
-         <br />
-         <p>
-          Get instantly connected to your friends and family, express your creativity, expand your network and discover new content on the fly
-         </p>
-       </div> 
-       <div className="FC-groupies">
-          <Link to="#">
-            <img src={OpenSqL} alt="OpenBrowserBtn" className="OpenBtn" />
-          </Link>
-          <img src={groupies} alt="Groupies" className="group" />
-        </div>
+
+      <div
+        className="fourth-container"
+        style={{ backgroundImage: `url(${groupies})` }}
+      >
+        <h3>BE READY TO DISCOVER YOURSELF IN THE MOMENT</h3>
+
+        <h4>
+          Get instantly connected to your friends and family, express your
+          creativity, expand your network and discover new content on the fly
+        </h4>
+
+        <Link to="#">
+          <img src={OpenSqL} alt="OpenBrowserBtn" className="OpenBtn" />
+        </Link>
       </div>
 
-      <div className="last-container">
+      <div className="last-container contact-section">
         <div className="img">
           <img src={circle1} alt="" className="circle1" />
           <img src={circle2} alt="" className="circle2" />
           <img src={circle3} alt="" className="circle3" />
           <img src={circle4} alt="" className="circle4" />
         </div>
+
         <div className="subLast">
-          <div className="joinWaitlist">
-            <h1>
-              Join the waitlist
-            </h1>
-            <br />
+          <div className="joinWaitlist waitlist">
+            <h4>Join our waitlist</h4>
+
             <p>
-              Be one of the very first people to test at new features launches and products
+              Be one of the very first people to test out new feature launches
+              and products
             </p>
-            <img src={womanSitting} alt="" className="womansit" />
-            <form action="post">
-              <input type="text" placeholder="Enter your email..." />
-              <button> Join</button>
+
+            <form action="POST">
+              <input
+                name="email"
+                type="text"
+                placeholder="Enter your email..."
+              />
+              
+              <img src={womanSitting} alt="" className="womansit" />
+
+              <button>Join</button>
             </form>
           </div>
-          <div className="contactUs-container">
-            <h2>Contact Us
-            </h2>
-            <br />
-              <p>
-                Feel free to reach out to us concerning any issue you might have
-              </p>
+
+          <div className="contactUs-container contact">
+            <h4>Contact Us</h4>
+
+            <p>
+              Feel free to reach out to us concerning any issues you might have
+            </p>
 
             <img src={manWalk} alt="" className="manWalk" />
-            <form action="post">
+
+            <form action="POST">
               <input type="text" placeholder="Enter your fullname..." />
               <input type="email" placeholder="Enter your Email..." />
               <input
