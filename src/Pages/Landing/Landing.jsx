@@ -8,13 +8,10 @@ import sitting from "../Images/Sitting.png";
 import thirdContainerBg from "../Images/third-container-bg.png";
 import iphoneMockupA from "../Images/iphone-mockup-a.png";
 import iphoneMockupB from "../Images/iphone-mockup-b.png";
-import beReady from "../Images/Text.png";
 import OpenSqL from "../Images/openbrowser.png";
 import groupies from "../Images/cuate.png";
-import joinWtl from "../Images/Header-text.png";
 import womanSitting from "../Images/Frame.png";
 import joinBtn from "../Images/Join-button.png";
-import contactUs from "../Images/Text 1.png";
 import manWalk from "../Images/Frame1.png";
 import circle1 from "../Images/Circle_2.png";
 import circle2 from "../Images/Cirlcles_2.png";
@@ -121,7 +118,7 @@ const Landing = () => {
         style={{ backgroundImage: `url(${groupies})` }}
       >
         <h3>BE READY TO DISCOVER YOURSELF IN THE MOMENT</h3>
-        
+
         <h4>
           Get instantly connected to your friends and family, express your
           creativity, expand your network and discover new content on the fly
@@ -132,29 +129,46 @@ const Landing = () => {
         </Link>
       </div>
 
-      <div className="last-container">
+      <div className="last-container contact-section">
         <div className="img">
           <img src={circle1} alt="" className="circle1" />
           <img src={circle2} alt="" className="circle2" />
           <img src={circle3} alt="" className="circle3" />
           <img src={circle4} alt="" className="circle4" />
         </div>
+
         <div className="subLast">
-          <div className="joinWaitlist">
-            <img src={joinWtl} alt="" className="joinWtl" />
-            <img src={womanSitting} alt="" className="womansit" />
-            <form action="post">
-              <input type="text" placeholder="Enter your email..." />
-              <img src={joinBtn} alt="" className="joinBtn" />
+          <div className="joinWaitlist waitlist">
+            <h4>Join our waitlist</h4>
+
+            <p>
+              Be one of the very first people to test out new feature launches
+              and products
+            </p>
+
+            <form action="POST">
+              <input
+                name="email"
+                type="text"
+                placeholder="Enter your email..."
+              />
+              
+              <img src={womanSitting} alt="" className="womansit" />
+
+              <button>Join</button>
             </form>
           </div>
-          <div className="contactUs-container">
-            <img src={contactUs} alt="" className="contactUs" />
+
+          <div className="contactUs-container contact">
+            <h4>Contact Us</h4>
+
+            <p>
+              Feel free to reach out to us concerning any issues you might have
+            </p>
+
             <img src={manWalk} alt="" className="manWalk" />
-            <form action="post"></form>
-            <img src={contactUs} alt="" className="contactUs" />
-            <img src={manWalk} alt="" className="manWalk" />
-            <form action="post">
+
+            <form action="POST">
               <input type="text" placeholder="Enter your fullname..." />
               <input type="email" placeholder="Enter your Email..." />
               <input
