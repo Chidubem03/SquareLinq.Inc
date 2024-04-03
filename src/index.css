@@ -98,9 +98,9 @@ nav > ul > li > a:hover {
 .navbar .rightside > a > button {
   position: relative;
   float: right;
-  font-size: 17px;
+  font-size: 15px;
   cursor: pointer;
-  width: 60%;
+  width: 50%;
   background: rgb(151, 71, 207);
   color: aliceblue;
   border: none;
@@ -110,7 +110,8 @@ nav > ul > li > a:hover {
 .navbar .rightside > a > button:hover{
   color: rgba(95, 238, 51, 0.863);
   transform: translateY(100);
-  font-size: 20px;
+  font-size: 17px;
+  /* end of navbar styling */
 }
 /**styling for the section container**/
 .sections {
@@ -301,7 +302,7 @@ nav > ul > li > a:hover {
 }
 .joinWaitlist form button {
   position: relative;
-  left: -73px;
+  left: -71px;
   width: 15%;
   font-family: inherit;
   color: aliceblue;
@@ -465,6 +466,7 @@ nav > ul > li > a:hover {
   height: inherit;
   width: 20%;
   opacity: 0.7;
+  /* end of Preloader page styling */
 }
 
 @media only screen and (max-width: 600px) {
