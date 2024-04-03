@@ -1,0 +1,65 @@
+.hero {
+  padding: 5rem;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.hero-text h1 {
+  color: white;
+  font-size: 10rem;
+  font-weight: normal;
+}
+
+.hero-text p {
+  color: white;
+  font-size: 1.5rem;
+  font-family: Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-images {
+  flex: 1;
+  display: flex;
+}
+
+.hero-images .vertical-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.second-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding: 5rem;
+  max-width: 1090px;
+  margin: 0 auto;
+}
+
+.second-container .rocketImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+}
+.second-container .sittingImg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+}
