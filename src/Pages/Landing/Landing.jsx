@@ -7,12 +7,9 @@ import sitting from "../Images/Sitting.png";
 import thirdContainerBg from "../Images/third-container-bg.png";
 import iphoneMockupA from "../Images/iphone-mockup-a.png";
 import iphoneMockupB from "../Images/iphone-mockup-b.png";
-import beReady from "../Images/Text.png";
-import thirdBgImage from "../Images/Features.png";
 import OpenSqL from "../Images/openbrowser.png";
 import groupies from "../Images/cuate.png";
 import womanSitting from "../Images/Frame.png";
-import joinBtn from "../Images/Join-button.png";
 import manWalk from "../Images/Frame1.png";
 import circle1 from "../Images/Circle_2.png";
 import circle2 from "../Images/Cirlcles_2.png";
@@ -148,7 +145,7 @@ const Landing = () => {
             <img src={womanSitting} alt="" className="womansit" />
             <form action="post">
               <input type="text" placeholder="Enter your email..." />
-              <img src={joinBtn} alt="" className="joinBtn" />
+              <button> Join</button>
             </form>
           </div>
           <div className="contactUs-container">
@@ -159,9 +156,6 @@ const Landing = () => {
                 Feel free to reach out to us concerning any issue you might have
               </p>
 
-            <img src={manWalk} alt="" className="manWalk" />
-            <form action="post"></form>
-            <img src={contactUs} alt="" className="contactUs" />
             <img src={manWalk} alt="" className="manWalk" />
             <form action="post">
               <input type="text" placeholder="Enter your fullname..." />

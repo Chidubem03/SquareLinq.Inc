@@ -299,11 +299,16 @@ nav > ul > li > a:hover {
   border: none;
   width: 100%;
 }
-.joinWaitlist form .joinBtn {
+.joinWaitlist form button {
   position: relative;
+  left: -73px;
   width: 15%;
-  height: 60%;
-  left: -70px;
+  font-family: inherit;
+  color: aliceblue;
+  background: rgb(151, 71, 207);
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
   align-self: center;
   z-index: 1;
 }
@@ -334,6 +339,7 @@ nav > ul > li > a:hover {
   align-self: center;
   width: 12%;
 }
+/* Preoloader Page styling */
 .home-container {
   max-height: 100vh;
   height: 100%;
