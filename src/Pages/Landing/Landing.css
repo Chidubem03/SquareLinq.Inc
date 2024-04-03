@@ -98,3 +98,29 @@
   font-weight: normal;
   color: rgba(255, 255, 255, 0.5);
 }
+
+.fourth-container {
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-color: #9747FF;
+  color: white;
+  padding: 5rem;
+  padding-bottom: 45%;
+  text-align: center;
+}
+
+.fourth-container h3 {
+  font-size: 2.5rem;
+  color: #231942;
+  margin-bottom: 1rem;
+}
+
+.fourth-container h4 {
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(35, 25, 66, 0.5);
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}

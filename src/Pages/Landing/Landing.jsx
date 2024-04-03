@@ -86,7 +86,7 @@ const Landing = () => {
             </h4>
           </div>
         </div>
-        
+
         <div className="row">
           <div className="col">
             <h3>Where hanging out is easy</h3>
@@ -100,12 +100,12 @@ const Landing = () => {
             <img src={iphoneMockupB} alt="" />
           </div>
         </div>
-        
+
         <div className="row">
           <div className="col image">
             <img src={iphoneMockupA} alt="" />
           </div>
-          
+
           <div className="col">
             <h3>Capture, share and experience moments</h3>
             <h4>
@@ -115,14 +115,21 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <div className="fourth-container">
-        <img src={beReady} alt="text" />
-        <div className="FC-groupies">
-          <Link to="#">
-            <img src={OpenSqL} alt="OpenBrowserBtn" className="OpenBtn" />
-          </Link>
-          <img src={groupies} alt="Groupies" className="group" />
-        </div>
+
+      <div
+        className="fourth-container"
+        style={{ backgroundImage: `url(${groupies})` }}
+      >
+        <h3>BE READY TO DISCOVER YOURSELF IN THE MOMENT</h3>
+        
+        <h4>
+          Get instantly connected to your friends and family, express your
+          creativity, expand your network and discover new content on the fly
+        </h4>
+
+        <Link to="#">
+          <img src={OpenSqL} alt="OpenBrowserBtn" className="OpenBtn" />
+        </Link>
       </div>
 
       <div className="last-container">
