@@ -1,4 +1,3 @@
-import openBrowser from "../Images/open-browser.png";
 import gmBox from "../Images/GmBox.png";
 import userVisuals from "../Images/userVisual.png";
 import forum from "../Images/forum.png";
@@ -11,7 +10,6 @@ import iphoneMockupB from "../Images/iphone-mockup-b.png";
 import OpenSqL from "../Images/openbrowser.png";
 import groupies from "../Images/cuate.png";
 import womanSitting from "../Images/Frame.png";
-import joinBtn from "../Images/Join-button.png";
 import manWalk from "../Images/Frame1.png";
 import circle1 from "../Images/Circle_2.png";
 import circle2 from "../Images/Cirlcles_2.png";
@@ -40,7 +38,7 @@ const Landing = () => {
           </p>
 
           <Link to="#">
-            <img src={openBrowser} alt="OpenSquarelinq" className="opensql" />
+            <button>Open Squarelinq in your browser</button>
           </Link>
         </div>
 

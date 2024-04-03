@@ -1,3 +1,4 @@
+/* First container styling */
 .hero {
   padding: 5rem;
   background-position: center center;
@@ -36,7 +37,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
+/* second container styling */
 .second-container {
   position: relative;
   display: flex;
@@ -138,6 +139,7 @@
 }
 
 .contact-section .waitlist form {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
