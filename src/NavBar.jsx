@@ -1,7 +1,6 @@
 import logo from './Pages/Images/squarelink-logo.png';
 import squareLinq from './Pages/Images/Squarelinq.png';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
-import signUp from './Pages/Images/signup-button.png';
 
 const NavBar = () => {
     return ( 
@@ -18,7 +17,7 @@ const NavBar = () => {
                 </ul>
             </nav>
             <div className="rightside">
-                <Link to="#"><img src={signUp} alt="Get Started" /></Link>
+                <Link to="#"><button>Get Started</button></Link>
             </div>
         </div>
      );

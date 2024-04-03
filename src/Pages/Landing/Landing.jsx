@@ -1,4 +1,3 @@
-import openBrowser from "../Images/open-browser.png";
 import gmBox from "../Images/GmBox.png";
 import userVisuals from "../Images/userVisual.png";
 import forum from "../Images/forum.png";
@@ -6,13 +5,10 @@ import LandingBgImage from "../Images/LandingBg.png";
 import rocketImg from "../Images/rocket.png";
 import sitting from "../Images/Sitting.png";
 import thirdBgImage from "../Images/Features.png";
-import beReady from "../Images/Text.png";
 import OpenSqL from "../Images/openbrowser.png";
 import groupies from "../Images/cuate.png";
-import joinWtl from "../Images/Header-text.png";
 import womanSitting from "../Images/Frame.png";
 import joinBtn from "../Images/Join-button.png";
-import contactUs from "../Images/Text 1.png";
 import manWalk from "../Images/Frame1.png";
 import circle1 from "../Images/Circle_2.png";
 import circle2 from "../Images/Cirlcles_2.png";
@@ -41,7 +37,7 @@ const Landing = () => {
           </p>
 
           <Link to="#">
-            <img src={openBrowser} alt="OpenSquarelinq" className="opensql" />
+            <button>Open Squarelinq in your browser</button>
           </Link>
         </div>
 
@@ -68,8 +64,14 @@ const Landing = () => {
         style={{ backgroundImage: `url(${thirdBgImage})` }}
       ></div>
       <div className="fourth-container">
-        <img src={beReady} alt="text" />
-        <div className="FC-groupies">
+        <div className="FC-text">
+         <h1>Be ready to discover yourself in the moment</h1>
+         <br />
+         <p>
+          Get instantly connected to your friends and family, express your creativity, expand your network and discover new content on the fly
+         </p>
+       </div> 
+       <div className="FC-groupies">
           <Link to="#">
             <img src={OpenSqL} alt="OpenBrowserBtn" className="OpenBtn" />
           </Link>
@@ -85,7 +87,13 @@ const Landing = () => {
         </div>
         <div className="subLast">
           <div className="joinWaitlist">
-            <img src={joinWtl} alt="" className="joinWtl" />
+            <h1>
+              Join the waitlist
+            </h1>
+            <br />
+            <p>
+              Be one of the very first people to test at new features launches and products
+            </p>
             <img src={womanSitting} alt="" className="womansit" />
             <form action="post">
               <input type="text" placeholder="Enter your email..." />
@@ -93,11 +101,14 @@ const Landing = () => {
             </form>
           </div>
           <div className="contactUs-container">
-            <img src={contactUs} alt="" className="contactUs" />
+            <h2>Contact Us
+            </h2>
+            <br />
+              <p>
+                Feel free to reach out to us concerning any issue you might have
+              </p>
+
             <img src={manWalk} alt="" className="manWalk" />
-            <form action="post"></form>
-            <img src={contactUs} alt="" className='contactUs'/>
-            <img src={manWalk} alt="" className='manWalk'/>
             <form action="post">
               <input type="text" placeholder='Enter your fullname...'/>
               <input type="email" placeholder='Enter your Email...'/>
