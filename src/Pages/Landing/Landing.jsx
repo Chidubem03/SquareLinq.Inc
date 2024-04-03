@@ -4,6 +4,10 @@ import forum from "../Images/forum.png";
 import LandingBgImage from "../Images/LandingBg.png";
 import rocketImg from "../Images/rocket.png";
 import sitting from "../Images/Sitting.png";
+import thirdContainerBg from "../Images/third-container-bg.png";
+import iphoneMockupA from "../Images/iphone-mockup-a.png";
+import iphoneMockupB from "../Images/iphone-mockup-b.png";
+import beReady from "../Images/Text.png";
 import thirdBgImage from "../Images/Features.png";
 import OpenSqL from "../Images/openbrowser.png";
 import groupies from "../Images/cuate.png";
@@ -55,14 +59,60 @@ const Landing = () => {
 
       <div className="second-container">
         <img src={rocketImg} alt="Rocket" className="rocketImg" />
-        <h2>Express yourself freely with private messaging and calling, stay linked to close ones no matter where they are</h2>
+        <h2>
+          Express yourself freely with private messaging and calling, stay
+          linked to close ones no matter where they are
+        </h2>
         <img src={sitting} alt="Sitting" className="sittingImg" />
       </div>
 
       <div
         className="third-container"
-        style={{ backgroundImage: `url(${thirdBgImage})` }}
-      ></div>
+        style={{ backgroundImage: `url(${thirdContainerBg})` }}
+      >
+        <div className="row">
+          <div className="col image">
+            <img src={iphoneMockupA} alt="" />
+          </div>
+
+          <div className="col">
+            <h3>Create safe space for you and others through forums</h3>
+            <h4>
+              Forums are organized into topic-based channels where you can
+              collaborate, share and just talk about your day without clogging
+              up a group chat.
+            </h4>
+          </div>
+        </div>
+        
+        <div className="row">
+          <div className="col">
+            <h3>Where hanging out is easy</h3>
+            <h4>
+              Grab a seat in a voice call when you're free. Friends in your
+              forum can see you're around and instantly pop in to talk without
+              having to call.
+            </h4>
+          </div>
+          <div className="col image">
+            <img src={iphoneMockupB} alt="" />
+          </div>
+        </div>
+        
+        <div className="row">
+          <div className="col image">
+            <img src={iphoneMockupA} alt="" />
+          </div>
+          
+          <div className="col">
+            <h3>Capture, share and experience moments</h3>
+            <h4>
+              Share and experience rare moments with others and through visuals
+              and make sure to share what you are thinking at a go.
+            </h4>
+          </div>
+        </div>
+      </div>
       <div className="fourth-container">
         <div className="FC-text">
          <h1>Be ready to discover yourself in the moment</h1>
@@ -78,6 +128,7 @@ const Landing = () => {
           <img src={groupies} alt="Groupies" className="group" />
         </div>
       </div>
+
       <div className="last-container">
         <div className="img">
           <img src={circle1} alt="" className="circle1" />
@@ -109,11 +160,21 @@ const Landing = () => {
               </p>
 
             <img src={manWalk} alt="" className="manWalk" />
+            <form action="post"></form>
+            <img src={contactUs} alt="" className="contactUs" />
+            <img src={manWalk} alt="" className="manWalk" />
             <form action="post">
-              <input type="text" placeholder='Enter your fullname...'/>
-              <input type="email" placeholder='Enter your Email...'/>
-              <input type="text" placeholder='Enter the subject for contacting us' />
-              <input type="text" placeholder='Type Something...' className='Textarea' />
+              <input type="text" placeholder="Enter your fullname..." />
+              <input type="email" placeholder="Enter your Email..." />
+              <input
+                type="text"
+                placeholder="Enter the subject for contacting us"
+              />
+              <input
+                type="text"
+                placeholder="Type Something..."
+                className="Textarea"
+              />
               <button>Submit</button>
             </form>
           </div>

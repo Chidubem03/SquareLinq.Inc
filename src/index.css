@@ -20,6 +20,14 @@ img {
   block-size: auto;
 }
 
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
 .App {
   max-width: 1400px;
   margin: 0 auto;
@@ -121,6 +129,7 @@ nav > ul > li > a:hover {
 }
 .writeUps a button {
   position: relative;
+}
   background: rgb(151, 71, 207);
   font-family: inherit;
   cursor: pointer;

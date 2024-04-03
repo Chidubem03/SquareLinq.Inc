@@ -58,9 +58,44 @@
   left: 0;
   width: 500px;
 }
+
 .second-container .sittingImg {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 120px;
+}
+
+.third-container {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #231942;
+  color: white;
+  padding: 5rem;
+}
+
+.third-container .row {
+  justify-content: center;
+  align-items: center;
+}
+
+.third-container .col.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-container h3 {
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+}
+
+.third-container h4 {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.5);
 }
