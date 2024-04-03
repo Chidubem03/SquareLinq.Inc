@@ -270,7 +270,7 @@ body{
 .last-container .img .circle3{
   position: relative;
   align-self: center;
-  top: 600px;
+  top: 650px;
   width: 45%;
 }
 .last-container .img .circle4{
@@ -281,7 +281,7 @@ body{
 }
 .last-container .subLast{
   position: relative;
-  top: -200px;
+  top: -100px;
   width: 100%;
   height: 80%;
   display: flex;
@@ -290,7 +290,7 @@ body{
   justify-content: center;
 }
 .subLast .joinWaitlist{
-  height: 25%;
+  height: 20%;
   width: 55%;
   display: flex;
   flex-direction: column;
@@ -337,7 +337,7 @@ body{
 .subLast .contactUs-container{
   position: relative;
   top: 200px;
-  height: 55%;
+  height: 75%;
   width: 45%;
   display: flex;
   flex-direction: column;
@@ -352,7 +352,49 @@ body{
 .contactUs-container .manWalk{
   position: relative;
   align-self: center;
-  width: 12%;
+  width: 15%;
+}
+.contactUs-container form{
+  padding-top: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  border-radius: 25px;
+  border: 1px outset rgb(247, 247, 247);
+  gap: 30px;
+  background: #fff;
+}
+.contactUs-container form input{
+  position: relative;
+  width: 80%;
+  height: 35%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px outset rgb(204, 201, 201);
+}
+.contactUs-container form input.Textarea{
+  position: relative;
+  width: 80%;
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px outset rgb(204, 201, 201);
+}
+.contactUs-container form button{
+  position: relative;
+  top: -15px;
+  font-size: 14px;
+  width: 20%;
+  height: 15%;
+  align-self: center;
+  padding: 10px;
+  color: #fff;
+  background: rgb(151, 71, 207);
+  border: none;
+  border-radius: 15px;
 }
 .home-container{
   max-height: 100vh;

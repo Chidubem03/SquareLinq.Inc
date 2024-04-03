@@ -72,7 +72,11 @@ const Landing = () => {
             <img src={contactUs} alt="" className='contactUs'/>
             <img src={manWalk} alt="" className='manWalk'/>
             <form action="post">
-              
+              <input type="text" placeholder='Enter your fullname...'/>
+              <input type="email" placeholder='Enter your Email...'/>
+              <input type="text" placeholder='Enter the subject for contacting us' />
+              <input type="text" placeholder='Type Something...' className='Textarea' />
+              <button>Submit</button>
             </form>
           </div>
          </div>
