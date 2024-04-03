@@ -129,7 +129,6 @@ nav > ul > li > a:hover {
 }
 .writeUps a button {
   position: relative;
-}
   background: rgb(151, 71, 207);
   font-family: inherit;
   cursor: pointer;
