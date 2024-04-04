@@ -128,7 +128,10 @@ const Landing = () => {
         </Link>
       </div>
 
-      <div className="last-container contact-section" style={{backgroundImage:`url(${lastContainerImg})`}} >
+      {/* added a background image to this container */}
+      <div className="last-container contact-section" style={{backgroundImage:`url(${lastContainerImg})`}} > 
+
+      {/*Commented out the the previous images rendered due to constant bugs encountered while creating the footer */}
         {/* <div className="img">
           <img src={circle1} alt="" className="circle1" />
           <img src={circle2} alt="" className="circle2" />

@@ -8,7 +8,6 @@ const Footer = () => {
   // Getting the current year..................
   const currentYear = new Date().getFullYear()
   ///////////////////////////////////////////////////
-  
 
     return (
         <div className="footer-section">
