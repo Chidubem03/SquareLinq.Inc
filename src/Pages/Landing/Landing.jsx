@@ -11,10 +11,10 @@ import OpenSqL from "../Images/openbrowser.png";
 import groupies from "../Images/cuate.png";
 import womanSitting from "../Images/Frame.png";
 import manWalk from "../Images/Frame1.png";
-import circle1 from "../Images/Circle_2.png";
-import circle2 from "../Images/Cirlcles_2.png";
-import circle3 from "../Images/Circles_1.png";
-import circle4 from "../Images/Circle_1.png";
+// import circle1 from "../Images/Circle_2.png";
+// import circle2 from "../Images/Cirlcles_2.png";
+// import circle3 from "../Images/Circles_1.png";
+// import circle4 from "../Images/Circle_1.png";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import lastContainerImg from "../Images/linq-bg_img.png"
 import "./Landing.css";

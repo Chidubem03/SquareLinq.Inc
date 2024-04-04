@@ -430,7 +430,7 @@ nav > ul > li > a:hover {
   opacity: 0.7;
   /* end of Preloader page styling */
 }
-
+/* Media query for mobile version */
 @media only screen and (max-width: 600px) {
   body {
     height: 100vh;
