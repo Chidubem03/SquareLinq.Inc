@@ -157,7 +157,7 @@ const Landing = () => {
               
               <img src={womanSitting} alt="" className="womansit" />
 
-              <button><Link to="#" style={{textDecoration: "none"}}>Join</Link></button>
+              <button><Link to="#/" style={{textDecoration: "none", backgroundColor: '#9747ff', color: '#fff'}}>Join</Link></button>
             </form>
           </div>
 
