@@ -16,6 +16,7 @@ import circle2 from "../Images/Cirlcles_2.png";
 import circle3 from "../Images/Circles_1.png";
 import circle4 from "../Images/Circle_1.png";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import lastContainerImg from "../Images/linq-bg_img.png"
 import "./Landing.css";
 
 const Landing = () => {
@@ -127,13 +128,13 @@ const Landing = () => {
         </Link>
       </div>
 
-      <div className="last-container contact-section">
-        <div className="img">
+      <div className="last-container contact-section" style={{backgroundImage:`url(${lastContainerImg})`}} >
+        {/* <div className="img">
           <img src={circle1} alt="" className="circle1" />
           <img src={circle2} alt="" className="circle2" />
           <img src={circle3} alt="" className="circle3" />
           <img src={circle4} alt="" className="circle4" />
-        </div>
+        </div> */}
 
         <div className="subLast">
           <div className="joinWaitlist waitlist">

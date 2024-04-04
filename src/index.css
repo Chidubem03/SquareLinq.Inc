@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 body {
@@ -185,7 +187,7 @@ nav > ul > li > a:hover {
 }
 /* last container styling */
 .last-container {
-  /* height: 120vh; */
+   /* height: 120vh; */
   display: flex;
   flex-direction: column;
 }
@@ -224,12 +226,13 @@ nav > ul > li > a:hover {
 }
 .last-container .subLast {
   position: relative;
-  top: -100px;
+  /* top: -100px; */
   width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
   justify-content: center;
 }
 .subLast .joinWaitlist {
@@ -280,6 +283,7 @@ nav > ul > li > a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 50px;
 }
 .contactUs-container h1{
   position: relative;
