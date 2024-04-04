@@ -100,7 +100,8 @@ nav > ul > li > a:hover {
 .navbar .rightside > a > button {
   position: relative;
   float: right;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: inherit;
   cursor: pointer;
   width: 50%;
   background: rgb(151, 71, 207);
@@ -112,7 +113,8 @@ nav > ul > li > a:hover {
 .navbar .rightside > a > button:hover{
   color: rgba(95, 238, 51, 0.863);
   transform: translateY(100);
-  font-size: 17px;
+  width: 55%;
+  font-size: 16px;
   /* end of navbar styling */
 }
 /**styling for the section container**/
@@ -191,7 +193,9 @@ nav > ul > li > a:hover {
   display: flex;
   flex-direction: column;
 }
-.last-container .img {
+/* Uncomment When in use */
+
+/* .last-container .img {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -223,7 +227,8 @@ nav > ul > li > a:hover {
   align-self: flex-start;
   height: 100px;
   width: 10%;
-}
+} */
+
 .last-container .subLast {
   position: relative;
   /* top: -100px; */
@@ -258,8 +263,8 @@ nav > ul > li > a:hover {
 .joinWaitlist .womansit {
   position: absolute;
   width: 15%;
-  right: -35px;
-  top: -100%;
+  right: -30px;
+  top: -70%;
   z-index: 2;
 }
 .joinWaitlist form {

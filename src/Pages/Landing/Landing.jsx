@@ -157,7 +157,7 @@ const Landing = () => {
               
               <img src={womanSitting} alt="" className="womansit" />
 
-              <button>Join</button>
+              <button><Link to="#" style={{textDecoration: "none"}}>Join</Link></button>
             </form>
           </div>
 
@@ -182,7 +182,7 @@ const Landing = () => {
                 placeholder="Type Something..."
                 className="Textarea"
               />
-              <button>Submit</button>
+              <Link to="#"><button>Submit</button></Link>
             </form>
           </div> }
         </div>
