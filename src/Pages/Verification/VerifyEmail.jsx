@@ -1,5 +1,6 @@
 import "./VerifyEmail.css"
 import VerifyImage from "../Images/verify_img.png"
+import { Link } from "react-router-dom/cjs/react-router-dom.min"
 
 const VerifyEmail = ()=>{
 
@@ -37,7 +38,7 @@ const VerifyEmail = ()=>{
             <div className="containerInnerRightInner">
               <div className="containerInnerRightInnerChild">
                   <section className="containerInnerRightInnerChild1"><h2>Verification Code Sent!</h2></section>
-                  <section className="containerInnerRightInnerChild2"><p>kindly check your email sharon@gmail.com for the verification code</p></section>
+                  <section className="containerInnerRightInnerChild2"><p>kindly check your email <Link>sharon@gmail.com</Link>  for the verification code</p></section>
                   <section className="containerInnerRightInnerChild3">
                        <input type="text" id="digit1" class = "inputs" maxlength="1" oninput="focusNextInput(this)" />
                        <input type="text" id="digit2" class = "inputs" maxlength="1" oninput="focusNextInput(this)" />
@@ -47,8 +48,8 @@ const VerifyEmail = ()=>{
                        <input type="text" id="digit6" class = "inputs" maxlength="1" oninput="focusNextInput(this)" />
                   </section>
                   <section className="containerInnerRightInnerChild4">
-                    <span><p>Switch to <Link>sharon@gmail.com</Link> </p></span>
-                    <span><p> Resend in 04s</p></span>
+                    <div><p>Switch to <Link>sharon@gmail.com</Link> </p></div>
+                    <div><p> Resend in 04s</p></div>
                   </section>
 
                   <section className="containerInnerRightInnerChild5"><button>Verify</button></section>
