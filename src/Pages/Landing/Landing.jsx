@@ -11,10 +11,10 @@ import OpenSqL from "../Images/openbrowser.png";
 import groupies from "../Images/cuate.png";
 import womanSitting from "../Images/Frame.png";
 import manWalk from "../Images/Frame1.png";
-import circle1 from "../Images/Circle_2.png";
-import circle2 from "../Images/Cirlcles_2.png";
-import circle3 from "../Images/Circles_1.png";
-import circle4 from "../Images/Circle_1.png";
+// import circle1 from "../Images/Circle_2.png";
+// import circle2 from "../Images/Cirlcles_2.png";
+// import circle3 from "../Images/Circles_1.png";
+// import circle4 from "../Images/Circle_1.png";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import lastContainerImg from "../Images/linq-bg_img.png"
 import "./Landing.css";
@@ -128,7 +128,10 @@ const Landing = () => {
         </Link>
       </div>
 
-      <div className="last-container contact-section" style={{backgroundImage:`url(${lastContainerImg})`}} >
+      {/* added a background image to this container */}
+      <div className="last-container contact-section" style={{backgroundImage:`url(${lastContainerImg})`}} > 
+
+      {/*Commented out the the previous images rendered due to constant bugs encountered while creating the footer */}
         {/* <div className="img">
           <img src={circle1} alt="" className="circle1" />
           <img src={circle2} alt="" className="circle2" />
@@ -154,7 +157,7 @@ const Landing = () => {
               
               <img src={womanSitting} alt="" className="womansit" />
 
-              <button>Join</button>
+              <button><Link to="#/" style={{textDecoration: "none", backgroundColor: '#9747ff', color: '#fff'}}>Join</Link></button>
             </form>
           </div>
 
@@ -179,7 +182,7 @@ const Landing = () => {
                 placeholder="Type Something..."
                 className="Textarea"
               />
-              <button>Submit</button>
+              <Link to="#"><button>Submit</button></Link>
             </form>
           </div> }
         </div>

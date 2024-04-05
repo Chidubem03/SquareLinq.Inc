@@ -1,14 +1,14 @@
-import "./Footer.css"
-import Logo from "../Images/Logo.png"
-import SignUpButton from "../Images/signupbutton.png"
+import "./Footer.css";
+import Logo from "../Images/Logo.png";
+import SignUpButton from "../Images/signupbutton.png";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 
 const Footer = () => {
 
   // Getting the current year..................
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   ///////////////////////////////////////////////////
-  
 
     return (
         <div className="footer-section">
@@ -27,9 +27,9 @@ const Footer = () => {
             <div className="footer-section_InnerTop2 footer-top"> 
             
               <ul>
-                <li ><a href="#">Home</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Waitlist</a></li>
+                <li ><Link> Home</Link></li> 
+                <li><Link>Contact Us</Link></li>
+                <li><Link>Waitlist</Link></li>
               </ul>
             
             
@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="footer-section_InnerTop3 footer-top"> 
             
             <div className="footer-section_InnerTop3Inner">
-           <img src={SignUpButton} alt="sign-up" />
+           <Link to="#"><img src={SignUpButton} alt="sign-up" /></Link>
             
             </div>
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
                 
                 <div className="footer-section_InnerBottom_Inner2">
-                  <a>Squarelink {currentYear} All Rights Reserved</a>
+                  <Link>Squarelink {currentYear} All Rights Reserved</Link>
                 </div>
                 
             </div>

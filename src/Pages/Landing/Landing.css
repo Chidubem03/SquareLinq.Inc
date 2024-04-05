@@ -37,6 +37,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 /* second container styling */
 .second-container {
   position: relative;
@@ -152,13 +153,14 @@
   z-index: 1;
 }
 
-.contact-section .waitlist input ~ button {
+.contact-section .waitlist input~button {
   position: absolute;
   font-family: "Gluten", cursive;
   font-size: 1.25rem;
   right: 25px;
   border: 0;
   border-radius: 60px;
+  cursor: pointer;
   color: #fff;
   background-color: #9747ff;
   padding: 0.75rem 1.75rem;
@@ -200,6 +202,7 @@
   border-radius: 60px;
   color: #fff;
   background-color: #9747ff;
+  cursor: pointer;
   padding: 1rem 2rem;
   margin-top: 1rem;
 }
