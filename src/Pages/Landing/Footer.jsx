@@ -31,7 +31,6 @@ const Footer = () => {
                 <li><a href="#">Waitlist</a></li>
               </ul>
             
-            
             </div>
             <div className="footer-section_InnerTop3 footer-top"> 
             
