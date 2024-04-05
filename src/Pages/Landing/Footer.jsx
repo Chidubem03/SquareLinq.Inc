@@ -56,7 +56,6 @@ const Footer = () => {
                   <a>Squarelink {currentYear} All Rights Reserved</a>
                 </div>
                 
-
             </div>
           </div>
 
