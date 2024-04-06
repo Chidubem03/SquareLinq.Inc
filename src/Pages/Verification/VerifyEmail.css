@@ -90,12 +90,17 @@ left: 30px;
     
 }
 
+.containerInnerRightInnerChild3 input{
+    font-size: 20px;
+    border: 1px solid #33333395;
+    text-align: center;
+}
+
 .containerInnerRightInnerChild4{
     width: 100%;
 display: flex;
 flex-direction: row;
 gap: 30%;
-
 }
 
 .containerInnerRightInnerChild5 button{
@@ -104,6 +109,6 @@ border: none;
 border-radius: 50px;
 font-family: Gluten;
 background: #9747FF;
-color: #fff
-;
+color: #fff;
+cursor: pointer;
 }
