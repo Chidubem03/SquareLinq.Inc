@@ -18,7 +18,7 @@ import React from 'react';
           const firstInput = inputs[i];
           firstInput.focus();
 
-          //interating each input of all input.
+          //interating each input of all inputs.
           inputs.forEach((input)=>{
           
             input.addEventListener("keyup", (e)=>{
