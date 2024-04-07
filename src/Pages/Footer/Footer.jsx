@@ -32,7 +32,6 @@ const Footer = () => {
                 <li><Link>Waitlist</Link></li>
               </ul>
             
-            
             </div>
             <div className="footer-section_InnerTop3 footer-top"> 
             
@@ -56,7 +55,6 @@ const Footer = () => {
                   <Link>Squarelink {currentYear} All Rights Reserved</Link>
                 </div>
                 
-
             </div>
           </div>
 

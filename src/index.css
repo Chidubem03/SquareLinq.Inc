@@ -192,6 +192,7 @@ nav > ul > li > a:hover {
    /* height: 120vh; */
   display: flex;
   flex-direction: column;
+  margin-bottom: 8.5rem;
 }
 /* Uncomment When in use */
 
