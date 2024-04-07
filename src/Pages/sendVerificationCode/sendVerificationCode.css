@@ -1,0 +1,92 @@
+.sendVerificationCode{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    background: #fff;
+}
+.sendVerification-leftside{
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    flex-direction: column;
+    gap: 1rem;
+    background-size: 50% 100vh;
+    background-repeat: no-repeat;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sendVerification-leftside > img{
+    position: relative;
+    width: 120px;
+    height: 50px;
+}
+.sendVerification-leftside .leftside-header{
+    font-family: inherit;
+    font-size: 20px;
+    color: #fff;
+}
+
+.sendVerification-leftside .leftside-paragraph{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-weight: normal;
+    line-height: 10px;
+}
+
+.sendVerification-leftside .slides{
+    width: 100px;
+    background: transparent;
+}
+
+.sendVerfication-rightside{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background: transparent;
+}
+.sendVerfication-rightside .rightside-header{
+    font-weight: 500;
+    font-family: serif;
+    font-size: 19px;
+    color: rgba(35, 25, 66, 0.5);
+}
+
+.sendVerfication-rightside .rightside-paragraph{
+    font-weight: normal;
+    font-size: 11px;
+    font-family: serif;
+    color: rgba(249, 254, 254, 0.603);
+}
+
+.sendVerfication-rightside form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.sendVerfication-rightside form label{
+    font-size: 14px;
+    margin-bottom: .5rem;
+    font-family: serif;
+    align-self: flex-start;
+}
+
+
+.sendVerfication-rightside form label input{
+    color: blueviolet;
+}
+
+.sendVerfication-rightside form button{
+    border: none;
+    border-radius: 20px;
+    font-family: inherit;
+    padding: 7px;
+    background-color: blueviolet;
+    color: #fff;
+}

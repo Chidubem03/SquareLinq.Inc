@@ -8,7 +8,7 @@ import bgImage from '../Images/bgimage.png';
 import {Link} from 'react-router-dom';
 
 
-const Home = () => {
+const Preloader = () => {
     return ( 
         <div className="home-container" style={{backgroundImage: `url(${bgImage})`}} >
            <div className="contain">
@@ -42,4 +42,4 @@ const Home = () => {
     );
 }
  
-export default Home;
+export default Preloader;
