@@ -47,6 +47,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 .navbar .leftside {
   position: relative;
@@ -70,6 +71,7 @@ nav {
   display: flex;
   width: 40%;
   padding: 1px;
+  
 }
 nav > ul {
   display: flex;
@@ -111,8 +113,8 @@ nav > ul > li > a:hover {
   padding: 1rem;
 }
 .navbar .rightside > a > button:hover{
-  color: rgba(95, 238, 51, 0.863);
-  transform: translateY(100);
+  color: burlywood;
+  transform: translateY(100) scale(1);
   width: 55%;
   font-size: 16px;
   /* end of navbar styling */
