@@ -1,7 +1,7 @@
 import slides from '../Images/slider-img.png';
 import leftsideImg from '../Images/leftside-img.png';
 import shineLogo from '../Images/shineLogo.png';
-import "./SendVerificationCode.css";
+import "./sendVerificationCode.css";
 
 function SendVerificationCode() {
 
