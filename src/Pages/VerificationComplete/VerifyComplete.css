@@ -1,5 +1,5 @@
 
-.sendVerification-container{
+.VerificationComplete-container{
     position: relative;
     min-height: 80vh;
     display: flex;
@@ -8,16 +8,16 @@
     width: 100vw;
     background: #fff;
 }
-.sendVerification-leftside{
+.VerificationComplete-leftside{
     position: relative;
     display: flex;
     width: 50%;
     height: 90vh;
-    background-size: cover;
+    background-size: 50vw 90vh;
     background-repeat: no-repeat;
     
 }
-.sendVerification-leftside .sendVerification-leftside_container{
+.VerificationComplete-leftside .VerificationComplete-leftside_container{
     position: relative;
     bottom: 6rem;
     left: 1rem;
@@ -30,37 +30,38 @@
     align-items: flex-start;
 }
 
-.sendVerification-leftside_container .shine{
+.VerificationComplete-leftside_container .shine{
     position: relative;
     width: 5%;
-    top: 3.6rem;
-    left: 9.1rem;
-    transform: rotate(21deg);
+    top: 3rem;
+    left: 10.4rem;
+    transform: rotate(15deg);
 }
-.sendVerification-leftside_container .leftside-header{
+.VerificationComplete-leftside_container .leftside-header{
     font-weight: 800;
     font-size: 45px;
+    font-family: inherit;
     color: #fff;
 }
 
-.sendVerification-leftside_container .leftside-paragraph{
+.VerificationComplete-leftside_container .leftside-paragraph{
     font-family: 'Times New Roman', Times, serif;
     text-align: left;
     font-weight: normal;
     font-size: 17px;
     color: #fff;
-    width: 70%;
     opacity: 0.6;
+    width: 70%;
     line-height: 25px;
 }
 
-.sendVerification-leftside_container .slides{
+.VerificationComplete-leftside_container .slides{
     width: 100px;
     height: 5px;
     background: transparent;
 }
 
-.sendVerfication-rightside{
+.VerificationComplete-rightside{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -71,7 +72,7 @@
     height: 90vh;
     background: transparent;
 }
-.sendVerfication-rightside .rightside-header{
+.VerificationComplete-rightside .rightside-header{
     position: relative;
     font-weight: 800;
     font-family: 'Times New Roman', Times, serif;
@@ -79,39 +80,29 @@
     color: rgb(21, 14, 59);
 }
 
-.sendVerfication-rightside .rightside-paragraph{
+.VerificationComplete-rightside .rightside-paragraph{
     font-weight: normal;
     font-size: 11px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgba(71, 82, 82, 0.603);
 }
 
-.sendVerfication-rightside form{
+.VerificationComplete-rightside .rightside-minicontainer{
+    width: 100%;
+    height: 20%;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    justify-content: center;
+    align-items: center;
 }
-
-.sendVerfication-rightside form label{
-    font-size: 14px;
-    margin-bottom: .5rem;
-    font-family: "Verdana, Geneva, Tahoma, sans-serif";
-    align-self: flex-start;
-    font-weight: normal;
-    color: rgb(57, 56, 56);
+.VerificationComplete-rightside .rightside-minicontainer .tick{
+    width: 40px;
 }
-.sendVerfication-rightside form label input[type="radio"]{
-    accent-color: rgb(151, 71, 207);
-    border-radius: 50%;
-    margin: .5rem;
-}
-
-
-.sendVerfication-rightside form button{
+.VerificationComplete-rightside .rightside-minicontainer button{
     border: none;
-    width: 40%;
+    width: 20%;
     margin-top: 2rem;
-    align-self: center;
     border-radius: 20px;
     font-family: "Apercu";
     font-size: 15px;
@@ -121,6 +112,6 @@
     color: #fff;
 }
 
-.sendVerfication-rightside form button:hover{
+.VerificationComplete-rightside .rightside-minicontainer button:hover{
     color: burlywood;
 }

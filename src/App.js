@@ -4,6 +4,8 @@ import Landing from './Pages/Landing/Landing';
 import Footer from './Pages/Footer/Footer';
 import VerifyEmail from './Pages/Verification/VerifyEmail';
 import SendVerificationCode from './Pages/sendVerificationCode/sendVerificationCode';
+import Preloader from './Pages/Preloader/Preloader';
+import VerificationComplete from './Pages/VerificationComplete/VerifyComplete';
 
 function App() {
   return (
@@ -11,15 +13,20 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          
           <Route exact path='/'>
             <Landing />
           </Route>
+          <Route path='/preloader'>
+            <Preloader />
+          </Route>
         <Route exact path = '/verifyemail'>
-          <VerifyEmail/>
+          <VerifyEmail />
         </Route>
         <Route path="/verification">
           <SendVerificationCode />
+        </Route>
+        <Route path='/completed'>
+          <VerificationComplete />
         </Route>
         </Switch> 
          <Footer />
