@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 body {
@@ -45,6 +47,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 .navbar .leftside {
   position: relative;
@@ -68,6 +71,7 @@ nav {
   display: flex;
   width: 40%;
   padding: 1px;
+  
 }
 nav > ul {
   display: flex;
@@ -98,7 +102,8 @@ nav > ul > li > a:hover {
 .navbar .rightside > a > button {
   position: relative;
   float: right;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: inherit;
   cursor: pointer;
   width: 50%;
   background: rgb(151, 71, 207);
@@ -108,9 +113,10 @@ nav > ul > li > a:hover {
   padding: 1rem;
 }
 .navbar .rightside > a > button:hover{
-  color: rgba(95, 238, 51, 0.863);
-  transform: translateY(100);
-  font-size: 17px;
+  color: burlywood;
+  transform: translateY(100) scale(1);
+  width: 55%;
+  font-size: 16px;
   /* end of navbar styling */
 }
 /**styling for the section container**/
@@ -118,7 +124,7 @@ nav > ul > li > a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-height: 500vh;
+  /*    max-height: 500vh; */
   height: 100%;
 }
 /*hero section*/
@@ -185,11 +191,14 @@ nav > ul > li > a:hover {
 }
 /* last container styling */
 .last-container {
-  height: 120vh;
+   /* height: 120vh; */
   display: flex;
   flex-direction: column;
+  margin-bottom: 8.5rem;
 }
-.last-container .img {
+/* Uncomment When in use */
+
+/* .last-container .img {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -221,15 +230,17 @@ nav > ul > li > a:hover {
   align-self: flex-start;
   height: 100px;
   width: 10%;
-}
+} */
+
 .last-container .subLast {
   position: relative;
-  top: -100px;
+  /* top: -100px; */
   width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
   justify-content: center;
 }
 .subLast .joinWaitlist {
@@ -255,8 +266,8 @@ nav > ul > li > a:hover {
 .joinWaitlist .womansit {
   position: absolute;
   width: 15%;
-  right: -35px;
-  top: -100%;
+  right: -30px;
+  top: -70%;
   z-index: 2;
 }
 .joinWaitlist form {
@@ -273,13 +284,14 @@ nav > ul > li > a:hover {
 }
 .subLast .contactUs-container {
   position: relative;
-  top: 200px;
-  height: 75%;
+  /* top: 200px; */
+  /* height: 75%; */
   width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 50px;
 }
 .contactUs-container h1{
   position: relative;
@@ -358,10 +370,11 @@ nav > ul > li > a:hover {
 }
 .content-text > img {
   position: relative;
-  left: 225px;
-  top: 10px;
+  left: 275px;
+  top: 15px;
   height: 50%;
-  width: 25px;
+  width: 23px;
+  transform: rotate(15deg);
 }
 .content-text .content {
   display: flex;
@@ -380,7 +393,7 @@ nav > ul > li > a:hover {
 .content-text .content .subtext {
   width: 100%;
   position: relative;
-  left: -132px;
+  left: -91px;
   font-size: 25px;
   color: rgb(83, 5, 83);
 }
@@ -426,7 +439,7 @@ nav > ul > li > a:hover {
   opacity: 0.7;
   /* end of Preloader page styling */
 }
-
+/* Media query for mobile version */
 @media only screen and (max-width: 600px) {
   body {
     height: 100vh;

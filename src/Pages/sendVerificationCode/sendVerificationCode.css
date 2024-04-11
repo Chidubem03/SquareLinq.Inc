@@ -1,0 +1,126 @@
+
+.sendVerification-container{
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    width: 100vw;
+    background: #fff;
+}
+.sendVerification-leftside{
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.sendVerification-leftside .sendVerification-leftside_container{
+    position: relative;
+    bottom: 6rem;
+    left: 1rem;
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sendVerification-leftside_container .shine{
+    position: relative;
+    width: 5%;
+    top: 3.6rem;
+    left: 9.1rem;
+    transform: rotate(21deg);
+}
+.sendVerification-leftside_container .leftside-header{
+    font-weight: 800;
+    font-size: 45px;
+    color: #fff;
+}
+
+.sendVerification-leftside_container .leftside-paragraph{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-weight: normal;
+    font-size: 17px;
+    color: #fff;
+    width: 70%;
+    opacity: 0.6;
+    line-height: 25px;
+}
+
+.sendVerification-leftside_container .slides{
+    width: 100px;
+    height: 5px;
+    background: transparent;
+}
+
+.sendVerfication-rightside{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    width: 50%;
+    height: 90vh;
+    background: transparent;
+}
+.sendVerfication-rightside .rightside-header{
+    position: relative;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    color: rgb(21, 14, 59);
+}
+
+.sendVerfication-rightside .rightside-paragraph{
+    font-weight: normal;
+    font-size: 11px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(71, 82, 82, 0.603);
+}
+
+.sendVerfication-rightside form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.sendVerfication-rightside form label{
+    font-size: 14px;
+    margin-bottom: .5rem;
+    font-family: "Verdana, Geneva, Tahoma, sans-serif";
+    align-self: flex-start;
+    font-weight: normal;
+    color: rgb(57, 56, 56);
+}
+.sendVerfication-rightside form label input[type="radio"]{
+    accent-color: rgb(151, 71, 207);
+    border-radius: 50%;
+    margin: .5rem;
+}
+
+
+.sendVerfication-rightside form button{
+    border: none;
+    width: 40%;
+    margin-top: 2rem;
+    align-self: center;
+    border-radius: 20px;
+    font-family: "Apercu";
+    font-size: 15px;
+    padding: 7px;
+    background-color: rgb(151, 71, 207);
+    cursor: pointer;
+    color: #fff;
+}
+
+.sendVerfication-rightside form button:hover{
+    color: burlywood;
+}
