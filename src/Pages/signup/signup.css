@@ -104,6 +104,8 @@ form p {
     line-height: 6px;
     font-family: 'Apercu';
     font-style: normal;
+    text-align: left;
+    display: block;
 }
 /* signup-button */
 .sign-up-btn {
@@ -168,4 +170,28 @@ text-align: center;
 .checkedIcon {
   height: 15px;
   width: 15px;
+}
+#checked-password-validation p {
+    font-size: 10px;
+    height: 40px;
+    padding: 0;
+}
+#checked-password-validation > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    width: 500px;
+}
+#checked-password-validation > div > p {
+    display: flex;
+}
+#checked-password-validation > p {
+    color: #333;
+    text-align: left;
+    font-size: 13px;
+}
+#highlight {
+    color: #9747FF;
+    text-decoration: none;
 }
