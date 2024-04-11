@@ -3,7 +3,7 @@ import shineLogo from '../Images/shineLogo.png';
 import googleIcon from '../Images/google_icon.png';
 import cancel from '../Images/cancel.svg';
 import checked from '../Images/checked.svg';
-import './signup.css'
+import './signup.css';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 
@@ -32,17 +32,16 @@ const Signup = () => {
     
   // this code below handles the email and the phone number input box
   
-      const [inputValue, setInputValue] = useState('');
+      const [emailAndPhoneValue, setemailAndPhoneValue] = useState('');
       const [inputType, setInputType] = useState(null); // Initially unknown
       const [validationError, setValidationError] = useState(null);
     
       const validateEmailPhoneInput = (event) => {
-        setInputValue(event.target.value);
+        setemailAndPhoneValue(event.target.value);
         setValidationError(null); // Clear any previous errors on change
       };
       const [isValid, setIsValid] = useState(false);
       const validateInput = (value) => {
-        setIsValid(false);
         let type = null;
     
         // Email validation
@@ -52,8 +51,8 @@ const Signup = () => {
           type = 'email';
         }
     
-        // Phone number validation (replace with your logic)
-        const phoneRegex = /^\d{10}$/; // Adjust for your phone number format
+        // Phone number validation 
+        const phoneRegex = /^\d{10}$/; 
         if (!isValid && phoneRegex.test(value)) {
           setIsValid(true);
           type = 'phone';
@@ -67,7 +66,7 @@ const Signup = () => {
         return isValid;
       };
       const handleBlur = () => {
-        validateInput(inputValue);
+        validateInput(emailAndPhoneValue);
       };
 
       // The code below is responsible for validating password input
@@ -125,7 +124,8 @@ const Signup = () => {
     }
     return passWordIsValid;
   };
-      ;
+  
+  
 // code below will check if created password is same as comfirm password
   const comfirmPassword = useRef(null)
   const [password2, setPassword2] = useState('')
@@ -174,10 +174,12 @@ const Signup = () => {
     } else if(password === password2) {
       console.log('correct')
     } 
-    if(!isValid) {
+    if(isValid === false) {
       e.preventDefault();
+      console.log(isValid, 'is false');
     }
    }
+   
   return (
     <div id="sign-up-container">
       <div className='con interactive-sec'>
@@ -209,7 +211,7 @@ const Signup = () => {
             <input type="text" 
             name="contactInfo"  
             id="combined-input"
-            value={inputValue}
+            value={emailAndPhoneValue}
             placeholder='Enter email address or phone number”'
             onChange={validateEmailPhoneInput} 
             className='input-boxes'
