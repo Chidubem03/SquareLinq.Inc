@@ -1,7 +1,4 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import NavBar from './NavBar';
-import Landing from './Pages/Landing/Landing';
-import Footer from './Pages/Landing/Footer';
 import Signup from './Pages/signup/Signup';
 import NavBar from './NavBar';
 import Landing from './Pages/Landing/Landing';
@@ -19,23 +16,22 @@ function App() {
       <Router>
       <NavBar /> 
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/Landing'>
             <Landing />
           </Route>
-
           <Route exact path="/Signup">
           <Signup />
           </Route>
-          <Route path='/preloader'>
+          <Route exact path='/preloader'>
             <Preloader />
           </Route>
         <Route exact path = '/verifyemail'>
           <VerifyEmail />
         </Route>
-        <Route path="/verification">
+        <Route exact path="/verification">
           <SendVerificationCode />
         </Route>
-        <Route path='/completed'>
+        <Route exact path='/completed'>
           <VerificationComplete />
         </Route>
         </Switch> 
