@@ -97,3 +97,6 @@
     opacity: 0.5;
     font-size: 11px;
 }
+.hidden{
+    display: none;
+}

@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Signup from './Pages/signup/Signup';
 import NavBar from './NavBar';
 import Landing from './Pages/Landing/Landing';
 import Footer from './Pages/Footer/Footer';
@@ -7,25 +8,30 @@ import SendVerificationCode from './Pages/sendVerificationCode/sendVerificationC
 import Preloader from './Pages/Preloader/Preloader';
 import VerificationComplete from './Pages/VerificationComplete/VerifyComplete';
 
+
 function App() {
+  
   return (
   <div className="App">
       <Router>
-        <NavBar />
+      <NavBar /> 
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/Landing'>
             <Landing />
           </Route>
-          <Route path='/preloader'>
+          <Route exact path="/Signup">
+          <Signup />
+          </Route>
+          <Route exact path='/preloader'>
             <Preloader />
           </Route>
         <Route exact path = '/verifyemail'>
           <VerifyEmail />
         </Route>
-        <Route path="/verification">
+        <Route exact path="/verification">
           <SendVerificationCode />
         </Route>
-        <Route path='/completed'>
+        <Route exact path='/completed'>
           <VerificationComplete />
         </Route>
         </Switch> 
