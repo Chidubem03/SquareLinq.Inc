@@ -84,7 +84,7 @@ import React from 'react';
           //alert('invalid verfication code')
         }
         else{
-          //Navigate to the page 
+          //Navigate to next page 
 
         }
         
