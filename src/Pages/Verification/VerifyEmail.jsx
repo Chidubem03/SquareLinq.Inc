@@ -74,7 +74,7 @@ import React from 'react';
         })
        
         const verficationCodeSent = "123456"//This is just a testing reference. A real verification code will be used on this variable soon...
-        if (!(allInputValues == verficationCodeSent)){
+        if (!(allInputValues === verficationCodeSent)){
           
           inputs.forEach((input)=>{
             input.classList.add('errorCode')
@@ -85,14 +85,14 @@ import React from 'react';
         }
         else{
           //Navigate to next page 
+          
 
         }
-        
+
+       allInputValues = ""
       })
       
     }
-
-    
 
 
     render(){
