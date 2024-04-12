@@ -67,11 +67,21 @@ left: 30px;
 
 }
 
+
+/* inputs styling */
 .inputs{
   width: 30px;
   height: 35px;
+  -webkit-appearance: none;
 
 }
+
+.errorCode{
+    border: 1px solid red !important;
+}
+
+/* ....................................... */
+
 .containerInnerRightInnerChild1,.containerInnerRightInnerChild2,.containerInnerRightInnerChild3,.containerInnerRightInnerChild4,.containerInnerRightInnerChild5 {
    padding: 10px 0;
 }
