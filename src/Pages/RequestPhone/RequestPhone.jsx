@@ -7,22 +7,41 @@ import { RiArrowDownSLine } from "react-icons/ri";
 const RequestPhone = () => {
   const { countries } = useCountries();
   const [country, setCountry] = React.useState(0);
+  const [isShowCountries, setIsShowCountries] = React.useState(false);
+  const [phoneNo, setPhoneNo] = React.useState("");
   const { name, flags, countryCallingCode } = countries[country];
+
+  const handleSeclection = (index) => {
+    setCountry(index);
+    setIsShowCountries(false);
+  };
+
+const handleNext=()=>{
+
+  const requestedPhoneNo = countryCallingCode.concat(phoneNo);
+
+console.log(requestedPhoneNo)
+
+
+
+}
 
   return (
     <section className="reset-phone-container">
       <article className="reset-phone-hero">
-        <div>
-          <h1>
-            Professional{" "}
-            <img src={shineLogo} alt="shine logo" className="shine-logo" />{" "}
-          </h1>
-          <p>
-            Join a community of like minded people where you can free air you
-            opinions, discuss new trends and shared interests. Interact with
-            your friends, family, colleagues and teammates as you you strengthen
-            the bond between one another...
-          </p>
+        <div className="reset-phone-overlay">
+          <div>
+            <h1>
+              Professional{" "}
+              <img src={shineLogo} alt="shine logo" className="shine-logo" />{" "}
+            </h1>
+            <p>
+              Join a community of like minded people where you can free air you
+              opinions, discuss new trends and shared interests. Interact with
+              your friends, family, colleagues and teammates as you you
+              strengthen the bond between one another...
+            </p>
+          </div>
         </div>
       </article>
       <article className="reset-phone-main">
@@ -35,10 +54,21 @@ const RequestPhone = () => {
           </div>
 
           <div className="phone-input-container">
-            <div className="country-flag">
+            <div
+              className="country-flag"
+              onClick={() => {
+                setIsShowCountries(!isShowCountries);
+              }}
+            >
               <img src={flags.svg} alt="" className="flag-img" />{" "}
               <RiArrowDownSLine />
-              <article className="select-country">
+              <article
+                className={`${
+                  isShowCountries
+                    ? "select-country show-countries"
+                    : "select-country"
+                }`}
+              >
                 {countries.map((item, index) => {
                   const { name, flags, countryCallingCode } = item;
 
@@ -46,10 +76,14 @@ const RequestPhone = () => {
                     <main
                       key={name}
                       className="select-main-article"
-                      onClick={() => setCountry(index)}
+                      onClick={() => handleSeclection(index)}
                     >
-                      <div>
-                        <img src={flags.svg} alt={name} className="" />
+                      <div className="selet-flag-country-1">
+                        <img
+                          src={flags.svg}
+                          alt={name}
+                          className="select-flag-img"
+                        />
                         <span>{name}</span>{" "}
                       </div>
                       <span className="">{countryCallingCode}</span>
@@ -60,18 +94,22 @@ const RequestPhone = () => {
             </div>{" "}
             <div className="county-phone-number-section">
               <aside>
-                <span className="country-code">234</span>
+                <span className="country-code">{countryCallingCode}</span>
               </aside>
               <span className="phone-number-1">
                 <input
                   type="text"
-                  placeholder="08132586888"
+                  placeholder="Phone Number"
                   className="phone-input"
+                  value={phoneNo}
+                  onChange={(e) => setPhoneNo(e.target.value)}
                 />
               </span>
             </div>
           </div>
-          <button className=" reset-phone-btn">Next</button>
+          <button className=" reset-phone-btn" onClick={handleNext}>
+            Next
+          </button>
         </main>
       </article>
     </section>
