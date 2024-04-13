@@ -5,19 +5,24 @@ import { useCountries } from "use-react-countries";
 import { RiArrowDownSLine } from "react-icons/ri";
 
 const RequestPhone = () => {
+  //for state management
   const { countries } = useCountries();
   const [country, setCountry] = React.useState(0);
   const [isShowCountries, setIsShowCountries] = React.useState(false);
   const [phoneNo, setPhoneNo] = React.useState("");
   const { name, flags, countryCallingCode } = countries[country];
 
+  //handling section if any of the country listed is clicked
   const handleSeclection = (index) => {
     setCountry(index);
     setIsShowCountries(false);
   };
 
+
+  //handling the next button
 const handleNext=()=>{
 
+  //concating the country code and the inputed phoneno
   const requestedPhoneNo = countryCallingCode.concat(phoneNo);
 
 console.log(requestedPhoneNo)
