@@ -1,9 +1,7 @@
 import slides from '../Images/slider-img.png';
 import leftsideImg from '../Images/leftside-img.png';
 import shineLogo from '../Images/shineLogo.png';
-import "./SendVerificationCode.css";
-//import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-//import { useLocation } from 'react-router-dom';
+import "./sendVerificationCode.css";
 
 function SendVerificationCode() {
 // This Logic is to redirect the user to the respective page thhat is linked to each input[type:radio] buttons
@@ -48,18 +46,19 @@ function SendVerificationCode() {
                 <p className="rightside-paragraph">
                     Select where you would like your verification code to be sent
                 </p>
-                <form action='#'>
+                <form action="Post">
 
                     <label htmlFor="email">
-                        <input type="radio" name='verify' value='Email' id='email' required='required'/>
+                        <input type="radio" name='verify' value='Email' />
                         Email address
                     </label>
 
                     <label htmlFor="number">
-                        <input type="radio" name='verify' value='Phone No' id='phone' required='required'/>
+                        <input type="radio" name='verify' value='Phone No'/>
                         Phone Number
                     </label>
-                   <button onClick={handleClick} >Send code</button>
+
+                    <button>Send code</button>
                 </form>
             </div>
         </div>
