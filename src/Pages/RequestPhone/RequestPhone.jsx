@@ -73,6 +73,7 @@ console.log(requestedPhoneNo)
             >
               <img src={flags.svg} alt="" className="flag-img" />{" "}
               <RiArrowDownSLine />
+              {/**select country container */}
               <article
                 className={`${
                   isShowCountries
@@ -107,6 +108,7 @@ console.log(requestedPhoneNo)
               <aside>
                 <span className="country-code">{countryCallingCode}</span>
               </aside>
+              {/**phone number input */}
               <span className="phone-number-1">
                 <input
                   type="text"
@@ -118,6 +120,7 @@ console.log(requestedPhoneNo)
               </span>
             </div>
           </div>
+          {/**next button */}
           <button className=" reset-phone-btn" onClick={handleNext}>
             Next
           </button>
