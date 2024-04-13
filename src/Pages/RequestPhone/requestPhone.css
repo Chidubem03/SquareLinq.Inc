@@ -8,10 +8,18 @@ p {
 .reset-phone-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 570px;
+  height: 690px;
+
 }
 
-.reset-phone-overlay{width: 100%;height: 100%;background-color: #9747ff5d;position: absolute;margin-top:-100px;}
+.reset-phone-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #9747ff5d;
+  position: absolute;
+  margin-top: -120px;
+   
+}
 .reset-phone-main {
   display: flex;
   justify-content: center;
@@ -22,7 +30,10 @@ p {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  
 }
+.hero-title{margin-top: 20%;}
 .reset-phone-hero h1 {
   color: #fff;
   margin-block: 20px;
@@ -38,7 +49,6 @@ p {
   letter-spacing: 0.02em;
   color: #fff;
   margin-block: 10px;
-
 }
 .reset-phone-hero > div {
   position: relative;
@@ -128,10 +138,11 @@ p {
   height: 250px;
   overflow-y: scroll;
   display: none;
- 
 }
 
-.select-country.show-countries{display: block;}
+.select-country.show-countries {
+  display: block;
+}
 .select-main-article {
   display: flex;
   justify-content: space-between;

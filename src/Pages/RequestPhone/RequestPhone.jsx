@@ -38,7 +38,7 @@ console.log(requestedPhoneNo)
       {/**Hero container for the  bacgroung image */}
       <article className="reset-phone-hero">
         <div className="reset-phone-overlay">
-          <div>
+          <div className="hero-title">
             <h1>
               Professional{" "}
               <img src={shineLogo} alt="shine logo" className="shine-logo" />{" "}
