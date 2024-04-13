@@ -17,7 +17,7 @@ const NavBar = () => {
       isSignupPage, isVerifyemailPage, isVerificationcompletePage, isSendverificationcodePage, isPreloaderPage
     );
   }
-  const isLandingPage = location.pathname === '/Landing';
+  const isLandingPage = location.pathname === '/';
 
   return (
     <div className={`${isSignuppages ? 'hidden' : 'navbar'}, ${isLandingPage ? 'navbar' : 'hidden'}`}>  {/* Apply class based on route */}

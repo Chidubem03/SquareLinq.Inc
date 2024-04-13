@@ -16,7 +16,7 @@ function App() {
       <Router>
       <NavBar /> 
         <Switch>
-          <Route exact path='/Landing'>
+          <Route exact path='/'>
             <Landing />
           </Route>
           <Route exact path="/Signup">

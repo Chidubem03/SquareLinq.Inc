@@ -16,7 +16,7 @@ import manWalk from "../Images/Frame1.png";
 // import circle3 from "../Images/Circles_1.png";
 // import circle4 from "../Images/Circle_1.png";
 import { Link } from "react-router-dom/cjs/react-router-dom";
-import lastContainerImg from "../Images/linq-bg_img.png"
+import lastContainerImg from "../Images/linq-bg_img.png";
 import "./Landing.css";
 
 const Landing = () => {
