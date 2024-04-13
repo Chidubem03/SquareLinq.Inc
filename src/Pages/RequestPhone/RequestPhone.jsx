@@ -14,7 +14,9 @@ const RequestPhone = () => {
 
   //handling section if any of the country listed is clicked
   const handleSeclection = (index) => {
+    //setting the selected country
     setCountry(index);
+    //hiding the select country container
     setIsShowCountries(false);
   };
 
