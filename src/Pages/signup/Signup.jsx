@@ -3,6 +3,7 @@ import shineLogo from '../Images/shineLogo.png';
 import googleIcon from '../Images/google_icon.png';
 import cancel from '../Images/cancel.svg';
 import checked from '../Images/checked.svg';
+// import SendVerificationCode from '../sendVerificationCode/sendVerificationCode';
 import './signup.css';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 
@@ -29,7 +30,7 @@ const Signup = () => {
     const blurUserName = () => {
       validateUsername(username);
     };
-    
+  
   // this code below handles the email and the phone number input box
   
       const [emailAndPhoneValue, setemailAndPhoneValue] = useState('');
@@ -57,14 +58,19 @@ const Signup = () => {
           setIsValid(true);
           type = 'phone';
         }
-    
-        if (!isValid) {
-          setValidationError('Invalid input. Please enter a valid email address or phone number.');
-        } else {
-          setInputType(type); // Set input type based on validation
-        }
-        return isValid;
-      };
+        setInterval(()=> {
+          if (!isValid) {
+            setValidationError('')
+          } else if(isValid) {
+            setValidationError('Invalid input. Please enter a valid email address or phone number.');
+          }
+          else {
+            setInputType(type); // Set input type based on validation
+          }
+          
+          console.log(isValid);
+          return isValid;
+        }, 500)}
       const handleBlur = () => {
         validateInput(emailAndPhoneValue);
       };
@@ -135,9 +141,7 @@ const Signup = () => {
     setPassword2(pswd);
     console.log(pswd)
     if(pswd === password) {
-      console.log('we are good to go');
     } else {
-      console.log('not the same');
       return false;
     }
   }
@@ -151,32 +155,29 @@ const Signup = () => {
    }
 
    // handle submit 
+   const [message, setMessage] = useState(null);
    const handleSubmit = (e) => {
-    if(!isChecked){
-      e.preventDefault();
-      console.error(isChecked, 'is not ticked')
-    } else {
-      console.log('its ticked')
-    }
+  
     if(username.length < 4 || username === '') {
       e.preventDefault();
-      console.log(username, 'username field is empty')
-    } 
-    if (passWordIsValid) {
-      e.preventDefault();
-      console.error('password is invalid')
-    } else if (!passWordIsValid) {
-      console.error('password fixed');
-    }
-    if(password2 === !password) {
-      e.preventDefault()
-      console.error('passwords must be the same')
-    } else if(password === password2) {
-      console.log('correct')
+      setMessage('user name must be greater or equal to 3 characters')
     } 
     if(isValid === false) {
       e.preventDefault();
-      console.log(isValid, 'is false');
+      setMessage('please enter a valid email address')
+    }
+    if (passWordIsValid) {
+      e.preventDefault();
+      setMessage('passwords is not valid')
+    }
+    if(password2 !== password) {
+      e.preventDefault()
+      setMessage('passwords do not match')
+    }
+    if(!isChecked){
+      e.preventDefault();
+      console.error(isChecked, 'is not ticked')
+      setMessage('please tick the terms and condition box');
     }
    }
    
@@ -204,9 +205,10 @@ const Signup = () => {
             value={username}
             onChange={handleChange} 
             onBlur={blurUserName}
+            autoComplete='on'
             />
             </label>
-            {usernameError && <p className="error-message" style={{color: 'red'}} >{usernameError}</p>}
+            {usernameError && <p  style={{color: 'red'}} >{usernameError}</p>}
             <label>
             <input type="text" 
             name="contactInfo"  
@@ -215,9 +217,11 @@ const Signup = () => {
             placeholder='Enter email address or phone number”'
             onChange={validateEmailPhoneInput} 
             className='input-boxes'
-            onBlur={handleBlur} />
+            onBlur={handleBlur}
+            autoComplete='email'
+            />
             </label>
-            {validationError && <p className="error-message" style={{color: 'red'}} >{validationError}</p>}
+          {validationError && <p style={{color: 'red'}}>{validationError}</p>}
             <label>
             <input type="password"
             name="pswd1" id="pswd1"
@@ -261,11 +265,12 @@ const Signup = () => {
             /> I agree to the <Link to="/" id="highlight">terms & conditions</Link>
           </label>
           <br/>
+          {message && <p style={{color: 'red'}}>{message}</p>}
           <br/>
-          <input 
-           type="submit"
-           value="Sign up" 
-           className='sign-up-btn' />
+           <button type='submit'
+           className='sign-up-btn'>
+            Sign Up
+           </button>
         </form>
         <p className="or">OR</p>
         <button type="button" className='google-btn'>Continue with Google <img src={googleIcon} alt="google icon" className='google_icon' /></button>

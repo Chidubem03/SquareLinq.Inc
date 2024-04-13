@@ -121,6 +121,9 @@ form p {
     color: #fff;
     font-family: 'Gluten';
 }
+.sign-up-btn:active {
+    background: #34076e;
+}
 
     /* Google-button */
 .google-btn {
