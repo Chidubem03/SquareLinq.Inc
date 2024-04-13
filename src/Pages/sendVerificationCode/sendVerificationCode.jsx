@@ -1,27 +1,9 @@
 import slides from '../Images/slider-img.png';
 import leftsideImg from '../Images/leftside-img.png';
 import shineLogo from '../Images/shineLogo.png';
-import "./SendVerificationCode.css";
-//import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-//import { useLocation } from 'react-router-dom';
+import "./sendVerificationCode.css";
 
 function SendVerificationCode() {
-
-    const handleClick = (e) =>{
-        e.preventDefault();
-        if(document.getElementById('email').checked){
-           window.location.pathname = '/verifyemail';
-            return true;
-           
-        }
-        else if(document.getElementById('phone').checked){
-            return true;
-        }
-        else{
-            alert('Check one of the boxes');
-            return false;
-        }
-    }
 
     return (
         <div className="sendVerification-container">
@@ -48,18 +30,19 @@ function SendVerificationCode() {
                 <p className="rightside-paragraph">
                     Select where you would like your verification code to be sent
                 </p>
-                <form action='#'>
+                <form action="Post">
 
                     <label htmlFor="email">
-                        <input type="radio" name='verify' value='Email' id='email' required='required'/>
+                        <input type="radio" name='verify' value='Email' />
                         Email address
                     </label>
 
                     <label htmlFor="number">
-                        <input type="radio" name='verify' value='Phone No' id='phone' required='required'/>
+                        <input type="radio" name='verify' value='Phone No'/>
                         Phone Number
                     </label>
-                   <button onClick={handleClick} >Send code</button>
+
+                    <button>Send code</button>
                 </form>
             </div>
         </div>
