@@ -1,0 +1,118 @@
+/* fonts */
+
+p {
+  font-family: "Apercu";
+}
+/* code below styles the interactive-sec container on the sign up page */
+
+.reset-phone-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 570px;
+}
+
+.reset-phone-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-phone-hero {
+  background: url("../Images/verify_img.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.reset-phone-hero h1 {
+  color: #fff;
+  margin-block: 20px;
+  font-family: "Gluten";
+  font-size: 30px;
+}
+.reset-phone-hero p {
+  font-weight: 200;
+  font-size: 16px;
+
+  min-height: 120px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-block: 10px;
+  background-color: black;
+}
+.reset-phone-hero > div {
+  position: relative;
+  top: 17%;
+  padding: 20px;
+}
+
+.reset-phone-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  max-height: 274px;
+  flex-direction: column;
+}
+.reset-phone-main-container p {
+  font-size: 14px;
+}
+.shine-logo {
+  position: relative;
+  width: 53.33px;
+  height: 49.28px;
+  transform: translate(-37px, -12px) rotate(13.52deg);
+}
+.phone-input-container {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0 30px -20px;
+}
+
+.country-flag {
+  width: 50px;
+  height: 30px;
+  border: 1px solid gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+.flag-img {
+  width: 25px;
+  height: 25px;
+}
+.country-code {
+  padding: 3px;
+}
+.county-phone-number-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid gainsboro;
+  width: 170px;
+  border-radius: 5px;
+}
+.phone-number-1 {
+  border-left: 1px solid gainsboro;
+  height: 20px;
+}
+.phone-input {
+  width: 110px;
+  font-size: 16px;
+  padding-left: 5px;
+  border: none;
+  outline: none;
+}
+.reset-phone-btn {
+  padding: 13px 43px;
+  border-radius: 30px;
+  background-color: #9747ff;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+.select-country{position: absolute;top: 50%; width: 250px;;background-color: black;height: 30px;}
+.select-main-article{display: flex;justify-content: space-between;align-items: center;}

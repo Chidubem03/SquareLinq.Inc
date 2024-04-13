@@ -1,47 +1,49 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import NavBar from './NavBar';
+//import NavBar from './NavBar';
 import Landing from './Pages/Landing/Landing';
-import Footer from './Pages/Landing/Footer';
+//import Footer from './Pages/Landing/Footer';
 import Signup from './Pages/signup/Signup';
 import NavBar from './NavBar';
-import Landing from './Pages/Landing/Landing';
+//import Landing from './Pages/Landing/Landing';
 import Footer from './Pages/Footer/Footer';
 import VerifyEmail from './Pages/Verification/VerifyEmail';
-import SendVerificationCode from './Pages/sendVerificationCode/sendVerificationCode';
+//import SendVerificationCode from './Pages/sendVerificationCode/sendVerificationCode';
 import Preloader from './Pages/Preloader/Preloader';
 import VerificationComplete from './Pages/VerificationComplete/VerifyComplete';
+import RequestPhone from './Pages/RequestPhone/RequestPhone';
 
 
 function App() {
   
   return (
-  <div className="App">
+    <div className="App">
       <Router>
-      <NavBar /> 
+        <NavBar />
         <Switch>
-          <Route exact path='/'>
+          <Route exact path="/">
             <Landing />
           </Route>
 
           <Route exact path="/Signup">
-          <Signup />
+            <Signup />
           </Route>
-          <Route path='/preloader'>
+          <Route path="/preloader">
             <Preloader />
           </Route>
-        <Route exact path = '/verifyemail'>
-          <VerifyEmail />
-        </Route>
-        <Route path="/verification">
-          <SendVerificationCode />
-        </Route>
-        <Route path='/completed'>
-          <VerificationComplete />
-        </Route>
-        </Switch> 
-         <Footer />
+          <Route exact path="/verifyemail">
+            <VerifyEmail />
+          </Route>
+          <Route path="/verification">{/**  <SendVerificationCode />*/}</Route>
+          <Route path="/completed">
+            <VerificationComplete />
+          </Route>
+          <Route path="/request-phone">
+            <RequestPhone/>
+          </Route>
+        </Switch>
+        <Footer />
       </Router>
-  </div>
+    </div>
   );
 }
 
