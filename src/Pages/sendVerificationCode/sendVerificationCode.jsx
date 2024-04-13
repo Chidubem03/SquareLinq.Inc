@@ -58,7 +58,7 @@ function SendVerificationCode() {
                         Phone Number
                     </label>
 
-                    <button>Send code</button>
+                    <button onClick={handleClick}>Send code</button>
                 </form>
             </div>
         </div>
