@@ -35,6 +35,7 @@ console.log(requestedPhoneNo)
 
   return (
     <section className="reset-phone-container">
+      {/**Hero container for the  bacgroung image */}
       <article className="reset-phone-hero">
         <div className="reset-phone-overlay">
           <div>
@@ -51,6 +52,7 @@ console.log(requestedPhoneNo)
           </div>
         </div>
       </article>
+      {/**container for the phone request */}
       <article className="reset-phone-main">
         <main className="reset-phone-main-container">
           <div>
@@ -63,7 +65,9 @@ console.log(requestedPhoneNo)
           <div className="phone-input-container">
             <div
               className="country-flag"
+           
               onClick={() => {
+                //showing and hiding of the select country container
                 setIsShowCountries(!isShowCountries);
               }}
             >
