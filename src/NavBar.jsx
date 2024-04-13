@@ -7,10 +7,20 @@ import './index.css'
 
 const NavBar = () => {
   const location = useLocation();
-  const isSignupPage = location.pathname === '/Signup';
+  const isSignuppages = () =>{
+    const isSignupPage = location.pathname === '/Signup';
+    const isVerifyemailPage = location.pathname === '/verifyemail';
+    const isVerificationcompletePage = location.pathname === '/completed';
+    const isSendverificationcodePage = location.pathname === '/verification';
+    const isPreloaderPage = location.pathname === '/preloader';
+    return(
+      isSignupPage, isVerifyemailPage, isVerificationcompletePage, isSendverificationcodePage, isPreloaderPage
+    );
+  }
+  const isLandingPage = location.pathname === '/';
 
   return (
-    <div className={`navbar ${isSignupPage ? 'hidden' : ''}`}>  {/* Apply class based on route */}
+    <div className={`${isSignuppages ? 'hidden' : 'navbar'}, ${isLandingPage ? 'navbar' : 'hidden'}`}>  {/* Apply class based on route */}
       <div className="leftside">
         <img src={logo} alt="squarelinq-logo" className='Img1' />
         <img src={squareLinq} alt="squarelinq" className='Img2' />

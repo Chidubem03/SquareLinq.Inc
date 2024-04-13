@@ -2,15 +2,20 @@ import "./Footer.css";
 import Logo from "../Images/Logo.png";
 import SignUpButton from "../Images/signupbutton.png";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 
 const Footer = () => {
+//Getting rid of the footer page, when the preloader page is loading
+  const location = useLocation();
+  const isPreloaderPage = location.pathname === '/preloader';
 
   // Getting the current year..................
   const currentYear = new Date().getFullYear();
   ///////////////////////////////////////////////////
 
     return (
+      <div className={` ${isPreloaderPage ? 'hidden' : ''}`}>
         <div className="footer-section">
     
     <div className="footer-section_Inner">
@@ -59,6 +64,7 @@ const Footer = () => {
           </div>
 
     </div>
+        </div>
         </div>
       );
 }

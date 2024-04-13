@@ -4,6 +4,22 @@ import shineLogo from '../Images/shineLogo.png';
 import "./SendVerificationCode.css";
 
 function SendVerificationCode() {
+// This Logic is to redirect the user to the respective page thhat is linked to each input[type:radio] buttons
+    const handleClick = (e) =>{
+        e.preventDefault();
+        if(document.getElementById('email').checked){
+           window.location.pathname = '/verifyemail';
+            return true;
+           
+        }
+        else if(document.getElementById('phone').checked){
+            return true;
+        }
+        else{
+            alert('Check one of the boxes');
+            return false;
+        }
+    }
 
     return (
         <div className="sendVerification-container">
@@ -42,7 +58,7 @@ function SendVerificationCode() {
                         Phone Number
                     </label>
 
-                    <button>Send code</button>
+                    <button onClick={handleClick}>Send code</button>
                 </form>
             </div>
         </div>

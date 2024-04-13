@@ -45,7 +45,7 @@ const Signup = () => {
         let type = null;
     
         // Email validation
-        const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+        const emailRegex = /^[\w-]+@[a-zA-Z\d-]+\.[a-zA-Z]{2,}$/;
         if (emailRegex.test(value)) {
           setIsValid(true);
           type = 'email';
@@ -127,15 +127,15 @@ const Signup = () => {
   
   
 // code below will check if created password is same as comfirm password
-  const comfirmPassword = useRef(null)
+  const confirmPassword = useRef(null)
   const [password2, setPassword2] = useState('')
 
   function handleConfirmPassword() {
-    let pswd = comfirmPassword.current.value;
+    let pswd = confirmPassword.current.value;
     setPassword2(pswd);
     console.log(pswd)
     if(pswd === password) {
-      console.log('where good to go');
+      console.log('we are good to go');
     } else {
       console.log('not the same');
       return false;
@@ -245,7 +245,7 @@ const Signup = () => {
             id="password2" 
             placeholder='Confirm Password' 
             className='input-boxes' 
-            ref={comfirmPassword}
+            ref={confirmPassword}
             value={password2}
             onChange={handleConfirmPassword}
             />
