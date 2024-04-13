@@ -34,10 +34,10 @@ console.log(requestedPhoneNo)
 }
 
   return (
-    <section className="reset-phone-container">
+    <section className="request-phone-container">
       {/**Hero container for the  bacgroung image */}
-      <article className="reset-phone-hero">
-        <div className="reset-phone-overlay">
+      <article className="request-phone-hero">
+        <div className="request-phone-overlay">
           <div className="hero-title">
             <h1>
               Professional{" "}
@@ -53,8 +53,8 @@ console.log(requestedPhoneNo)
         </div>
       </article>
       {/**container for the phone request */}
-      <article className="reset-phone-main">
-        <main className="reset-phone-main-container">
+      <article className="request-phone-main">
+        <main className="request-phone-main-container">
           <div>
             <h2>Enter your phone number</h2>
             <p>
@@ -121,7 +121,7 @@ console.log(requestedPhoneNo)
             </div>
           </div>
           {/**next button */}
-          <button className=" reset-phone-btn" onClick={handleNext}>
+          <button className=" request-phone-btn" onClick={handleNext}>
             Next
           </button>
         </main>
