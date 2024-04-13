@@ -49,12 +49,12 @@ function SendVerificationCode() {
                 <form action="Post">
 
                     <label htmlFor="email">
-                        <input type="radio" name='verify' value='Email' />
+                        <input type="radio" name='verify' value='Email' id='email' />
                         Email address
                     </label>
 
                     <label htmlFor="number">
-                        <input type="radio" name='verify' value='Phone No'/>
+                        <input type="radio" name='verify' value='Phone No' id='phone'/>
                         Phone Number
                     </label>
 
