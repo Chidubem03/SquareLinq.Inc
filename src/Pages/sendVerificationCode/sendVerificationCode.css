@@ -2,6 +2,7 @@
 .sendVerification-container{
     position: relative;
     min-height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     max-width: 100%;
@@ -12,7 +13,7 @@
     position: relative;
     display: flex;
     width: 50%;
-    height: 90vh;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     

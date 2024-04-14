@@ -1,5 +1,5 @@
 .containerInner{
-    height: calc(100vh - 125px);
+    height: 100vh;
     width: auto;
     margin-bottom: 30px;
     display: flex;
@@ -71,7 +71,7 @@ left: 30px;
 .inputs{
   width: 30px;
   height: 35px;
-  -webkit-appearance: none;
+  
 
 }
 

@@ -13,6 +13,7 @@ function SendVerificationCode() {
            
         }
         else if(document.getElementById('phone').checked){
+            window.location.pathname = '/request-phone';
             return true;
         }
         else{
