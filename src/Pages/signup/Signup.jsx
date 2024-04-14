@@ -3,7 +3,8 @@ import shineLogo from '../Images/shineLogo.png';
 import googleIcon from '../Images/google_icon.png';
 import cancel from '../Images/cancel.svg';
 import checked from '../Images/checked.svg';
-// import SendVerificationCode from '../sendVerificationCode/sendVerificationCode';
+import eyeOpen from '../Images/eye-open.svg';
+import eyeClose from '../Images/eye-close.svg';
 import './signup.css';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 
@@ -139,7 +140,6 @@ const Signup = () => {
   function handleConfirmPassword() {
     let pswd = confirmPassword.current.value;
     setPassword2(pswd);
-    console.log(pswd)
     if(pswd === password) {
     } else {
       return false;
@@ -161,26 +161,43 @@ const Signup = () => {
     if(username.length < 4 || username === '') {
       e.preventDefault();
       setMessage('user name must be greater or equal to 3 characters')
+      return false;
     } 
     if(isValid === false) {
       e.preventDefault();
       setMessage('please enter a valid email address')
+      return false;
     }
     if (passWordIsValid) {
       e.preventDefault();
       setMessage('passwords is not valid')
+      return false;
     }
     if(password2 !== password) {
       e.preventDefault()
       setMessage('passwords do not match')
+      return false;
     }
     if(!isChecked){
       e.preventDefault();
-      console.error(isChecked, 'is not ticked')
       setMessage('please tick the terms and condition box');
+      return false;
     }
+
    }
-   
+
+   // the reveal and close password function
+
+   const [isPasswordVisible, setIsPasswordVisible] = useState(true);
+
+   const changePassWordType = () => {
+     setIsPasswordVisible((isPasswordVisible) => {
+      return isPasswordVisible = !isPasswordVisible;
+     });
+   };
+ 
+
+
   return (
     <div id="sign-up-container">
       <div className='con interactive-sec'>
@@ -222,14 +239,22 @@ const Signup = () => {
             />
             </label>
           {validationError && <p style={{color: 'red'}}>{validationError}</p>}
-            <label>
-            <input type="password"
-            name="pswd1" id="pswd1"
+            <label className='input-boxes'>
+            <input 
+            type={isPasswordVisible ? 'password' : 'text'}
+            name="pswd1" 
+            id="pswd1"
             placeholder='Create a password' 
-            className='input-boxes'
+            className='input-box'
             value={password}
             onChange={handlePassWord}
             onInput={() => validatePasswordInput(password)}
+            />
+            <img 
+             src={isPasswordVisible ? eyeClose : eyeOpen}
+            className='password-icon' 
+            alt="" 
+            onClick={()=>changePassWordType()}
             />
             </label>
             { isPassWordValid &&
@@ -242,16 +267,22 @@ const Signup = () => {
               <p><img src={check4} className='checkedIcon' alt="" />Password must not include white space. but in exception replace them with underscores "_".</p>
               </div>
             </div>}
-            <label>
+            <label className='input-boxes'>
             <input 
-            type="password" 
+            type={isPasswordVisible ? 'password' : 'text'} 
             name="password2" 
             id="password2" 
             placeholder='Confirm Password' 
-            className='input-boxes' 
-            ref={confirmPassword}
+            className='input-box'
             value={password2}
+            ref={confirmPassword}
             onChange={handleConfirmPassword}
+            />
+            <img 
+            src={isPasswordVisible ? eyeClose : eyeOpen}
+            className='password-icon' 
+            alt=""
+            onClick={()=>changePassWordType()}
             />
             </label>
           </div>
