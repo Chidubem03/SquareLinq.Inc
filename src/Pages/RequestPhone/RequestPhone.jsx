@@ -1,5 +1,5 @@
 import React from "react";
-import "../RequestPhone/requestPhone.css";
+import "./requestPhone.css";
 import shineLogo from "../Images/shineLogo.png";
 import { useCountries } from "use-react-countries";
 import { RiArrowDownSLine } from "react-icons/ri";
@@ -9,11 +9,11 @@ const RequestPhone = () => {
   const { countries } = useCountries();
   const [country, setCountry] = React.useState(0);
   const [isShowCountries, setIsShowCountries] = React.useState(false);
-  const [phoneNo, setPhoneNo] = React.useState("");
+  const [phoneNo, setPhoneNo] = React.useState(" ");
   const { name, flags, countryCallingCode } = countries[country];
 
   //handling section if any of the country listed is clicked
-  const handleSeclection = (index) => {
+  const handleSelection = (index) => {
     //setting the selected country
     setCountry(index);
     //hiding the select country container
@@ -35,7 +35,7 @@ console.log(requestedPhoneNo)
 
   return (
     <section className="request-phone-container">
-      {/**Hero container for the  bacgroung image */}
+      {/**Hero container for the  background image */}
       <article className="request-phone-hero">
         <div className="request-phone-overlay">
           <div className="hero-title">
@@ -65,6 +65,9 @@ console.log(requestedPhoneNo)
           <div className="phone-input-container">
             <div
               className="country-flag"
+              style={{
+                cursor: "pointer"
+              }}
            
               onClick={() => {
                 //showing and hiding of the select country container
@@ -88,7 +91,7 @@ console.log(requestedPhoneNo)
                     <main
                       key={name}
                       className="select-main-article"
-                      onClick={() => handleSeclection(index)}
+                      onClick={() => handleSelection(index)}
                     >
                       <div className="selet-flag-country-1">
                         <img
@@ -121,7 +124,7 @@ console.log(requestedPhoneNo)
             </div>
           </div>
           {/**next button */}
-          <button className=" request-phone-btn" onClick={handleNext}>
+          <button className=" request-phone-btn" style={{ cursor: "pointer"}} onClick={handleNext}>
             Next
           </button>
         </main>

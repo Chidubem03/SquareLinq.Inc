@@ -6,16 +6,28 @@ import { useLocation } from 'react-router-dom';
 
 
 const Footer = () => {
-//Getting rid of the footer page, when the preloader page is loading
+
+//Getting rid of the footer page, when the other pages aside from the landing page is loading
   const location = useLocation();
-  const isPreloaderPage = location.pathname === '/preloader';
+  const isLandingPage = location.pathname === '/';
+  const isSignuppages = () =>{
+    const isSignupPage = location.pathname === '/Signup';
+    const isVerifyemailPage = location.pathname === '/verifyemail';
+    const isVerificationcompletePage = location.pathname === '/completed';
+    const isSendverificationcodePage = location.pathname === '/verification';
+    const isPreloaderPage = location.pathname === '/preloader';
+    return(
+      isSignupPage, isVerifyemailPage, isVerificationcompletePage, isSendverificationcodePage, isPreloaderPage
+    );
+  }
+
 
   // Getting the current year..................
   const currentYear = new Date().getFullYear();
   ///////////////////////////////////////////////////
 
     return (
-      <div className={` ${isPreloaderPage ? 'hidden' : ''}`}>
+      <div className={` ${isSignuppages ? 'hidden' : ''}, ${isLandingPage ? 'footer-section' : 'hidden'}`}>
         <div className="footer-section">
     
     <div className="footer-section_Inner">
@@ -41,7 +53,7 @@ const Footer = () => {
             <div className="footer-section_InnerTop3 footer-top"> 
             
             <div className="footer-section_InnerTop3Inner">
-           <Link to="#"><img src={SignUpButton} alt="sign-up" /></Link>
+           <Link to="/Signup"><img src={SignUpButton} alt="sign-up" /></Link>
             
             </div>
             </div>
@@ -62,7 +74,6 @@ const Footer = () => {
                 
             </div>
           </div>
-
     </div>
         </div>
         </div>
