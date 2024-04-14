@@ -195,6 +195,13 @@ const Signup = () => {
       return isPasswordVisible = !isPasswordVisible;
      });
    };
+  //  handleClick, when a user clicks the signUp btn he gets redirected to the sendVerificaionCode page
+   const handleClick = (e) =>{
+    e.preventDefault();
+    return(
+      window.location.pathname = '/verification'
+    );
+   }
  
 
 
@@ -298,7 +305,11 @@ const Signup = () => {
           <br/>
           {message && <p style={{color: 'red'}}>{message}</p>}
           <br/>
-           <button type='submit'
+           <button
+           onClick={
+            handleClick
+           }
+           type='submit'
            className='sign-up-btn'>
             Sign Up
            </button>
