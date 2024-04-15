@@ -20,18 +20,24 @@ const RequestPhone = () => {
     setIsShowCountries(false);
   };
 
-
   //handling the next button
-const handleNext=()=>{
+  const handleNext = () => {
+    //concating the country code and the inputed phoneno
 
-  //concating the country code and the inputed phoneno
-  const requestedPhoneNo = countryCallingCode.concat(phoneNo);
+    const requestedPhoneNo = countryCallingCode.concat(phoneNo);
 
-console.log(requestedPhoneNo)
+    console.log(requestedPhoneNo);
+  };
 
+  const handleChange = (e) => {
+    const input = e.target.value;
+    // removing any letter and character and replacing it with " "
+    const numInput = input.replace(/\D/g, "");
 
-
-}
+    // slice the input if it exceeds 10 characters
+    const slicedInput = numInput.slice(0, 10);
+    setPhoneNo(slicedInput);
+  };
 
   return (
     <section className="request-phone-container">
@@ -66,9 +72,8 @@ console.log(requestedPhoneNo)
             <div
               className="country-flag"
               style={{
-                cursor: "pointer"
+                cursor: "pointer",
               }}
-           
               onClick={() => {
                 //showing and hiding of the select country container
                 setIsShowCountries(!isShowCountries);
@@ -114,17 +119,24 @@ console.log(requestedPhoneNo)
               {/**phone number input */}
               <span className="phone-number-1">
                 <input
-                  type="text"
+                  type="tel"
                   placeholder="Phone Number"
                   className="phone-input"
                   value={phoneNo}
-                  onChange={(e) => setPhoneNo(e.target.value)}
+                  onChange={(e) => {
+                    handleChange(e);
+                  }}
+                  autoFocus={true}
                 />
               </span>
             </div>
           </div>
           {/**next button */}
-          <button className=" request-phone-btn" style={{ cursor: "pointer"}} onClick={handleNext}>
+          <button
+            className=" request-phone-btn"
+            style={{ cursor: "pointer" }}
+            onClick={handleNext}
+          >
             Next
           </button>
         </main>
