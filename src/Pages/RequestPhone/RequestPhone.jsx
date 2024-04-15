@@ -23,7 +23,7 @@ const RequestPhone = () => {
   //handling the next button
   const handleNext = () => {
     //concating the country code and the inputed phoneno
-    phonenumber(phoneNo);
+
     const requestedPhoneNo = countryCallingCode.concat(phoneNo);
 
     console.log(requestedPhoneNo);
