@@ -154,38 +154,37 @@ const Signup = () => {
     })
    }
 
-   // handle submit 
    const [message, setMessage] = useState(null);
+
    const handleSubmit = (e) => {
-  
-    if(username.length < 4 || username === '') {
-      e.preventDefault();
-      setMessage('user name must be greater or equal to 3 characters')
-      return false;
-    } 
-    if(isValid === false) {
-      e.preventDefault();
-      setMessage('please enter a valid email address')
-      return false;
-    }
-    if (passWordIsValid) {
-      e.preventDefault();
-      setMessage('passwords is not valid')
-      return false;
-    }
-    if(password2 !== password) {
-      e.preventDefault()
-      setMessage('passwords do not match')
-      return false;
-    }
-    if(!isChecked){
-      e.preventDefault();
-      setMessage('please tick the terms and condition box');
-      return false;
-    }
-
-   }
-
+     e.preventDefault(); // Prevent default form submission
+   
+     // Validation checks
+     let isValid = true; // Assuming you have a function to validate email
+     if (username.length < 4 || username === '') {
+       setMessage('Username must be at least 4 characters long');
+       isValid = false;
+     } else if (!isValid) { // Assuming you have an email validation function
+       setMessage('Please enter a valid email address');
+       isValid = false;
+     } else if (passWordIsValid) { // Assuming you have a password validation function
+       setMessage('Password is not valid');
+       isValid = false;
+     } else if (password2 !== password) {
+       setMessage('Passwords do not match');
+       isValid = false;
+     } else if (!isChecked) {
+       setMessage('Please accept the terms and conditions');
+       isValid = false;
+     }
+   
+     // Submit form only if all conditions are met
+     if (isValid) {
+       setMessage(null); // Clear any previous error messages
+       window.location.pathname = '/verification'; // Redirect to verification page
+     }
+   };
+   
    // the reveal and close password function
 
    const [isPasswordVisible, setIsPasswordVisible] = useState(true);
@@ -196,12 +195,12 @@ const Signup = () => {
      });
    };
   //  handleClick, when a user clicks the signUp btn he gets redirected to the sendVerificaionCode page
-   const handleClick = (e) =>{
-    e.preventDefault();
-    return(
-      window.location.pathname = '/verification'
-    );
-   }
+  //  const handleClick = (e) => {
+  //   e.preventDefault();
+  //   return(
+  //     window.location.pathname = '/verification'
+  //   );
+  //  }
  
 
 
@@ -306,9 +305,6 @@ const Signup = () => {
           {message && <p style={{color: 'red'}}>{message}</p>}
           <br/>
            <button
-           onClick={
-            handleClick
-           }
            type='submit'
            className='sign-up-btn'>
             Sign Up
