@@ -15,7 +15,7 @@ import React from 'react';
       let allInputValues = "";
       ////////////////////////////////////////////////
 
-
+      
       if (inputs.length){
         //initial index position of inputs to focus
         let i = 0;
@@ -96,9 +96,13 @@ import React from 'react';
 
 
     render(){
-
+      var emailAddresss = localStorage.getItem('email-address');
+      const emailContent = document.getElementById('emailContent');
+      if(emailContent){
+        emailContent.innerHTML = emailAddresss;
+      }
+      
       return(
-
         <div className="container">
           <div className="containerInner">
             <div className="containerInnerLeft">
@@ -131,7 +135,7 @@ import React from 'react';
               <div className="containerInnerRightInner">
                 <div className="containerInnerRightInnerChild">
                     <section className="containerInnerRightInnerChild1"><h2>Verification Code Sent!</h2></section>
-                    <section className="containerInnerRightInnerChild2"><p>kindly check your email <Link>sharon@gmail.com</Link>  for the verification code</p></section>
+                    <section className="containerInnerRightInnerChild2"><p>kindly check your email <Link><span id='emailContent'></span></Link>  for the verification code</p></section>
                     <section className="containerInnerRightInnerChild3">
                          <input type="text" id="digit1"  class = "inputs" maxlength="1" />
                          <input type="text" id="digit2"  class = "inputs" maxlength="1" />
@@ -143,7 +147,7 @@ import React from 'react';
                     </section>
                          
                     <section className="containerInnerRightInnerChild4">
-                      <div><p>Switch to <Link>sharon@gmail.com</Link> </p></div>
+                      <div><p>Switch to <Link><span id='emailContent'></span></Link> </p></div>
                       <div><p> Resend in 04s</p></div>
                     </section>
   

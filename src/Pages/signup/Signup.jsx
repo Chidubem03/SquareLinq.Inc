@@ -10,7 +10,8 @@ import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 
 const Signup = () => {
-    
+
+
     // code below validates the username
     const [username, setUsername] = useState('');
     const [usernameError, setUsernameError] = useState(null);
@@ -158,7 +159,10 @@ const Signup = () => {
 
    const handleSubmit = (e) => {
      e.preventDefault(); // Prevent default form submission
-   
+
+    const emailAddressValue = document.getElementById('combined-input').value;
+    localStorage.setItem('email-address', emailAddressValue);
+
      // Validation checks
      let isValid = true; // Assuming you have a function to validate email
      if (username.length < 4 || username === '') {
@@ -183,6 +187,9 @@ const Signup = () => {
        setMessage(null); // Clear any previous error messages
        window.location.pathname = '/verification'; // Redirect to verification page
      }
+    
+    
+
    };
    
    // the reveal and close password function
@@ -306,7 +313,8 @@ const Signup = () => {
           <br/>
            <button
            type='submit'
-           className='sign-up-btn'>
+           className='sign-up-btn'
+          id='signUp'>
             Sign Up
            </button>
         </form>
