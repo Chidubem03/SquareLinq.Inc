@@ -35,56 +35,42 @@ const Signup = () => {
   
   // this code below handles the email and the phone number input box
   
-      const [emailAndPhoneValue, setemailAndPhoneValue] = useState('');
+      const [emailAndPhoneValue, setEmailAndPhoneValue] = useState('');
       const [inputType, setInputType] = useState(null); // Initially unknown
       const [validationError, setValidationError] = useState(null);
-    
-      const validateEmailPhoneInput = (event) => {
-        setemailAndPhoneValue(event.target.value);
-        setValidationError(null); // Clear any previous errors on change
-      };
-      const [isValid, setIsValid] = useState(false);
-      const validateInput = (value) => {
-        let type = null;
-    
-        // Email validation
-        const emailRegex = /^[\w-]+@[a-zA-Z\d-]+\.[a-zA-Z]{2,}$/;
-        if (emailRegex.test(value)) {
-          setIsValid(true);
-          type = 'email';
-        }
-    
-        // Phone number validation 
-        const phoneRegex = /^\d{10}$/; 
-        if (!isValid && phoneRegex.test(value)) {
-          setIsValid(true);
-          type = 'phone';
-        }
-        setInterval(()=> {
-          if (!isValid) {
-            setValidationError('')
-          } else if(isValid) {
-            setValidationError('Invalid input. Please enter a valid email address or phone number.');
-          }
-          else {
-            setInputType(type); // Set input type based on validation
-          }
-          
-          console.log(isValid);
-          return isValid;
-        }, 500)}
-      const handleBlur = () => {
-        validateInput(emailAndPhoneValue);
-      };
+      const [emailAndPhoneValid, setEmailAndPhoneValid] = useState(false)
 
+      const validateEmailPhoneInput = (event) => {
+        const result = event.type === 'paste' ? event.clipboardData.getData('text') : event.target.value;
+        setEmailAndPhoneValue(result);
+        setValidationError(null); // Clear any previous errors on change
+        validateInput(result); // Validate the input
+      };
+    
+      const validateInput = (value) => {
+        // Generic validation for email and phone
+        const emailOrPhoneRegex = /^([\w-]+@[a-zA-Z\d-]+\.[a-zA-Z]{2,})|(\d{10})$/;
+    
+        if (emailOrPhoneRegex.test(value)) {
+          setEmailAndPhoneValid(true);
+          setInputType(emailOrPhoneRegex.test(value) ? 'email' : 'phone');
+        } else {
+          setEmailAndPhoneValid(false);
+          setInputType(null);
+        }
+      }
+      
+        
       // The code below is responsible for validating password input
       const [password, setPassword] = useState('');
       let [passWordIsValid, setPassWordIsValid] = useState(false);
       const [isPassWordValid, setIsPasswordValid] = useState(false);
 
       const handlePassWord = (event) => {
-        setPassword(event.target.value);
+        const result = event.type === 'paste' ? event.clipboardData.getData('text') : event.target.value;
+        setPassword(result);
         setIsPasswordValid(true);
+        validatePasswordInput(result);
       }
 
       const [check1, setCheck1] = useState(cancel);
@@ -108,7 +94,7 @@ const Signup = () => {
   const validatePasswordInput = (password) => {
     const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@_$!%*?&]{8,}$/; // Regular expression for validation
      passWordIsValid = regex.test(password);
-    setPassWordIsValid(passWordIsValid);
+     setPassWordIsValid(passWordIsValid);
 
     if (!passWordIsValid) {
       if (!password.match(/[A-Z]/)) {
@@ -118,7 +104,7 @@ const Signup = () => {
         setCheck1(checked)
       }
       if (!password.match(/\d/) && !password.match(/[@$!%*?&]/) && !password.match(/[a-z]/)) {
-        // No need to set check2 here, it's already invalid
+        setCheck2(cancel)
       } else {
         // Password contains at least one number, special character or lowercase letter
         setCheck2(checked); // Assuming 'checked' represents a valid state
@@ -130,7 +116,7 @@ const Signup = () => {
         setCheck4(checked)
       }
     }
-    return passWordIsValid;
+    return isPassWordValid;
   };
   
   
@@ -158,7 +144,7 @@ const Signup = () => {
    const [message, setMessage] = useState(null);
 
    const handleSubmit = (e) => {
-     e.preventDefault(); // Prevent default form submission
+      // Prevent default form submission
 
     const emailAddressValue = document.getElementById('combined-input').value;
     localStorage.setItem('email-address', emailAddressValue);
@@ -167,18 +153,23 @@ const Signup = () => {
      let isValid = true; // Assuming you have a function to validate email
      if (username.length < 4 || username === '') {
        setMessage('Username must be at least 4 characters long');
+       e.preventDefault();
        isValid = false;
-     } else if (!isValid) { // Assuming you have an email validation function
-       setMessage('Please enter a valid email address');
-       isValid = false;
-     } else if (passWordIsValid) { // Assuming you have a password validation function
+     } else if (!emailAndPhoneValid) { // Assuming you have an email validation function
+       setMessage('Please enter a valid email address or a valid phone number');
+       e.preventDefault();
+       return false
+     } else if (!isPassWordValid) { // Assuming you have a password validation function
        setMessage('Password is not valid');
+       e.preventDefault();
        isValid = false;
      } else if (password2 !== password) {
        setMessage('Passwords do not match');
+       e.preventDefault();
        isValid = false;
      } else if (!isChecked) {
        setMessage('Please accept the terms and conditions');
+       e.preventDefault();
        isValid = false;
      }
    
@@ -188,8 +179,6 @@ const Signup = () => {
        window.location.pathname = '/verification'; // Redirect to verification page
      }
     
-    
-
    };
    
    // the reveal and close password function
@@ -201,15 +190,6 @@ const Signup = () => {
       return isPasswordVisible = !isPasswordVisible;
      });
    };
-  //  handleClick, when a user clicks the signUp btn he gets redirected to the sendVerificaionCode page
-  //  const handleClick = (e) => {
-  //   e.preventDefault();
-  //   return(
-  //     window.location.pathname = '/verification'
-  //   );
-  //  }
- 
-
 
   return (
     <div id="sign-up-container">
@@ -247,7 +227,6 @@ const Signup = () => {
             placeholder='Enter email address or phone number”'
             onChange={validateEmailPhoneInput} 
             className='input-boxes'
-            onBlur={handleBlur}
             autoComplete='email'
             />
             </label>
@@ -261,7 +240,6 @@ const Signup = () => {
             className='input-box'
             value={password}
             onChange={handlePassWord}
-            onInput={() => validatePasswordInput(password)}
             />
             <img 
              src={isPasswordVisible ? eyeClose : eyeOpen}
