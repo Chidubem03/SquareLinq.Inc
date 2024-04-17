@@ -32,8 +32,9 @@
 
 .containerInnerLeft_imgColorInner{
 position: absolute;
-top: 100px;
+top: 200px;
 left: 30px;
+gap: 1rem;
 
 }
 
@@ -44,10 +45,14 @@ left: 30px;
 }
 
 .containerInnerLeft_imgColorInner section p{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-weight: normal;
+    font-size: 17px;
     color: #fff;
-    font-family:'Courier New', Courier, monospace;
-    font-size: 13px;
-    line-height: 20px;
+    opacity: 0.6;
+    width: 90%;
+    line-height: 25px;
 
 }
 

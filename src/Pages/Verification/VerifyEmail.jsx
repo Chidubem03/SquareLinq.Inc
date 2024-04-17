@@ -100,13 +100,14 @@ class VerfyEmail extends React.Component {
                   <section>
                     <h2>Professional</h2>
                   </section>
-
+                  <br />
+                  <br />
                   <section>
                     <p>
                       Join a community of like minded people where you can free
-                      air you opinions, <br /> discuss new trends and shared
-                      interests. Interact with your friends, family, <br />{" "}
-                      colleagues and teammates <br /> as you strengthen the bond
+                      air you opinions, discuss new trends and shared
+                      interests. Interact with your friends, family,
+                      colleagues and teammates as you strengthen the bond
                       between one another...
                     </p>
                   </section>

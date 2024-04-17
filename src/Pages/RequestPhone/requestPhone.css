@@ -41,15 +41,17 @@ p {
   color: #fff;
   margin-block: 20px;
   font-family: "Gluten";
-  font-size: 30px;
+  font-size: 45px;
 }
 .request-phone-hero p {
-  font-weight: 200;
-  font-size: 16px;
-  min-height: 120px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-weight: normal;
+    font-size: 17px;
+    color: #fff;
+    opacity: 0.6;
+    width: 90%;
+    line-height: 25px;
 }
 .request-phone-hero > div {
   position: relative;
@@ -71,7 +73,7 @@ p {
   position: relative;
   width: 53.33px;
   height: 49.28px;
-  transform: translate(-37px, -12px) rotate(13.52deg);
+  transform: translate(-45px, -25px) rotate(13.52deg);
 }
 .phone-input-container {
   display: flex;

@@ -49,6 +49,7 @@ const RequestPhone = () => {
               Professional{" "}
               <img src={shineLogo} alt="shine logo" className="shine-logo" />{" "}
             </h1>
+            <br/>
             <p>
               Join a community of like minded people where you can free air you
               opinions, discuss new trends and shared interests. Interact with
