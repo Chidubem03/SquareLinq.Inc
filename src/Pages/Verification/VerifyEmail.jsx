@@ -126,7 +126,7 @@ class VerfyEmail extends React.Component {
                   <p>
                     kindly check your email{" "}
                     <Link>
-                      <span id="emailContent"></span>
+                      <span id="emailContent">{emailToverify}</span>
                     </Link>{" "}
                     for the verification code
                   </p>

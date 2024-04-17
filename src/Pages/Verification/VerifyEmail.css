@@ -1,13 +1,14 @@
 .containerInner{
     height: 100vh;
     width: auto;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: row;
 }
 
 .containerInnerLeft{
     flex: 1;
+    border: 2px solid #333;
 }
 
 .containerInnerRight{
@@ -18,6 +19,7 @@
 .containerInnerLeft_img{
     height: 100%;
     background-size:cover;
+    background-position: center;
     
 }
 

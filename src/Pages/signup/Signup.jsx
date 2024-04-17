@@ -145,7 +145,8 @@ const Signup = () => {
 
    const handleSubmit = (e) => {
       // Prevent default form submission
-
+      e.preventDefault();
+      // web storage of the emailInput value
     const emailAddressValue = document.getElementById('combined-input').value;
     localStorage.setItem('email-address', emailAddressValue);
 
@@ -178,8 +179,8 @@ const Signup = () => {
        setMessage(null); // Clear any previous error messages
        window.location.pathname = '/verification'; // Redirect to verification page
      }
-    
-   };
+    };
+   
    
    // the reveal and close password function
 
@@ -292,7 +293,10 @@ const Signup = () => {
            <button
            type='submit'
            className='sign-up-btn'
-          id='signUp'>
+          id='signUp'
+          style={{
+          cursor : 'pointer'
+          }}>
             Sign Up
            </button>
         </form>
