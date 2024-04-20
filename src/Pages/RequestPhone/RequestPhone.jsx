@@ -22,10 +22,11 @@ const RequestPhone = () => {
 
   //handling the next button
   const handleNext = () => {
+    window.location.pathname = "/verifyemail";
     //concating the country code and the inputed phoneno
-
     const requestedPhoneNo = countryCallingCode.concat(phoneNo);
-
+    localStorage.setItem('phone-no', requestedPhoneNo);
+    
     console.log(requestedPhoneNo);
   };
 

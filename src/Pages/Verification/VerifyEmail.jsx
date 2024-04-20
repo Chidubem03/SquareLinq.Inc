@@ -82,11 +82,24 @@ class VerfyEmail extends React.Component {
     var emailAddresss = localStorage.getItem("email-address");
     const emailToverify = emailAddresss || "";
 
-    //  const emailContent = document.getElementById('emailContent');
-    //  if(emailContent){
-    //    emailContent.innerHTML = emailAddresss;
-    //  }
+    var phoneNumber = localStorage.getItem("phone-no");
+    const phoneToverify = phoneNumber || "";
 
+    const rightContent =() =>{
+      if(document.referrer === 'https://localhost:3000/verification'){
+        return emailToverify;
+      }
+      else if(document.referrer ==='https://localhost:3000/request-phone'){
+        return phoneToverify
+      }
+    }
+     const emailContent = document.getElementById('emailContent');
+     if(emailContent){
+       emailContent.innerHTML = emailAddresss;
+     }
+    // const handleClick = () =>{
+    //   console.log(document.referrer)
+    // }
     return (
       <div className="container">
         <div className="containerInner">
@@ -127,7 +140,7 @@ class VerfyEmail extends React.Component {
                   <p>
                     kindly check your email{" "}
                     <Link>
-                      <span id="emailContent">{emailToverify}</span>
+                      <span id="emailContent">{rightContent}</span>
                     </Link>{" "}
                     for the verification code
                   </p>
@@ -146,7 +159,7 @@ class VerfyEmail extends React.Component {
                     <p>
                       Switch to{" "}
                       <Link>
-                        <span id="emailContent">{emailToverify}</span>
+                        <span id="emailContent">{rightContent}</span>
                       </Link>{" "}
                     </p>
                   </div>
@@ -156,7 +169,7 @@ class VerfyEmail extends React.Component {
                 </section>
 
                 <section className="containerInnerRightInnerChild5">
-                  <button>Verify</button>
+                 <button /*onClick={handleClick}*/>Verify</button> 
                 </section>
               </div>
             </div>
