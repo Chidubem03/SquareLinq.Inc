@@ -8,6 +8,7 @@ import SendVerificationCode from './Pages/sendVerificationCode/sendVerificationC
 import Preloader from './Pages/Preloader/Preloader';
 import VerificationComplete from './Pages/VerificationComplete/VerifyComplete';
 import RequestPhone from './Pages/RequestPhone/RequestPhone';
+import UserInvite from './Pages/userInvite/UserInvite';
 
 
 function App() {
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route exact path="/request-phone">
             <RequestPhone />
+          </Route>
+          <Route exact path="/UserInvite">
+            <UserInvite />
           </Route>
         </Switch>
         <Footer />

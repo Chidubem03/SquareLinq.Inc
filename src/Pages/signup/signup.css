@@ -52,11 +52,11 @@ h1 {
     top: 17%;
     padding: 20px;
 }
-.shine-logo {
+#shine-logo {
     position: relative;
     width: 53.33px;
     height: 49.28px;
-    transform: translate(-37px, -12px) rotate(13.52deg);
+    transform: translate(-45px, -27px) rotate(20.52deg);
 }
 /* the styling below is for the sign-up section of the sign up page */
 
@@ -215,4 +215,7 @@ text-align: center;
 .password-icon {
     cursor: pointer;
     height: 20px;
+}
+.sign-up-slider {
+    margin-top: 15px;
 }
