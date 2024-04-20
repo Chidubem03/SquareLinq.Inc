@@ -3,7 +3,7 @@ import shineLogo from "../Images/shineLogo.png";
 import tick from "../Images/tick.png";
 import slides from "../Images/VerifyComplete-slider.png";
 import "./VerifyComplete.css";
-import leftsideImg from "../Images/verifyCompletebgImage.png";
+import leftsideImg from "../Images/left-side-img.png";
 
 const VerifyComplete = () => {
     return ( 
