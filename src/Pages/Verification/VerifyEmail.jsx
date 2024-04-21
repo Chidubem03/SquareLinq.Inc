@@ -85,14 +85,15 @@ class VerfyEmail extends React.Component {
     var phoneNumber = localStorage.getItem("phone-no");
     const phoneToverify = phoneNumber || "";
 
-    const rightContent =() =>{
-      if(document.referrer === 'https://localhost:3000/verification'){
+    const rightContent = () => {
+      if (document.referrer == "http://localhost:3000/verification") {
         return emailToverify;
       }
-      else if(document.referrer ==='https://localhost:3000/request-phone'){
-        return phoneToverify
+      if (document.referrer == "http://localhost:3000/request-phone") {
+        return phoneToverify;
       }
-    }
+    };
+
     //  const emailContent = document.getElementById('emailContent');
     //  if(emailContent){
     //    emailContent.innerHTML = emailAddresss;
@@ -118,10 +119,10 @@ class VerfyEmail extends React.Component {
                   <section>
                     <p>
                       Join a community of like minded people where you can free
-                      air you opinions, discuss new trends and shared
-                      interests. Interact with your friends, family,
-                      colleagues and teammates as you strengthen the bond
-                      between one another...
+                      air you opinions, discuss new trends and shared interests.
+                      Interact with your friends, family, colleagues and
+                      teammates as you strengthen the bond between one
+                      another...
                     </p>
                   </section>
 
@@ -140,7 +141,7 @@ class VerfyEmail extends React.Component {
                   <p>
                     kindly check your email{" "}
                     <Link>
-                      <span id="emailContent">{rightContent}</span>
+                      <span id="emailContent">{rightContent()}</span>
                     </Link>{" "}
                     for the verification code
                   </p>
@@ -159,7 +160,7 @@ class VerfyEmail extends React.Component {
                     <p>
                       Switch to{" "}
                       <Link>
-                        <span id="emailContent">{rightContent}</span>
+                        <span id="emailContent">{rightContent()}</span>
                       </Link>{" "}
                     </p>
                   </div>
@@ -169,7 +170,7 @@ class VerfyEmail extends React.Component {
                 </section>
 
                 <section className="containerInnerRightInnerChild5">
-                 <button /*onClick={handleClick}*/>Verify</button> 
+                  <button /*onClick={handleClick}*/>Verify</button>
                 </section>
               </div>
             </div>
