@@ -98,6 +98,9 @@ border-radius: 5px;
 width: 450px;
 height: 40px;
 text-align: left;
+display: flex;
+align-items: center;
+padding: 0 5px;
 }
 .invite-inputs {
 width: 92%;
