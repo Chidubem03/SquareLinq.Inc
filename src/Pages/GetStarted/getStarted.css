@@ -50,7 +50,7 @@
 .getstarted-article {
   width: 340px;
   height: 390px;
-  background-color: aqua;
+ 
   display: flex;
   justify-content: start;
   align-items: center;
@@ -63,8 +63,9 @@
   width: 100%;
   padding: 10px;
 }
-.import-div p{color: #231942;
-;}
+.import-div p {
+  color: #231942;
+}
 
 .toggle {
   width: 60px;
@@ -80,7 +81,7 @@
   width: 30px;
   height: 17px;
   border-radius: 30px 0 0 30px;
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -91,21 +92,79 @@
   height: 100%;
   border-radius: 0 30px 30px 0;
   display: flex;
-   justify-content: center;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 .check-icon {
   color: white;
 }
-
- .getstarted-section h3{font-family: Gotham Black;
-font-size: 13px;
-font-weight: 800;
-line-height: 14.37px;
-color: #231942;
-
+.check-div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #231942;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.suggested-heading{display: flex;justify-content: start;align-items: start;width: 100%;padding: 10px;;}
 
-.suggested-img{}
+.getstarted-section h3 {
+  font-family: Gotham Black;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 14.37px;
+  color: #231942;
+  margin-bottom: 5px;
+}
+
+.suggested-div {
+  display: flex;
+
+  flex-direction: column;
+  width: 75%;
+  padding: 10px;
+}
+
+.suggested-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.suggested-article {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 10px;
+ 
+}
+
+.suggested-persion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.suggested-persion p {
+  font-family: Apercu;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.75px;
+  color: #231942;
+}
+
+.suggested-btn-div{display: flex;justify-content: center;align-items: center;}
+.suggested-btn{color: white;background-color:black;width: 136px;
+height: 39px;
+outline: none;
+border: none;
+
+border-radius: 30px;
+
+
+;}
+
+
+
+.skip-div{float: right;width: 100%;display: flex;justify-content: end;align-items: center;padding-right: 30px;}
+.skip-div p{color: violet;}
