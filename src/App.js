@@ -44,7 +44,7 @@ function App() {
             <UserInvite />
           </Route>
           <Route exact path="/getstarted">
-            <RequestPhone />
+            <GetStarted />
           </Route>
         </Switch>
         <Footer />
