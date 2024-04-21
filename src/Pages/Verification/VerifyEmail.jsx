@@ -93,10 +93,10 @@ class VerfyEmail extends React.Component {
         return phoneToverify
       }
     }
-     const emailContent = document.getElementById('emailContent');
-     if(emailContent){
-       emailContent.innerHTML = emailAddresss;
-     }
+    //  const emailContent = document.getElementById('emailContent');
+    //  if(emailContent){
+    //    emailContent.innerHTML = emailAddresss;
+    //  }
     // const handleClick = () =>{
     //   console.log(document.referrer)
     // }
