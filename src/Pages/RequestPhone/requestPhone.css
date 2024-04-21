@@ -167,3 +167,19 @@ p {
   height: 20px;
   margin-right: 3px;
 }
+.error{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 170px;
+  border-radius: 5px;
+  border: 1px solid red;
+}
+.confirm{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 170px;
+  border-radius: 5px;
+  border: 1px solid green;
+}

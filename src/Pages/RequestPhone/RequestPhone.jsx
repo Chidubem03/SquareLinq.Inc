@@ -19,10 +19,18 @@ const RequestPhone = () => {
     //hiding the select country container
     setIsShowCountries(false);
   };
-
+  // const phoneValue = document.querySelector('.phone-input');
   //handling the next button
-  const handleNext = () => {
+  const handleNext = (e) => {
+    e.preventDefault();
+    if (document.getElementById('phone-input').value.length > 9 && document.getElementById('phone-input').value.length < 11){
+    document.getElementById('county-phone-number-section').className = "confirm"
     window.location.pathname = "/verifyemail";
+    }
+    else{
+      document.getElementById('county-phone-number-section').className = "error";
+      alert('Provide a valid number');
+    }
     //concating the country code and the inputed phoneno
     const requestedPhoneNo = countryCallingCode.concat(phoneNo);
     localStorage.setItem('phone-no', requestedPhoneNo);
@@ -114,7 +122,7 @@ const RequestPhone = () => {
                 })}
               </article>
             </div>{" "}
-            <div className="county-phone-number-section">
+            <div className="county-phone-number-section" id="county-phone-number-section">
               <aside>
                 <span className="country-code">{countryCallingCode}</span>
               </aside>
@@ -124,6 +132,7 @@ const RequestPhone = () => {
                   type="tel"
                   placeholder="Phone Number"
                   className="phone-input"
+                  id="phone-input"
                   value={phoneNo}
                   onChange={(e) => {
                     handleChange(e);

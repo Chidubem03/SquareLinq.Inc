@@ -86,11 +86,19 @@ class VerfyEmail extends React.Component {
     const phoneToverify = phoneNumber || "";
 
     const rightContent = () => {
-      if (document.referrer == "http://localhost:3000/verification") {
+      if (document.referrer === "http://localhost:3000/verification") {
         return emailToverify;
       }
-      if (document.referrer == "http://localhost:3000/request-phone") {
+      if (document.referrer === "http://localhost:3000/request-phone") {
         return phoneToverify;
+      }
+    };
+    const leftContent = () => {
+      if (document.referrer === "http://localhost:3000/verification"){
+        return "email";
+      }
+      if (document.referrer === "http://localhost:3000/request-phone"){
+        return "phone No.";
       }
     };
 
@@ -139,7 +147,7 @@ class VerfyEmail extends React.Component {
                 </section>
                 <section className="containerInnerRightInnerChild2">
                   <p>
-                    kindly check your email{" "}
+                    kindly check your {leftContent()}{" "}
                     <Link>
                       <span id="emailContent">{rightContent()}</span>
                     </Link>{" "}
