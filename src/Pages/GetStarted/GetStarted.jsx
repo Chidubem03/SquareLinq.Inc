@@ -13,7 +13,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const GetStarted = () => {
   return (
-    <div id="getstarted-container">
+    <div className="getstarted-container">
       <div className="con interactive-sec">
         <div>
           <h1>
@@ -32,6 +32,17 @@ const GetStarted = () => {
       <section className="getstarted-section">
         <article className="getstarted-article">
           <h1>Start a convo now!</h1>
+          <p>
+            Import contacts and select friends to start your first conversation
+            with{" "}
+          </p>
+          <div>
+            <p>Import my contacts</p>
+            <div className="toggle">
+              <span className="close-x">X</span>
+              <span className="ok-x">v</span>
+            </div>
+          </div>
         </article>
       </section>
     </div>
