@@ -1,5 +1,4 @@
-
-import React from 'react'
+import React from "react";
 import shineLogo from "../Images/shineLogo.png";
 import googleIcon from "../Images/google_icon.png";
 import cancel from "../Images/cancel.svg";
@@ -7,7 +6,8 @@ import checked from "../Images/checked.svg";
 import eyeOpen from "../Images/eye-open.svg";
 import eyeClose from "../Images/eye-close.svg";
 import slider from "../Images/auth-pagination-slider.png";
-import "./getStarted.css"
+import "./getStarted.css";
+import { IoIosClose, IoIosCheckmark } from "react-icons/io";
 
 import { Link } from "react-router-dom/cjs/react-router-dom";
 
@@ -36,17 +36,17 @@ const GetStarted = () => {
             Import contacts and select friends to start your first conversation
             with{" "}
           </p>
-          <div>
+          <div className="import-div">
             <p>Import my contacts</p>
             <div className="toggle">
-              <span className="close-x">X</span>
-              <span className="ok-x">v</span>
+              <span className="close-x"><IoIosClose/></span>
+              <span className="ok-x"><IoIosCheckmark className="check-icon"/></span>
             </div>
           </div>
         </article>
       </section>
     </div>
   );
-}
+};
 
-export default GetStarted
+export default GetStarted;
