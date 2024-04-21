@@ -9,6 +9,7 @@ import Preloader from './Pages/Preloader/Preloader';
 import VerificationComplete from './Pages/VerificationComplete/VerifyComplete';
 import RequestPhone from './Pages/RequestPhone/RequestPhone';
 import UserInvite from './Pages/userInvite/UserInvite';
+import GetStarted from './Pages/GetStarted/GetStarted';
 
 
 function App() {
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route exact path="/UserInvite">
             <UserInvite />
+          </Route>
+          <Route exact path="/getstarted">
+            <RequestPhone />
           </Route>
         </Switch>
         <Footer />
