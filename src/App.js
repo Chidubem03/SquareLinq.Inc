@@ -10,7 +10,7 @@ import VerificationComplete from './Pages/VerificationComplete/VerifyComplete';
 import RequestPhone from './Pages/RequestPhone/RequestPhone';
 import UserInvite from './Pages/userInvite/UserInvite';
 import GetStarted from './Pages/GetStarted/GetStarted';
-
+import YourInterest from './Pages/yourInterest/YourInterest';
 
 function App() {
   
@@ -45,6 +45,9 @@ function App() {
           </Route>
           <Route exact path="/getstarted">
             <GetStarted />
+          </Route>
+          <Route exact path='/yourinterest'>
+            <YourInterest />
           </Route>
         </Switch>
         <Footer />

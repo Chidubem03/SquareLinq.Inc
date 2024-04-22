@@ -72,6 +72,10 @@ class VerfyEmail extends React.Component {
         //alert('invalid verfication code')
       } else {
         //Navigate to next page
+        inputs.forEach((input) => {
+          input.classList.add("confirmedCode");
+        });
+        inputs[0].focus();
       }
 
       allInputValues = "";
