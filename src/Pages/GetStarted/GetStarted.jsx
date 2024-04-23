@@ -1,14 +1,14 @@
 import React from "react";
 import shineLogo from "../Images/shineLogo.png";
-import googleIcon from "../Images/google_icon.png";
-import cancel from "../Images/cancel.svg";
-import checked from "../Images/checked.svg";
-import eyeOpen from "../Images/eye-open.svg";
-import eyeClose from "../Images/eye-close.svg";
+// import googleIcon from "../Images/google_icon.png";
+// import cancel from "../Images/cancel.svg";
+// import checked from "../Images/checked.svg";
+// import eyeOpen from "../Images/eye-open.svg";
+// import eyeClose from "../Images/eye-close.svg";
 import slider from "../Images/auth-pagination-slider.png";
 import "./getStarted.css";
 import { IoIosClose, IoIosCheckmark } from "react-icons/io";
-import { Link } from "react-router-dom/cjs/react-router-dom";
+// import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const GetStarted = () => {
   const suggestion = [
