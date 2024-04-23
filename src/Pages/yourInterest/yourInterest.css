@@ -20,7 +20,7 @@
 }
 .yourInterest-leftside .yourInterest-leftside_container{
     position: relative;
-    bottom: 6rem;
+    bottom: 9rem;
     left: 1rem;
     display: inherit;
     width: 100%;
@@ -34,8 +34,8 @@
 .yourInterest-leftside_container .shine{
     position: relative;
     width: 5%;
-    top: 3.6rem;
-    left: 9.1rem;
+    top: 6rem;
+    left: 11.6rem;
     transform: rotate(21deg);
 }
 .yourInterest-leftside_container .leftside-header{
@@ -66,79 +66,206 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: .6rem;
+    gap: .4rem;
     width: 50%;
     border: 2px solid #333;
     height: 100vh;
     background: transparent;
 }
-.yourInterest-rightside .rightside-header{
+.yourInterest-rightside .yourInterest-rightside_content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    gap: 0rem;
+}
+.yourInterest-rightside_content .rightside-header{
     position: relative;
     font-weight: 800;
     font-family: 'Times New Roman', Times, serif;
     font-size: 21px;
     color: rgb(21, 14, 59);
+    margin: 0;
 }
 
-.yourInterest-rightside .rightside-paragraph{
+.yourInterest-rightside_content .rightside-paragraph{
     font-weight: normal;
     font-size: 11px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: rgba(71, 82, 82, 0.603);
+    color: rgba(71, 75, 75, 0.603);
+    width: 70%;
+    text-align: center;
+    margin: 0;
 }
-.yourInterest-rightside form{
+form{
+    position: relative;
     width: 100%;
-    height: 40%;
-    justify-content: center;align-items: center;
-    gap: 1rem;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
 }
 form .tags{
     position: relative;
+    width: 100%;
+    max-height: 60;
+    display: flex;
+    place-items: center;
+}
+form .tags .tags-content{
+    position: relative;
+    left: -6rem;
+    max-height: 80%; 
     width: 50%;
     display: grid;
+    place-items: left;
     grid-template-columns: repeat(4, 1fr);
-    gap: .4rem;
+    gap: .5rem;
 }
-form .tags label{
-    border-radius: 20px;
-    width: calc(font-size * 2.5);
+form .tags .tags-content label.check{
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 11px;
     color: #fff;
-    background: rgb(243, 154, 243);
+    background: rgb(37, 37, 92);
+    display: flex;
+    justify-content: space-between;
 }
-form .tags label > button{
+form .tags .tags-content label span{
     background: transparent;
     width: fit-content;
     border: none;
+    align-content: right;
 }
-form .tags label > button img{
-    width: 8px;
+form .tags .tags-content label span img{
+    width: 10px;
+    color: white;
+    float: right;
 }
+
 form label.input{
-    width: 50%;
+    width: 85%;
     padding: 10px;
+    display: flex;
+    flex-direction:row;
+    margin-bottom: .5rem;
 }
-form .input input{
+form label.input input{
     width: 100%;
     padding: 10px;
     border-radius: 2px;
+    border: none;
+    border-radius: 4px;
+    background: rgb(205, 202, 202);
 }
-form .input input::placeholder{
-    color: #b0abab;
+form label.input input::placeholder{
+    color: #838080;
 }
-form .input input a{
+form label.input a{
     position: relative;
-    left: -1rem;
+    top: .7rem;
+    left: -3rem;
+    font-size: 13px;
 }
 form button.btn{
     border: none;
     padding: 10px 15px;
     border-radius: 15px;
-    width: 35px;
+    color: #fff;
+    width: 100px;
     background: rgb(146, 45, 241);
 }
-.clicked{
-    border-radius: 20px;
-    width: calc(font-size * 2.5);
+.add{
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 11px;
     color: #fff;
-    background: rgb(17, 17, 35);
+    background: rgb(200, 137, 200);
+    display: flex;
+    justify-content: space-between;
+}
+.tags-content #tag1{
+    width: 110px;
+    height: 22px;
+}
+.tags-content #tag2{
+    width: 60px;
+    height: 22px;
+}
+.tags-content #tag3{
+    width: 80px;
+    height: 22px;
+}
+.tags-content #tag4{
+    width: 140px;
+    height: 22px;
+}
+.tags-content #tag5{
+    width: 100px;
+    height: 22px;
+}
+.tags-content #tag6{
+    width: 60px;
+    height: 22px;
+}
+.tags-content #tag7{
+    width: 80px;
+    height: 22px;
+}
+.tags-content #tag8{
+    width: 80px;
+    height: 22px;
+}
+.tags-content #tag9{
+    width: 70px;
+    height: 22px;
+}
+.tags-content #tag10{
+    width: 70px;
+    height: 22px;
+}
+.tags-content #tag11{
+    width: 130px;
+    height: 22px;
+}
+.tags-content #tag12{
+    width: 70px;
+    height: 22px;
+}
+.tags-content #tag13{
+    width: 80px;
+    height: 22px;
+}
+.tags-content #tag14{
+    width: 80px;
+    height: 22px;
+}
+.tags-content #tag15{
+    width: 70px;
+    height: 22px;
+}
+.tags-content #tag16{
+    width: 100px;
+    height: 22px;
+}
+.tags-content #tag17{
+    width: 150px;
+    height: 22px;
+}
+.tags-content #tag18{
+    width: 80px;
+    height: 22px;
+}
+.tags-content #tag19{
+    width: 80px;
+    height: 22px;
+}
+.tags-content #tag20{
+    width: 90px;
+    height: 22px;
 }
