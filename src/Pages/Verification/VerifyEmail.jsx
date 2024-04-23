@@ -1,10 +1,11 @@
+import React, { useEffect } from "react";
 import "./VerifyEmail.css";
 import VerifyImage from "../Images/verify_img.png";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import React from "react";
+import { Link, useHistory, withRouter } from "react-router-dom/cjs/react-router-dom.min";
 
 // This class is used to make sure the dom(defined in the "render() function") is loaded first before implementing the code in "componentDidMount()"
 class VerfyEmail extends React.Component {
+
   componentDidMount() {
     /**Dom elements definition center...........................................................................*/
     const inputs = document.querySelectorAll(".inputs");
@@ -56,6 +57,8 @@ class VerfyEmail extends React.Component {
       });
     }
 
+
+    
     /**This action takes place when the verify button is clicked */
     verifyBtn.addEventListener("click", () => {
       inputs.forEach((input) => {
@@ -71,15 +74,15 @@ class VerfyEmail extends React.Component {
 
         //alert('invalid verfication code')
       } else {
-        //Navigate to next page
-        inputs.forEach((input) => {
-          input.classList.add("confirmedCode");
-        });
-        inputs[0].focus();
+        //Navigate to next page 
+        const { history } = this.props;
+        history.push('/completed')
       }
 
       allInputValues = "";
     });
+
+
   }
 
   render() {
@@ -193,4 +196,4 @@ class VerfyEmail extends React.Component {
   }
 }
 
-export default VerfyEmail;
+export default withRouter(VerfyEmail);

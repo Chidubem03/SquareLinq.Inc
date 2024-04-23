@@ -78,8 +78,6 @@ gap: 1rem;
 .inputs{
   width: 30px;
   height: 35px;
-  
-
 }
 
 .errorCode{
@@ -94,7 +92,6 @@ gap: 1rem;
 .containerInnerRightInnerChild1,.containerInnerRightInnerChild2,.containerInnerRightInnerChild3,.containerInnerRightInnerChild4,.containerInnerRightInnerChild5 {
    padding: 10px 0;
 }
-
 
 .containerInnerRightInnerChild p{
   font-family: Arial, Helvetica, sans-serif;

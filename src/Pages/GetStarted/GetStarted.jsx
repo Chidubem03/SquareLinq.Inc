@@ -8,7 +8,6 @@ import eyeClose from "../Images/eye-close.svg";
 import slider from "../Images/auth-pagination-slider.png";
 import "./getStarted.css";
 import { IoIosClose, IoIosCheckmark } from "react-icons/io";
-
 import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const GetStarted = () => {
