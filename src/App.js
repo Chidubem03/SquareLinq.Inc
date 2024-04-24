@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Signup from './Pages/signup/Signup';
+import SignIn from './Pages/signIn/signIn'
 import NavBar from './NavBar';
 import Landing from './Pages/Landing/Landing';
 import Footer from './Pages/Footer/Footer';
@@ -25,6 +26,11 @@ function App() {
           <Route exact path="/Signup">
             <Signup />
           </Route>
+          
+          <Route exact path="/signin">
+            <SignIn />
+          </Route>
+
           <Route exact path="/preloader">
             <Preloader />
           </Route>
