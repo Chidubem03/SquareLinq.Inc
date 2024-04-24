@@ -117,3 +117,35 @@
 .VerificationComplete-rightside .rightside-minicontainer button:hover{
     color: burlywood;
 }
+
+.VerificationCompleteStatusBar{
+    height: 40px;
+    width: 180px;
+    position: absolute;
+    right: 10px;
+    top:20px;
+    box-shadow: 0px 0px 5px 1px #d6ffd7;
+    border-radius: 7px;
+    overflow: hidden;
+    /* display: none; */
+    /* background-color: grey; */
+}
+
+.VerifyComplete_status-txt a{
+    color: #00F244;
+    font-size: 12px;
+    font-family: 'Apercu';
+}
+
+.VerificationCompleteStatus_Section1{
+    height: 90%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.VerificationCompleteStatus_Section2{
+    height: 10%;
+    background-color: #00F244;
+}

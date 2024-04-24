@@ -2,6 +2,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom";
 import shineLogo from "../Images/shineLogo.png";
 import tick from "../Images/tick.png";
 import slides from "../Images/VerifyComplete-slider.png";
+import Green_tick from '../Images/green-tick.png';
 import "./VerifyComplete.css";
 import leftsideImg from "../Images/left-side-img.png";
 
@@ -25,6 +26,27 @@ const VerifyComplete = () => {
               </div>
             </div>
             <div className="VerificationComplete-rightside">
+
+                
+            {/* This container/div displays the end result when verifying your email */}
+              <div className="VerificationCompleteStatusBar">
+
+                <div className="VerificationCompleteStatus_Section1">
+                <div id="VerificationCompleteStatus_Section1_left" className="danger-sign">
+                    <img src={Green_tick} alt="green-tick" />
+                </div>
+                <div id="VerificationCompleteStatus_Section1_Right" className = "VerifyComplete_status-txt">
+                    <a>Verification Successful</a>
+                </div>
+                </div>
+
+                <div className="VerificationCompleteStatus_Section2">
+
+                </div>
+
+                </div>
+            {/* ............................................................................... */}
+
                 <h1 className="rightside-header">
                     Verification Complete!!
                 </h1>

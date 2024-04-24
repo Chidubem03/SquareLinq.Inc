@@ -124,6 +124,7 @@ const Signup = () => {
       } else if (!password.includes(" ")) {
         setCheck4(checked);
       }
+      
     }
     return isPassWordValid;
   };
