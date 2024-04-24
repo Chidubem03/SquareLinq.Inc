@@ -47,7 +47,7 @@ function App() {
             <GetStarted />
           </Route>
           <Route exact path='/yourinterest'>
-            <YourInterest />
+            <YourInterest />  
           </Route>
         </Switch>
         <Footer />
