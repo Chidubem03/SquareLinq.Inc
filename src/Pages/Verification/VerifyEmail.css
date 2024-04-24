@@ -128,3 +128,52 @@ background: #9747FF;
 color: #fff;
 cursor: pointer;
 }
+
+.VerificationStatus{
+    height: 40px;
+    width: 180px;
+    background-color: #fff;
+    position: fixed;
+    right: 10px;
+    top:20px;
+    box-shadow: 0px 0px 5px 1px #ffe3e3;
+    border-radius: 7px;
+    overflow: hidden;
+    display: none;
+}
+
+.VerificationStatus_display{
+    display: block
+}
+
+.VerificationStatus_Section1{
+    height: 90%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.status-txt a{
+    font-size: 12px;
+    font-family: 'Apercu';
+    color:#FD190A;
+}
+
+.VerificationStatus_Section2{
+height: 10%;
+/* background-color: #FD190A; */
+}
+
+.danger-sign{
+    padding-top: 2px;
+    
+}
+
+
+
+
+.danger-sign img{
+width: 16px;
+
+}

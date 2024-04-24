@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import "./VerifyEmail.css";
 import VerifyImage from "../Images/verify_img.png";
+import WarningImg from '../Images/warning.png';
 import { Link, useHistory, withRouter } from "react-router-dom/cjs/react-router-dom.min";
+
 
 // This class is used to make sure the dom(defined in the "render() function") is loaded first before implementing the code in "componentDidMount()"
 class VerfyEmail extends React.Component {
@@ -10,6 +12,7 @@ class VerfyEmail extends React.Component {
     /**Dom elements definition center...........................................................................*/
     const inputs = document.querySelectorAll(".inputs");
     const verifyBtn = document.querySelector(".containerInnerRightInnerChild5");
+    const VerificationStatusBar = document.querySelector(".VerificationStatus");
     ///////////////////////////////////////////////////////////////////////////
 
     /**Global varables declaration center .............*/
@@ -46,6 +49,10 @@ class VerfyEmail extends React.Component {
               input.value = "";
               allInputValues = "";
               input.classList.remove("errorCode");
+              setTimeout(()=>{
+                VerificationStatusBar.classList.remove('VerificationStatus_display')
+              }, 2000)
+
             });
           }
           ///////////////////////////////////////////////////////////////////////////////
@@ -57,8 +64,6 @@ class VerfyEmail extends React.Component {
       });
     }
 
-
-    
     /**This action takes place when the verify button is clicked */
     verifyBtn.addEventListener("click", () => {
       inputs.forEach((input) => {
@@ -72,7 +77,10 @@ class VerfyEmail extends React.Component {
         });
         inputs[5].focus(); //focus the cursor on the last button
 
-        //alert('invalid verfication code')
+        VerificationStatusBar.classList.add('VerificationStatus_display')
+       
+
+
       } else {
         //Navigate to next page 
         const { history } = this.props;
@@ -82,10 +90,12 @@ class VerfyEmail extends React.Component {
       allInputValues = "";
     });
 
+       
 
   }
 
   render() {
+  
     var emailAddresss = localStorage.getItem("email-address");
     const emailToverify = emailAddresss || "";
 
@@ -116,6 +126,7 @@ class VerfyEmail extends React.Component {
     // const handleClick = () =>{
     //   console.log(document.referrer)
     // }
+
     return (
       <div className="container">
         <div className="containerInner">
@@ -147,6 +158,26 @@ class VerfyEmail extends React.Component {
             </div>
           </div>
           <div className="containerInnerRight">
+
+            {/* This container/div displays the end result when verifying your email */}
+              <div className="VerificationStatus">
+
+                  <div className="VerificationStatus_Section1">
+                    <div id="VerificationStatus_Section1_left" className="danger-sign">
+                      <img src={WarningImg} alt="warning" />
+                    </div>
+                    <div id="VerificationStatus_Section1_Right" className = "status-txt">
+                      <a>Invalid Verfication Code</a>
+                    </div>
+                  </div>
+
+                  <div className="VerificationStatus_Section2" style={{backgroundColor: "red"}}>
+
+                  </div>
+
+              </div>
+            {/* ............................................................................... */}
+
             <div className="containerInnerRightInner">
               <div className="containerInnerRightInnerChild">
                 <section className="containerInnerRightInnerChild1">
