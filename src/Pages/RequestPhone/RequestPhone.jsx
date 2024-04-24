@@ -10,7 +10,7 @@ const RequestPhone = () => {
   const [country, setCountry] = React.useState(0);
   const [isShowCountries, setIsShowCountries] = React.useState(false);
   const [phoneNo, setPhoneNo] = React.useState(" ");
-  const { name, flags, countryCallingCode } = countries[country];
+  const { /*name*/ flags, countryCallingCode } = countries[country];
 
   //handling section if any of the country listed is clicked
   const handleSelection = (index) => {

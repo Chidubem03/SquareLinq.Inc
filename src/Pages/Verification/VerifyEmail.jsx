@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./VerifyEmail.css";
 import VerifyImage from "../Images/verify_img.png";
 import WarningImg from '../Images/warning.png';
-import { Link, useHistory, withRouter } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, withRouter } from "react-router-dom/cjs/react-router-dom.min";
 
 
 // This class is used to make sure the dom(defined in the "render() function") is loaded first before implementing the code in "componentDidMount()"
@@ -167,7 +167,7 @@ class VerfyEmail extends React.Component {
                       <img src={WarningImg} alt="warning" />
                     </div>
                     <div id="VerificationStatus_Section1_Right" className = "status-txt">
-                      <a>Invalid Verfication Code</a>
+                      <a href="/#">Invalid Verfication Code</a>
                     </div>
                   </div>
 

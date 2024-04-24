@@ -41,7 +41,7 @@ return(
                             <label for="rememberMe">Remember this password</label>
                         </div>
                         <div className="sign-in-inner3_right">
-                            <a href="#">Forgot password?</a>
+                            <a href="/#">Forgot password?</a>
                         </div>
 
                     </div>
@@ -58,9 +58,9 @@ return(
 
                     <div id="sign-in-inner6" className="sign-in-inner6">
                         <div className="Google-btn"> 
-                        <div className="Google-btn_txt"><a>Continue with Google</a></div>
+                        <div className="Google-btn_txt"><a href="/#">Continue with Google</a></div>
                         <div className="Google-btn_logo"> 
-                        <img src= {googleLogo}/>
+                        <img src= {googleLogo} alt="Google"/>
                         </div>
                         
                         </div>

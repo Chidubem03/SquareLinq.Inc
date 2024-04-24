@@ -24,6 +24,7 @@ p {
 /* code below styles the interactive-sec container on the sign up page */
 .con {
     width: 50%;
+    height: 100%;
     border: 2px solid #333;
 }
 .interactive-sec {
@@ -67,13 +68,15 @@ h1 {
     align-items: center;
 }
 form {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
     text-align: center;
     padding: 10px;
 }
 form > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
     flex-direction: column;
 }
 form p {
@@ -117,10 +120,11 @@ form p {
     height: 39px;
     top: 554px;
     left: 1214px;
-    gap: 0px;
+    gap: 0;
     border: none;
     border-radius: 30px;
-    opacity: 0px;
+    cursor: pointer;
+    opacity: 1;
     color: #fff;
     font-family: 'Gluten';
 }

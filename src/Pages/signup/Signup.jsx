@@ -62,6 +62,7 @@ const Signup = () => {
       setEmailAndPhoneValid(false);
       setInputType(null);
     }
+    console.log(inputType);
   };
 
   // The code below is responsible for validating password input
@@ -334,9 +335,6 @@ const Signup = () => {
             type="submit"
             className="sign-up-btn"
             id="signUp"
-            style={{
-              cursor: "pointer",
-            }}
           >
             Sign Up
           </button>

@@ -36,7 +36,7 @@ const VerifyComplete = () => {
                     <img src={Green_tick} alt="green-tick" />
                 </div>
                 <div id="VerificationCompleteStatus_Section1_Right" className = "VerifyComplete_status-txt">
-                    <a>Verification Successful</a>
+                    <a href="/#">Verification Successful</a>
                 </div>
                 </div>
 

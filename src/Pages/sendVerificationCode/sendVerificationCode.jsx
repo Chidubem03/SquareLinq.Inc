@@ -5,7 +5,7 @@ import "./SendVerificationCode.css";
 
 function SendVerificationCode() {
     
-// This Logic is to redirect the user to the respective page thhat is linked to each input[type:radio] buttons
+// This Logic is to redirect the user to the respective page that is linked to each input[type:radio] buttons
     const handleClick = (e) =>{
         e.preventDefault();
         if(document.getElementById('email').checked){
