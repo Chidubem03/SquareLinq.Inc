@@ -19,7 +19,8 @@ const YourInterest = () => {
          // If the removed icon was the only text in the search field
       if (prevText.trim() === text) {
         return ''; // Clear the search field
-      }  // Check if the clicked icon's text is followed by a comma
+      }  
+      // Check if the clicked icon's text is followed by a comma
       const regex = new RegExp(`,? ${text}`);
       if (regex.test(prevText)) {
         // Remove the clicked icon's text along with any preceding comma
@@ -44,7 +45,9 @@ const YourInterest = () => {
     })
     }
   };
-
+    const handleNext = () =>{
+      window.location.pathname = '/userinvite';
+    }
 
     const Add = <img src={addSign} className="plus" alt="Add"/>;
     const Good = <img src={goodSign} style={{float : 'right'}} alt="Good"/>;
@@ -135,11 +138,8 @@ const YourInterest = () => {
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                     />
-                      <Link style={{cursor : 'pointer', textDecoration : 'none'}}>
-                        Enter
-                      </Link>
                   </label>
-                  <button className='btn' style={{cursor: "pointer"}}>Next</button>
+                  <button className='btn' onClick={handleNext} style={{cursor: "pointer"}}>Next</button>
                 </form>
             </div>
             </div>
