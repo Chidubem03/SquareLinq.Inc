@@ -8,6 +8,44 @@ import goodSign from '../Images/Good.png';
 import addSign from '../Images/Add.png';
 
 const YourInterest = () => {
+  const [searchText, setSearchText] = useState('');
+  const [clickedIcons, setClickedIcons] = useState([]);
+
+  const handleIconClick = (text) => {
+     if (clickedIcons.includes(text)) {
+      // If icon is already clicked, remove it from clickedIcons
+      setClickedIcons(prevIcons => prevIcons.filter(icon => icon !== text));
+      setSearchText(prevText =>{ 
+         // If the removed icon was the only text in the search field
+      if (prevText.trim() === text) {
+        return ''; // Clear the search field
+      }  // Check if the clicked icon's text is followed by a comma
+      const regex = new RegExp(`,? ${text}`);
+      if (regex.test(prevText)) {
+        // Remove the clicked icon's text along with any preceding comma
+        return prevText.replace(regex, '');
+      }
+      const regexp = new RegExp(`${text} ?,`);
+      if(regexp.test(prevText)){
+        return prevText.replace(regexp, '');
+      }
+      // Remove the clicked icon's text without removing other accompanying text
+      return prevText.replace(text, '').replace(/, ,/, ', ').trim();
+      });
+    } else{
+      // If icon is not clicked, add it to clickedIcons
+      setClickedIcons(prevIcons => [...prevIcons, text]);
+    setSearchText(prevText => {
+      if (prevText.trim() === '') {
+        return text;
+      } else {
+        return `${prevText}, ${text}`;
+      }
+    })
+    }
+  };
+
+
     const Add = <img src={addSign} className="plus" alt="Add"/>;
     const Good = <img src={goodSign} style={{float : 'right'}} alt="Good"/>;
     const [status, setStatus] = useState({
@@ -69,35 +107,39 @@ const YourInterest = () => {
                 <form action="#">
                   <div className="tags">
                     <div className="tags-content">
-                    <label id='tag1' className={status.tag1 ? 'check' : 'add'} htmlFor="Fashion">Fashion Tech<span onClick={() => handleClick('tag1')}>{status.tag1 ? Good : Add}</span> </label>
-                    <label id='tag2' className={status.tag2 ? 'check' : 'add'} htmlFor="Tech">Tech<span  onClick={() => handleClick('tag2')}>{status.tag2 ? Good : Add}</span>  </label>
-                    <label id='tag3'  className={status.tag3 ? 'check' : 'add'} htmlFor="Finance">Finance<span onClick={() => handleClick('tag3')}>{status.tag3 ? Good : Add} </span> </label>
-                    <label id='tag4' className={status.tag4 ? 'check' : 'add'}  htmlFor="Health and Lifestyle">Health and Lifestyle<span onClick={() => handleClick('tag4')}>{status.tag4 ? Good : Add} </span></label>
-                    <label id='tag5' className={status.tag5 ? 'check' : 'add'} htmlFor="Entertainment">Entertainment<span  onClick={() => handleClick('tag5')}> {status.tag5 ? Good : Add} </span></label>
-                    <label id='tag6' className={status.tag6 ? 'check' : 'add'} htmlFor="Food">Food<span onClick={() => handleClick('tag6')}>{status.tag6 ? Good : Add} </span></label>
-                    <label id='tag7' className={status.tag7 ? 'check' : 'add'}  htmlFor="Business">Business<span onClick={() => handleClick('tag7')}> {status.tag7 ? Good : Add} </span></label>
-                    <label id='tag8' className={status.tag8 ? 'check' : 'add'}  htmlFor="Education">Education<span onClick={() => handleClick('tag8')}>{status.tag8 ? Good : Add} </span> </label>
-                    <label id='tag9' className={status.tag9 ? 'check' : 'add'}  htmlFor="Beauty">Beauty<span onClick={() => handleClick('tag9')}>{status.tag9 ? Good : Add} </span> </label>
-                    <label id='tag10' className={status.tag10 ? 'check' : 'add'} htmlFor="Socials">Socials<span onClick={() => handleClick('tag10')}>{status.tag10 ? Good : Add} </span> </label>
-                    <label id='tag11' className={status.tag11 ? 'check' : 'add'} htmlFor="Arts and Culture">Arts and Culture<span onClick={() => handleClick('tag11')}>{status.tag11 ? Good : Add} </span> </label>
-                    <label id='tag12' className={status.tag12 ? 'check' : 'add'} htmlFor="FAANG">FAANG<span onClick={() => handleClick('tag12')}> {status.tag12 ? Good : Add} </span></label>
-                    <label id='tag13' className={status.tag13 ? 'check' : 'add'} htmlFor="Startups">Startups<span onClick={() => handleClick('tag13')}> {status.tag13 ? Good : Add} </span></label>
-                    <label id='tag14' className={status.tag14 ? 'check' : 'add'} htmlFor="Tailoring">Tailoring<span onClick={() => handleClick('tag14')}>{status.tag14 ? Good : Add} </span> </label>
-                    <label id='tag15' className={status.tag15 ? 'check' : 'add'} htmlFor="AFCON">AFCON<span onClick={() => handleClick('tag15')}>{status.tag15 ? Good : Add} </span> </label>
-                    <label id='tag16' className={status.tag16 ? 'check' : 'add'} htmlFor="Architecture">Architecture<span onClick={() => handleClick('tag16')}>{status.tag16 ? Good : Add} </span> </label>
-                    <label id='tag17' className={status.tag17 ? 'check' : 'add'} htmlFor="Knowledge and power">Knowledge and power<span onClick={() => handleClick('tag17')}>{status.tag17 ? Good : Add} </span> </label>
-                    <label id='tag18' className={status.tag18 ? 'check' : 'add'} htmlFor="SitCom">SitCom <span onClick={() => handleClick('tag18')}>{status.tag18 ? Good : Add} </span> </label>
-                    <label id='tag19' className={status.tag19 ? 'check' : 'add'} htmlFor="Comedy">Comedy<span onClick={() => handleClick('tag19')}>{status.tag19 ? Good : Add} </span> </label>
-                    <label id='tag20' className={status.tag20 ? 'check' : 'add'} htmlFor="Latin Pop">Latin Pop<span onClick={() => handleClick('tag20')}> {status.tag20 ? Good : Add} </span></label>
+                    <label id='tag1' className={status.tag1 ? 'check' : 'add'} htmlFor="Fashion">Fashion <span id="tag" onClick={() => {handleClick('tag1');handleIconClick('Fashion');}}>{status.tag1 ? Good : Add}</span> </label>
+                    <label id='tag2' className={status.tag2 ? 'check' : 'add'} htmlFor="Tech">Tech<span id="tag" onClick={() => {handleClick('tag2');handleIconClick('Tech');}}>{status.tag2 ? Good : Add}</span>  </label>
+                    <label id='tag3'  className={status.tag3 ? 'check' : 'add'} htmlFor="Finance">Finance<span id="tag" onClick={() => {handleClick('tag3'); handleIconClick('Finance');}}>{status.tag3 ? Good : Add} </span> </label>
+                    <label id='tag4' className={status.tag4 ? 'check' : 'add'}  htmlFor="Health and Lifestyle">Health and Lifestyle<span id="tag" onClick={() => {handleClick('tag4'); handleIconClick('Health and Lifestyle');}}>{status.tag4 ? Good : Add} </span></label>
+                    <label id='tag5' className={status.tag5 ? 'check' : 'add'} htmlFor="Entertainment">Entertainment<span id="tag" onClick={() => {handleClick('tag5'); handleIconClick('Entertainment');}}> {status.tag5 ? Good : Add} </span></label>
+                    <label id='tag6' className={status.tag6 ? 'check' : 'add'} htmlFor="Food">Food<span id="tag" onClick={() =>{ handleClick('tag6'); handleIconClick('Food');}}>{status.tag6 ? Good : Add} </span></label>
+                    <label id='tag7' className={status.tag7 ? 'check' : 'add'}  htmlFor="Business">Business<span id="tag" onClick={() => {handleClick('tag7'); handleIconClick('Business');}}> {status.tag7 ? Good : Add} </span></label>
+                    <label id='tag8' className={status.tag8 ? 'check' : 'add'}  htmlFor="Education">Education<span id="tag" onClick={() => {handleClick('tag8'); handleIconClick('Education');}}>{status.tag8 ? Good : Add} </span> </label>
+                    <label id='tag9' className={status.tag9 ? 'check' : 'add'}  htmlFor="Beauty">Beauty<span id="tag" onClick={() => {handleClick('tag9'); handleIconClick('Beauty');}}>{status.tag9 ? Good : Add} </span> </label>
+                    <label id='tag10' className={status.tag10 ? 'check' : 'add'} htmlFor="Socials">Socials<span id="tag" onClick={() => {handleClick('tag10'); handleIconClick('Socials');}}>{status.tag10 ? Good : Add} </span> </label>
+                    <label id='tag11' className={status.tag11 ? 'check' : 'add'} htmlFor="Arts and Culture">Arts and Culture<span id="tag" onClick={() => {handleClick('tag11'); handleIconClick('Arts and Culture');}}>{status.tag11 ? Good : Add} </span> </label>
+                    <label id='tag12' className={status.tag12 ? 'check' : 'add'} htmlFor="FAANG">FAANG<span id="tag" onClick={() =>{ handleClick('tag12'); handleIconClick('FAANG');}}> {status.tag12 ? Good : Add} </span></label>
+                    <label id='tag13' className={status.tag13 ? 'check' : 'add'} htmlFor="Startups">Startups<span id="tag" onClick={() => {handleClick('tag13'); handleIconClick('Startups');}}> {status.tag13 ? Good : Add} </span></label>
+                    <label id='tag14' className={status.tag14 ? 'check' : 'add'} htmlFor="Tailoring">Tailoring<span id="tag" onClick={() => {handleClick('tag14'); handleIconClick('Tailoring');}}>{status.tag14 ? Good : Add} </span> </label>
+                    <label id='tag15' className={status.tag15 ? 'check' : 'add'} htmlFor="AFCON">AFCON<span id="tag" onClick={() => {handleClick('tag15'); handleIconClick('AFCON');}}>{status.tag15 ? Good : Add} </span> </label>
+                    <label id='tag16' className={status.tag16 ? 'check' : 'add'} htmlFor="Architecture">Architecture<span id="tag" onClick={() => {handleClick('tag16'); handleIconClick('Architecture');}}>{status.tag16 ? Good : Add} </span> </label>
+                    <label id='tag17' className={status.tag17 ? 'check' : 'add'} htmlFor="Knowledge and power">Knowledge and power<span id="tag" onClick={() => {handleClick('tag17'); handleIconClick('Knowledge and power');}}>{status.tag17 ? Good : Add} </span> </label>
+                    <label id='tag18' className={status.tag18 ? 'check' : 'add'} htmlFor="SitCom">SitCom <span id="tag" onClick={() => {handleClick('tag18'); handleIconClick('SitCom');}}>{status.tag18 ? Good : Add} </span> </label>
+                    <label id='tag19' className={status.tag19 ? 'check' : 'add'} htmlFor="Comedy">Comedy<span id="tag" onClick={() => {handleClick('tag19'); handleIconClick('Comedy');}}>{status.tag19 ? Good : Add} </span> </label>
+                    <label id='tag20' className={status.tag20 ? 'check' : 'add'} htmlFor="Latin Pop">Latin Pop<span id="tag" onClick={() => {handleClick('tag20'); handleIconClick('Latin Pop');}}> {status.tag20 ? Good : Add} </span></label>
                   </div>
                   </div>
                   <label className="input">
-                    <input type="text"placeholder='Search interests and seperate with a comma "," '/>
+                    <input type="text" 
+                    placeholder='Search your interests... '
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)}
+                    />
                       <Link style={{cursor : 'pointer', textDecoration : 'none'}}>
                         Enter
                       </Link>
                   </label>
-                  <button className='btn'>Next</button>
+                  <button className='btn' style={{cursor: "pointer"}}>Next</button>
                 </form>
             </div>
             </div>
