@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom/cjs/react-router-dom';
+//import { Link } from 'react-router-dom/cjs/react-router-dom';
 import leftsideImg from '../Images/leftside-img.png';
 import shineLogo from '../Images/shineLogo.png';
 import './yourInterest.css';
@@ -8,6 +8,13 @@ import goodSign from '../Images/Good.png';
 import addSign from '../Images/Add.png';
 
 const YourInterest = () => {
+    const handleNext = () => {
+      if(document.querySelector('input[type="text"]').value === ''){
+        alert('Select your interest or click skip');
+        return false
+      }
+      window.location.pathname = '/UserInvite';
+    }
   const [searchText, setSearchText] = useState('');
   const [clickedIcons, setClickedIcons] = useState([]);
 
@@ -45,9 +52,6 @@ const YourInterest = () => {
     })
     }
   };
-    const handleNext = () =>{
-      window.location.pathname = '/userinvite';
-    }
 
     const Add = <img src={addSign} className="plus" alt="Add"/>;
     const Good = <img src={goodSign} style={{float : 'right'}} alt="Good"/>;
@@ -107,7 +111,7 @@ const YourInterest = () => {
                     and videos tailored to meet your exquisite taste
                 </p>
               </div>
-                <form action="#">
+                <form action='/UserInvite'>
                   <div className="tags">
                     <div className="tags-content">
                     <label id='tag1' className={status.tag1 ? 'check' : 'add'} htmlFor="Fashion">Fashion <span id="tag" onClick={() => {handleClick('tag1');handleIconClick('Fashion');}}>{status.tag1 ? Good : Add}</span> </label>
@@ -133,14 +137,15 @@ const YourInterest = () => {
                   </div>
                   </div>
                   <label className="input">
-                    <input type="text" 
+                    <input 
+                    type="text" 
                     placeholder='Search your interests... '
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                     />
                   </label>
-                  <button className='btn' onClick={handleNext} style={{cursor: "pointer"}}>Next</button>
                 </form>
+                <button onClick={handleNext} className='btn' style={{cursor: "pointer"}}>Next</button>
             </div>
             </div>
     );

@@ -11,6 +11,9 @@ import { IoIosClose, IoIosCheckmark } from "react-icons/io";
 // import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const GetStarted = () => {
+  const handleNext = () =>{
+    window.location.pathname = '/yourinterest';
+  }
   const suggestion = [
     {
       id: 0,
@@ -108,7 +111,7 @@ const GetStarted = () => {
             <p className="skip1">Skip</p>
           </div>
           <div className="suggested-btn-div">
-            <button className="suggested-btn">Next</button>
+            <button className="suggested-btn" onClick={handleNext}>Next</button>
           </div>
         </article>
       </section>

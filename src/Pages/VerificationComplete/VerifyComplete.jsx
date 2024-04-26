@@ -7,6 +7,10 @@ import "./VerifyComplete.css";
 import leftsideImg from "../Images/left-side-img.png";
 
 const VerifyComplete = () => {
+    const handleContinue = () =>{
+        window.location.pathname = '/getstarted';
+    }
+
     return ( 
         <div className="VerificationComplete-container">
             <div className="VerificationComplete-leftside" style={{ backgroundImage: `url(${leftsideImg})` }}>
@@ -55,7 +59,7 @@ const VerifyComplete = () => {
                 </p>
                 <div className="rightside-minicontainer">
                    <img src={tick} alt="GoodTick" className="tick" />
-                     <button>Continue</button>
+                     <button onClick={handleContinue}>Continue</button>
                 </div>
             </div>
         </div>
