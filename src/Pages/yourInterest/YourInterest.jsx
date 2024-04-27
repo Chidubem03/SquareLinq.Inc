@@ -1,4 +1,4 @@
-//import { Link } from 'react-router-dom/cjs/react-router-dom';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 import leftsideImg from '../Images/leftside-img.png';
 import shineLogo from '../Images/shineLogo.png';
 import './yourInterest.css';
@@ -8,12 +8,17 @@ import goodSign from '../Images/Good.png';
 import addSign from '../Images/Add.png';
 
 const YourInterest = () => {
+ 
     const handleNext = () => {
+       const errMessage = document.querySelector('.error');
       if(document.querySelector('input[type="text"]').value === ''){
-        alert('Select your interest or click skip');
-        return false
+        errMessage.style.display = "flex";
+        return false;
       }
+      else{
       window.location.pathname = '/UserInvite';
+      errMessage.style.display = "none";
+      }
     }
   const [searchText, setSearchText] = useState('');
   const [clickedIcons, setClickedIcons] = useState([]);
@@ -40,11 +45,14 @@ const YourInterest = () => {
       // Remove the clicked icon's text without removing other accompanying text
       return prevText.replace(text, '').replace(/, ,/, ', ').trim();
       });
+      
     } else{
       // If icon is not clicked, add it to clickedIcons
       setClickedIcons(prevIcons => [...prevIcons, text]);
+       const errMessage = document.querySelector('.error');
     setSearchText(prevText => {
       if (prevText.trim() === '') {
+        errMessage.style.display = "none";
         return text;
       } else {
         return `${prevText}, ${text}`;
@@ -143,6 +151,14 @@ const YourInterest = () => {
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                     />
+                    <div className="div">
+                      <p className='error' style={{color : "red", fontWeight : "bold", display : "none"}}>
+                        Please select your interests or click on skip
+                      </p>
+                        <Link style={{marginLeft: "auto", marginRight: "0", marginTop: "2rem"}} to ='/UserInvite'>
+                          Skip
+                        </Link>
+                    </div>
                   </label>
                 </form>
                 <button onClick={handleNext} className='btn' style={{cursor: "pointer"}}>Next</button>

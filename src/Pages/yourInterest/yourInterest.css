@@ -140,6 +140,7 @@ form .tags .tags-content label span{
     background: transparent;
     width: fit-content;
     border: none;
+    cursor: pointer;
     align-content: right;
 }
 form .tags .tags-content label span img{
@@ -152,13 +153,14 @@ form label.input{
     width: 85%;
     padding: 10px;
     display: flex;
-    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: .5rem;
 }
 form label.input input{
     width: 100%;
     padding: 10px;
-    border-radius: 2px;
     border: none;
     border-radius: 4px;
     background: rgb(205, 202, 202);
@@ -166,12 +168,7 @@ form label.input input{
 form label.input input::placeholder{
     color: #838080;
 }
-form label.input a{
-    position: relative;
-    top: .7rem;
-    left: -3rem;
-    font-size: 13px;
-}
+
  button.btn{
     border: none;
     padding: 10px 15px;
@@ -268,4 +265,18 @@ form label.input a{
 .tags-content #tag20{
     width: 90px;
     height: 22px;
+}
+
+form label.input .div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+form label.input .div p.error{
+    border: none;
+    border-bottom: 1px solid red;
+    width: fit-content;
+    margin-top: .5rem;
 }
