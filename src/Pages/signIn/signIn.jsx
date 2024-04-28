@@ -41,7 +41,7 @@ return(
                             <label for="rememberMe">Remember this password</label>
                         </div>
                         <div className="sign-in-inner3_right">
-                            <a href="/#">Forgot password?</a>
+                            <a href="/resetpassword">Forgot password?</a>
                         </div>
 
                     </div>

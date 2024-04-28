@@ -62,7 +62,7 @@ border-radius: 5px;
 }
 
 .sign-in-inner input:focus{
-    outline: none;
+    outline: 1px solid rgb(125, 69, 125);
     
 }
 
@@ -83,6 +83,11 @@ gap: 1px;
 
 .sign-in-inner3_left input{
     transform: scale(1);
+    accent-color: rgb(151, 71, 207);
+    cursor: pointer;
+}
+.sign-in-inner3_left input:focus{
+    outline: none;
 }
 
 .sign-in-inner3_left label {
