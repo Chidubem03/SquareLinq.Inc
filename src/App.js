@@ -14,6 +14,8 @@ import GetStarted from './Pages/GetStarted/GetStarted';
 import YourInterest from './Pages/yourInterest/YourInterest';
 import ResetPassword from './Pages/resetPassword/resetPassword';
 
+import ResetSuccess from "./Pages/resetSuccess/ResetSuccess"
+
 function App() {
   
   return (
@@ -54,13 +56,15 @@ function App() {
           <Route exact path="/getstarted">
             <GetStarted />
           </Route>
-          <Route exact path='/yourinterest'>
-            <YourInterest />  
+          <Route exact path="/yourinterest">
+            <YourInterest />
           </Route>
-          <Route exact path='/resetpassword'>
-            <ResetPassword />  
+          <Route exact path="/resetpassword">
+            <ResetPassword />
           </Route>
-
+          <Route exact path="/resetsucess">
+            <ResetSuccess />
+          </Route>
         </Switch>
         <Footer />
       </Router>
