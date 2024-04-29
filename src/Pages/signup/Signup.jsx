@@ -333,7 +333,7 @@ const Signup = () => {
           <br />
           <button
             type="submit"
-            className="sign-up-btn"
+            className="btn"
             id="signUp"
           >
             Sign Up

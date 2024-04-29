@@ -216,7 +216,7 @@ class VerfyEmail extends React.Component {
                 </section>
 
                 <section className="containerInnerRightInnerChild5">
-                  <button /*onClick={handleClick}*/>Verify</button>
+                  <button className="btn" /*onClick={handleClick}*/>Verify</button>
                 </section>
               </div>
             </div>

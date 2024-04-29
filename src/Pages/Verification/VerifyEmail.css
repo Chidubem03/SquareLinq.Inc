@@ -119,16 +119,6 @@ flex-direction: row;
 gap: 30%;
 }
 
-.containerInnerRightInnerChild5 button{
-padding: 10px 50px;
-border: none;
-border-radius: 50px;
-font-family: Gluten;
-background: #9747FF;
-color: #fff;
-cursor: pointer;
-}
-
 .VerificationStatus{
     height: 40px;
     width: 180px;

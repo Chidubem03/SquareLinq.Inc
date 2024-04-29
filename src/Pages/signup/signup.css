@@ -113,21 +113,7 @@ form p {
     text-align: left;
     display: block;
 }
-/* signup-button */
-.sign-up-btn {
-    background: #9747FF;
-    width: 136px;
-    height: 39px;
-    top: 554px;
-    left: 1214px;
-    gap: 0;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    opacity: 1;
-    color: #fff;
-    font-family: 'Gluten';
-}
+
 .sign-up-btn:active {
     background: #34076e;
 }

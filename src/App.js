@@ -12,7 +12,8 @@ import RequestPhone from './Pages/RequestPhone/RequestPhone';
 import UserInvite from './Pages/userInvite/UserInvite';
 import GetStarted from './Pages/GetStarted/GetStarted';
 import YourInterest from './Pages/yourInterest/YourInterest';
-import ResetPassword from './Pages/resetPassword/resetPassword';
+import PasswordSent from './Pages/ResetPassword/PasswordSent';
+import './normalize.css';
 
 function App() {
   
@@ -24,11 +25,10 @@ function App() {
           <Route exact path="/">
             <Landing />
           </Route>
-          {/* sign up */}
           <Route exact path="/Signup">
             <Signup />
           </Route>
-          {/* Sign in */}
+          
           <Route exact path="/signin">
             <SignIn />
           </Route>
@@ -57,10 +57,9 @@ function App() {
           <Route exact path='/yourinterest'>
             <YourInterest />  
           </Route>
-          <Route exact path='/resetpassword'>
-            <ResetPassword />  
+          <Route exact path='/passwordSent'>
+            <PasswordSent />  
           </Route>
-
         </Switch>
         <Footer />
       </Router>

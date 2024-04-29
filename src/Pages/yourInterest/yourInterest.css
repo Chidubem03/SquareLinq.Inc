@@ -168,15 +168,6 @@ form label.input input{
 form label.input input::placeholder{
     color: #838080;
 }
-
- button.btn{
-    border: none;
-    padding: 10px 15px;
-    border-radius: 15px;
-    color: #fff;
-    width: 100px;
-    background: rgb(146, 45, 241);
-}
 .add{
     border-radius: 10px;
     padding: 5px;
