@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 import shineLogo from "../Images/shineLogo.png";
 import slider from "../Images/auth-pagination-slider.png";
 import "./resetSuccess.css";
-import {IoIosCheckmark } from "react-icons/io";
+import { IoCheckmarkOutline } from "react-icons/io5";
 
 // import { Link } from "react-router-dom/cjs/react-router-dom";
 
@@ -28,14 +28,17 @@ const ResetSuccess = () => {
       <section className="reset-success-section">
         <article className="reset-success-article">
           <h1>Password Reset Successfully</h1>
-          <p>Note that the development build is not optimized.</p>
-          <div className='check-container'><IoIosCheckmark/></div>
-          <button>Complete</button>
-
+          <p>Your password has been successfully changed, now Sign In</p>
+          <div className="check-container">
+            <IoCheckmarkOutline />
+          </div>
+          <button className="suggested-btn">
+            Countinue
+          </button>
         </article>
       </section>
     </div>
   );
-}
+};
 
-export default ResetSuccess
+export default ResetSuccess;
