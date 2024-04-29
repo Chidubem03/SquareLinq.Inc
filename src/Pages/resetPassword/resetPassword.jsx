@@ -1,11 +1,14 @@
 import leftsideImg from "../Images/selfie.png";
 import shineLogo from "../Images/shineLogo.png";
 import slides from "../Images/auth-pagination-slider.png";
-import { Link } from "react-router-dom/cjs/react-router-dom";
 import './resetPassword.css';
 
 
 const ResetPassword = () => {
+    function handleSubmit(e) {
+        e.preventDefault();
+        window.location.pathname = "#";
+    }
     return ( 
         <div className="resetPassword-container">
             <div className="resetPassword-leftside" style={{ backgroundImage: `url(${leftsideImg})` }}>
@@ -32,16 +35,17 @@ const ResetPassword = () => {
                     Enter the email you'd like the reset password link to be sent
                 </p>
               </div>
-                <form action="/#">
+                <form action="/#" onSubmit={handleSubmit}>
                     <label htmlFor="email">
                         <input 
                         type="email" 
                         placeholder="Enter your mail" 
                         /> 
-                         <Link to ="#/"> 
-                         Send 
-                         </Link>
+                        
                     </label>
+        <button className="btn">
+        Send 
+        </button>
                 </form>
                 
 

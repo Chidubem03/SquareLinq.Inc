@@ -46,8 +46,8 @@ return(
 
                     </div>
 
-                    <div id="sign-in-inner4" className="signIn-btn">
-                        <button>Sign In</button>
+                    <div id="sign-in-inner4">
+                        <button className="btn">Sign In</button>
                     </div>
                     
                     <div id="sign-in-inner5" className="sign-in-inner5">

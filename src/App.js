@@ -12,7 +12,8 @@ import RequestPhone from './Pages/RequestPhone/RequestPhone';
 import UserInvite from './Pages/userInvite/UserInvite';
 import GetStarted from './Pages/GetStarted/GetStarted';
 import YourInterest from './Pages/yourInterest/YourInterest';
-import PasswordSent from './Pages/ResetPassword/PasswordSent';
+import PasswordSent from './Pages/Passwordsent/PasswordSent';
+import ResetPassword from './Pages/resetPassword/resetPassword';
 import './normalize.css';
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
           <Route exact path="/completed">
             <VerificationComplete />
           </Route>
-          <Route exact path="/request-phone">
+          <Route exact path="/requestPhone">
             <RequestPhone />
           </Route>
           <Route exact path="/UserInvite">
@@ -59,6 +60,9 @@ function App() {
           </Route>
           <Route exact path='/passwordSent'>
             <PasswordSent />  
+          </Route>
+          <Route exact path='/resetPassword'>
+            <ResetPassword /> 
           </Route>
         </Switch>
         <Footer />

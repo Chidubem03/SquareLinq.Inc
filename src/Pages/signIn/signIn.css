@@ -107,17 +107,9 @@ gap: 1px;
 .signIn-btn {
     margin: 40px;
 }
-
-.signIn-btn button{
-padding: 10px 30px;
-border-radius: 50px;
-background:#9747FF;
-color: #fff;
-border: none;
-cursor: pointer;
-
+#sign-in-inner4 button {
+    margin-top: 10px;
 }
-
 .sign-in-inner5 h2{
 font-family:'Apercu';
 font-size: 13px;

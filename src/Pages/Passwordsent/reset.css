@@ -67,24 +67,3 @@ gap: 41px;
     flex-direction: column;
     align-items: center;
 }
-.btn {
-text-align: center;
-padding: 15px 35px;
-gap: 10px;
-width: 141px;
-height: 43px;
-background: #9747FF;
-border-radius: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-border: none;
-outline: none;
-font-family: 'Gluten';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 13px;
-color: #FFF;
-}

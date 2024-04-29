@@ -113,20 +113,5 @@
 }
 
 
-.sendVerfication-rightside form button{
-    border: none;
-    width: 40%;
-    margin-top: 2rem;
-    align-self: center;
-    border-radius: 20px;
-    font-family: "Apercu";
-    font-size: 15px;
-    padding: 7px;
-    background-color: rgb(151, 71, 207);
-    cursor: pointer;
-    color: #fff;
-}
 
-.sendVerfication-rightside form button:hover{
-    color: burlywood;
-}
+

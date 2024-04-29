@@ -144,7 +144,7 @@ const RequestPhone = () => {
           </div>
           {/**next button */}
           <button
-            className=" request-phone-btn"
+            className="btn"
             style={{ cursor: "pointer" }}
             onClick={handleNext}
           >
