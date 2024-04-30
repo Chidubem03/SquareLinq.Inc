@@ -65,10 +65,10 @@ function App() {
           </Route>
           <Route exact path="/resetsucess">
             <ResetSuccess />
+            </Route>
           <Route exact path='/passwordSent'>
             <PasswordSent />  
           </Route>
-         
         </Switch>
         <Footer />
       </Router>

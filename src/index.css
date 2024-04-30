@@ -97,22 +97,25 @@ nav > ul > li > a:hover {
 }
 .navbar .rightside {
   position: relative;
-  width: 20%;
+  width: 25%;
+  gap: .4rem;
+  display: flex;
 }
-.navbar .rightside > a > button {
-  position: relative;
-  float: right;
-  font-size: 14px;
-  font-family: inherit;
+.rightside a > .button {
+  width: 136px;
+  height: 39px;
   cursor: pointer;
-  width: 50%;
-  background: rgb(151, 71, 207);
-  color: aliceblue;
-  border: none;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gluten';
+  background: #fff;
+  color: #333;
+  border: 1px solid rgb(151, 71, 207);
   border-radius: 2rem;
-  padding: 1rem;
 }
-.navbar .rightside > a > button:hover{
+.button:hover{
   color: burlywood;
   transform: translateY(100) scale(1);
   width: 55%;
