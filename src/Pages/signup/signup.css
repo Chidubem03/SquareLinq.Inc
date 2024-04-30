@@ -18,9 +18,6 @@
     font-size: 15px;
     line-height: 18px;
 }
-p {
- font-family: 'Apercu';
-}
 /* code below styles the interactive-sec container on the sign up page */
 .con {
     width: 50%;
@@ -33,22 +30,10 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
 }
-h1 {
-    color: #fff;
+.signup-h1 {
     margin-block: 20px;
-    font-family: 'Gluten', cursive;
 }
-.interactive-sec p {
-   font-family: 'Times New Roman', Times, serif;
-    text-align: left;
-    font-weight: normal;
-    font-size: 17px;
-    color: #fff;
-    opacity: 0.6;
-    width: 80%;
-    line-height: 25px;
-}
-.con > div {
+#con-1 {
     position: relative;
     top: 17%;
     padding: 20px;

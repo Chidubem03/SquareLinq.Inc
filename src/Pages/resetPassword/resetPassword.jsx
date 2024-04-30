@@ -13,10 +13,10 @@ const ResetPassword = () => {
         <div className="resetPassword-container">
             <div className="resetPassword-leftside" style={{ backgroundImage: `url(${leftsideImg})` }}>
              <div className="resetPassword-leftside_container">
-                <h1 className="leftside-header">
-                    Interactive <img src={shineLogo} alt="shineLogo" className='shine' />{" "}
+                <h1>
+                    Interactive <img src={shineLogo} alt="shineLogo" />{" "}
                 </h1>
-                <p className="leftside-paragraph">
+                <p className="paragraph-info">
                     Join a community of like minded people
                     where you can free air you opinions, discuss
                     new trends and shared interests. Interact with
@@ -28,14 +28,14 @@ const ResetPassword = () => {
             </div>
             <div className="resetPassword-rightside">
               <div className="resetPassword-rightside_content">
-                <h1 className="rightside-header">
+                <h1 id="reset-pswd-1">
                     Reset Password
                 </h1>
                 <p className="rightside-paragraph">
                     Enter the email you'd like the reset password link to be sent
                 </p>
               </div>
-                <form action="/#" onSubmit={handleSubmit}>
+                <form action="/#" onSubmit={handleSubmit} id="resetPassword-form">
                     <label htmlFor="email">
                         <input 
                         type="email" 

@@ -31,18 +31,18 @@ function SendVerificationCode() {
                 <h1 className="leftside-header">
                     Explore
                 </h1>
-                <p className="leftside-paragraph">
+                <p className="paragraph-info">
                     Join a community of like minded people
                     where you can free air you opinions, discuss
                     new trends and shared interests. Interact with
                     your friends, family, colleagues and teammates
                     as you you strengthen the bond between one another...
                 </p>
-                <img src={slides} alt="slide" className='slides' />
+                <img src={slides} alt="slide" />
               </div>
             </div>
             <div className="sendVerfication-rightside">
-                <h1 className="rightside-header">
+                <h1 className="send-verification-post">
                     Get a verification code
                 </h1>
                 <p className="rightside-paragraph">

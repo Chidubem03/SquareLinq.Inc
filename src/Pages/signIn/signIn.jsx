@@ -12,12 +12,12 @@ return(
     <div id="signIn-container">
             
             <div className="con interactive-sec">
-            <div>
+            <div id="con-2">
           <h1>
             Interactive <img src={shineLogo} alt="shine logo" id="shine-logo" />{" "}
           </h1>
           <br />
-          <p>
+          <p className="paragraph-info">
             Join a community of like minded people where you can free air you
             opinions, discuss new trends and shared interests. Interact with
             your friends, family, colleagues and teammates as you you strengthen
@@ -30,7 +30,7 @@ return(
             <div className="con sign-in">
                 <div className="sign-in-inner">
                     <div id="sign-in-inner1" className="welcomeText-cont">
-                        <h1>Welcome back Sharon!</h1>
+                        <h1 id="sign-in-h1">Welcome back Sharon!</h1>
                     </div>
                     <div id="sign-in-inner2" className="sign-in-input" >
                     <input type="password" placeholder="Enter your password" />

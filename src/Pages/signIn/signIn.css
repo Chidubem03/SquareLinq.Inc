@@ -2,8 +2,10 @@
 .con {
     border: none;
 }
-.con > div{
-    top: 0%;
+#con-2 {
+    position: relative;
+    top: 26%;
+    left: 20px;
     padding: 0;
 }
 
@@ -29,15 +31,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 300px;
 }
 
 /* Header Text styles */
-.welcomeText-cont h1{
-color: #333;
+#sign-in-h1 {
+color: #231942;
+font-family: 'myFont';
+font-weight: 500;
 font-size: 30px;
-font-family: 'Gotham Black';
-font-weight: bold;
 margin: 0px;
+text-align: center;
+width: 350px;
+height: 33px;
 }
 
 /* Input section styles  */

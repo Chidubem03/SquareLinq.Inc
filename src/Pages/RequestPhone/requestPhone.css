@@ -40,21 +40,29 @@ p {
   font-family: "Gluten";
   font-size: 45px;
 }
-.request-phone-hero p {
-  font-family: 'Times New Roman', Times, serif;
-    text-align: left;
-    font-weight: normal;
-    font-size: 17px;
-    color: #fff;
-    opacity: 0.6;
-    width: 90%;
-    line-height: 25px;
-}
+
 .request-phone-hero > div {
   position: relative;
   padding: 20px;
 }
 
+#request-phone-h1 {
+  font-family: 'myfont';
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 33px;
+  color: #231942;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#instruction {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #919192;
+}
 .request-phone-main-container {
   display: flex;
   justify-content: center;
