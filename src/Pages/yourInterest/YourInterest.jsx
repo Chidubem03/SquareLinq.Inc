@@ -95,31 +95,31 @@ const YourInterest = () => {
           
             <div className="yourInterest-leftside" style={{ backgroundImage: `url(${leftsideImg})` }}>
              <div className="yourInterest-leftside_container">
-                <img src={shineLogo} alt="shineLogo" className='shine' />
+                <img src={shineLogo} alt="shineLogo" />
                 <h1 className="leftside-header">
                     Explore
                 </h1>
-                <p className="leftside-paragraph">
+                <p className="leftside-paragraph paragraph-info">
                     Join a community of like minded people
                     where you can free air you opinions, discuss
                     new trends and shared interests. Interact with
                     your friends, family, colleagues and teammates
                     as you you strengthen the bond between one another...
                 </p>
-                <img src={slides} alt="slide" className='slides' />
+                <img src={slides} alt="slide" />
               </div>
             </div>
             <div className="yourInterest-rightside">
               <div className="yourInterest-rightside_content">
-                <h1 className="rightside-header">
+                <p className="questions">
                     What are your Interests?
-                </h1>
+                </p>
                 <p className="rightside-paragraph">
                     Select topics you're interested in and explore forums feeds
                     and videos tailored to meet your exquisite taste
                 </p>
               </div>
-                <form action='/UserInvite'>
+                <form action='/UserInvite' className='yourInterest-form '>
                   <div className="tags">
                     <div className="tags-content">
                     <label id='tag1' className={status.tag1 ? 'check' : 'add'} htmlFor="Fashion">Fashion <span id="tag" onClick={() => {handleClick('tag1');handleIconClick('Fashion');}}>{status.tag1 ? Good : Add}</span> </label>

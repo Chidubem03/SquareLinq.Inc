@@ -45,17 +45,6 @@
     color: #fff;
 }
 
-.sendVerification-leftside_container .leftside-paragraph{
-    font-family: 'Times New Roman', Times, serif;
-    text-align: left;
-    font-weight: normal;
-    font-size: 17px;
-    color: #fff;
-    width: 70%;
-    opacity: 0.6;
-    line-height: 25px;
-}
-
 .sendVerification-leftside_container .slides{
     width: 100px;
     height: 5px;
@@ -74,11 +63,10 @@
     height: 100vh;
     background: transparent;
 }
-.sendVerfication-rightside .rightside-header{
-    position: relative;
-    font-weight: 800;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 21px;
+.send-verification-post {
+    font-weight: 500;
+    font-family: 'myfont', 'Times New Roman', Times, serif;
+    font-size: 30px;
     color: rgb(21, 14, 59);
     margin-bottom: 0;
 }
@@ -113,20 +101,5 @@
 }
 
 
-.sendVerfication-rightside form button{
-    border: none;
-    width: 40%;
-    margin-top: 2rem;
-    align-self: center;
-    border-radius: 20px;
-    font-family: "Apercu";
-    font-size: 15px;
-    padding: 7px;
-    background-color: rgb(151, 71, 207);
-    cursor: pointer;
-    color: #fff;
-}
 
-.sendVerfication-rightside form button:hover{
-    color: burlywood;
-}
+

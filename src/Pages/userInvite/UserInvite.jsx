@@ -43,8 +43,8 @@ export default function UserInvite() {
   return (
     <div className='user-invite-container'>
       <div className='user-invite-info'>
-      <h1>Community <img src={shineLogo} alt="shine logo" id='shineLogo' /> </h1>
-          <p>
+      <h1 className='userinvite-h1' >Community <img src={shineLogo} alt="shine logo" id='shineLogo' /> </h1>
+          <p className='paragraph-info'>
           Join a community of like minded people where you can free air you opinions, discuss new trends and shared interests. Interact with your friends, family, colleagues and teammates as you you strengthen the bond between one another... 
           </p>
           <img src={slider} alt="" />
@@ -79,7 +79,7 @@ export default function UserInvite() {
             </div>
             {errMsg && <p style={{color: 'red'}}>{errMsg}</p>}
          </div>
-         <button className='invite-btn'>
+         <button className='btn invite-btn'>
             <span className='btn-txt'>
             finish
             </span>

@@ -59,7 +59,7 @@ const RequestPhone = () => {
               <img src={shineLogo} alt="shine logo" className="shine-logo" />{" "}
             </h1>
             <br/>
-            <p>
+            <p className="paragraph-info">
               Join a community of like minded people where you can free air you
               opinions, discuss new trends and shared interests. Interact with
               your friends, family, colleagues and teammates as you you
@@ -72,9 +72,9 @@ const RequestPhone = () => {
       <article className="request-phone-main">
         <main className="request-phone-main-container">
           <div>
-            <h2>Enter your phone number</h2>
-            <p>
-              Kindly enter your phone number to receive the verification code{" "}
+            <h1 id="request-phone-h1">Enter your phone number</h1>
+            <p id="instruction">
+              Kindly enter your phone number to receive the verification code
             </p>
           </div>
 
@@ -144,7 +144,7 @@ const RequestPhone = () => {
           </div>
           {/**next button */}
           <button
-            className=" request-phone-btn"
+            className="btn"
             style={{ cursor: "pointer" }}
             onClick={handleNext}
           >

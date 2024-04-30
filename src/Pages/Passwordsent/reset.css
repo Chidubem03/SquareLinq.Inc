@@ -1,0 +1,69 @@
+/* fonts */
+@font-face {
+    font-family: 'myFont';
+    src: url('../../assets/fonts/Gotham_Black/Gotham_Black.otf'); /* Adjust path and format as needed */
+    format: format('opentype');
+  }
+  @font-face {
+    font-family: 'Apercu';
+    src: url('../../assets/fonts/apercu/Apercu_Regular.otf'); /* Adjust path and format as needed */
+    format: format('opentype');
+  }
+#reset-password-con {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.interactive-sec {
+    background: url('../Images/selfie.png');
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.con > .text-con {
+    position: relative;
+    top: 17%;
+    padding: 20px;
+}
+#shine-logo {
+    position: relative;
+    width: 53.33px;
+    height: 49.28px;
+    transform: translate(-45px, -27px) rotate(20.52deg);
+}
+/* the styling below is for the sign-up section of the sign up page */
+
+#reset-page-paragraph {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-weight: normal;
+    font-size: 20px;
+    color: #fff;
+    width: 80%;
+    line-height: 25px;
+}
+.reset-password-sent-con {
+    width: 50%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.reset-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 41px;
+}
+.img-confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

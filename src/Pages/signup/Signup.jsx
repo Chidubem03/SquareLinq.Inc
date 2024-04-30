@@ -207,12 +207,12 @@ const Signup = () => {
   return (
     <div id="sign-up-container">
       <div className="con interactive-sec">
-        <div>
-          <h1>
+        <div id="con-1">
+          <h1 className="signup-h1">
             Interactive <img src={shineLogo} alt="shine logo" id="shine-logo" />{" "}
           </h1>
           <br />
-          <p>
+          <p className="paragraph-info">
             Join a community of like minded people where you can free air you
             opinions, discuss new trends and shared interests. Interact with
             your friends, family, colleagues and teammates as you you strengthen
@@ -333,7 +333,7 @@ const Signup = () => {
           <br />
           <button
             type="submit"
-            className="sign-up-btn"
+            className="btn"
             id="signUp"
           >
             Sign Up
