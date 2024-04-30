@@ -18,6 +18,7 @@
     width: 50%;
     height: 100%;
 } 
+
 .user-invite-info {
     background: url('../Images/left-side-img.png');
     background-size: cover;
@@ -25,30 +26,26 @@
     background-position: center;
     padding: 20px;
     color: #fff;
-    font-family: 'Apercu';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 150%;
-    letter-spacing: 0.02em;
 }
+
 .user-invite-input {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #shineLogo {
     width: 52.52px;
     height: 48.54px;
     transform: translate(-119px, -40px) rotate(10.41deg);
 }
-h1 {
-font-family: 'Gluten';
-font-style: normal;
-font-weight: 600;
-font-size: 60px;
-line-height: 53px;
+
+.userinvite-h1 {
 margin-top: 50px;
+}
+.user-invite-info p {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 #user-invite-form {
     width: 474px;
@@ -58,6 +55,7 @@ margin-top: 50px;
     justify-content: space-between;
     flex-direction: column;
 }
+
  /* Welcome to SquareLinq */
 .welcome-text {
 font-family: 'myFont';
@@ -66,6 +64,7 @@ font-weight: 500;
 font-size: 30px;
 line-height: 33px;
 color: #231942;
+text-align: center;
 }
 
 form > div > p:nth-of-type(2) {
@@ -77,11 +76,6 @@ text-align: center;
 color: #919192;
 }
 .invite-btn {
-width: 136px;
-height: 39px;
-background: #9747FF;
-border-radius: 30px;
-border: none;
 transform: translateY(36px);
 }
 .btn-txt {

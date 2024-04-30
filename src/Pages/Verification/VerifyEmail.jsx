@@ -143,7 +143,7 @@ class VerfyEmail extends React.Component {
                   <br />
                   <br />
                   <section>
-                    <p>
+                    <p className="paragraph-info">
                       Join a community of like minded people where you can free
                       air you opinions, discuss new trends and shared interests.
                       Interact with your friends, family, colleagues and
@@ -181,7 +181,7 @@ class VerfyEmail extends React.Component {
             <div className="containerInnerRightInner">
               <div className="containerInnerRightInnerChild">
                 <section className="containerInnerRightInnerChild1">
-                  <h2>Verification Code Sent!</h2>
+                  <h2 id="verify-email-h1" >Verification Code Sent!</h2>
                 </section>
                 <section className="containerInnerRightInnerChild2">
                   <p>
@@ -216,7 +216,7 @@ class VerfyEmail extends React.Component {
                 </section>
 
                 <section className="containerInnerRightInnerChild5">
-                  <button /*onClick={handleClick}*/>Verify</button>
+                  <button className="btn" /*onClick={handleClick}*/>Verify</button>
                 </section>
               </div>
             </div>
