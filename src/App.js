@@ -16,6 +16,8 @@ import PasswordSent from './Pages/Passwordsent/PasswordSent';
 import ResetPassword from './Pages/resetPassword/resetPassword';
 import './normalize.css';
 
+import ResetSuccess from "./Pages/resetSuccess/ResetSuccess"
+
 function App() {
   
   return (
@@ -55,15 +57,18 @@ function App() {
           <Route exact path="/getstarted">
             <GetStarted />
           </Route>
-          <Route exact path='/yourinterest'>
-            <YourInterest />  
+          <Route exact path="/yourinterest">
+            <YourInterest />
           </Route>
+          <Route exact path="/resetpassword">
+            <ResetPassword />
+          </Route>
+          <Route exact path="/resetsucess">
+            <ResetSuccess />
           <Route exact path='/passwordSent'>
             <PasswordSent />  
           </Route>
-          <Route exact path='/resetPassword'>
-            <ResetPassword /> 
-          </Route>
+         
         </Switch>
         <Footer />
       </Router>
