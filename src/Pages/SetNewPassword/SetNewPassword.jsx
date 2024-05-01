@@ -6,6 +6,12 @@ import SetNewPasswordImg from "../Images/selfie.png"
 
 const SetNewPassword = ()=>{
 
+
+    const handleResetBtn = ()=>{
+
+        //Reset logic here
+    }
+
     return (
 
         <div className='container'>
@@ -56,7 +62,7 @@ const SetNewPassword = ()=>{
                 </section>
 
                 <section className="SetNewPassword_containerInnerRightInnerChild5">
-                  <button className="btn" /*onClick={handleClick}*/>Verify</button>
+                  <button className="btn" onClick={handleResetBtn}>Reset</button>
                 </section>
               </div>
             </div>
