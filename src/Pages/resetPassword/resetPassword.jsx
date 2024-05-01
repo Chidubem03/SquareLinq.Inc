@@ -5,9 +5,8 @@ import './resetPassword.css';
 
 
 const ResetPassword = () => {
-    function handleSubmit(e) {
+    const  handleSend = (e) =>{
         e.preventDefault();
-        window.location.pathname = "#";
     }
     return ( 
         <div className="resetPassword-container">
@@ -35,15 +34,14 @@ const ResetPassword = () => {
                     Enter the email you'd like the reset password link to be sent
                 </p>
               </div>
-                <form action="/#" onSubmit={handleSubmit} id="resetPassword-form">
+                <form id="resetPassword-form">
                     <label htmlFor="email">
                         <input 
                         type="email" 
                         placeholder="Enter your mail" 
                         /> 
-                        
                     </label>
-        <button className="btn">
+        <button onClick={handleSend} className="btn">
         Send 
         </button>
                 </form>

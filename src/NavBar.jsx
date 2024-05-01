@@ -34,7 +34,7 @@ const NavBar = () => {
       </nav>
       <div className="rightside">
         <Link to="/Signup"><button className="btn">Sign Up</button></Link>
-        <Link to="/SignIn"><button className="button">Sign In</button></Link>
+        <Link to="/requestuser"><button className="button">Sign In</button></Link>
       </div>
     </div>
   );

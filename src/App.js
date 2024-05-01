@@ -14,9 +14,11 @@ import GetStarted from './Pages/GetStarted/GetStarted';
 import YourInterest from './Pages/yourInterest/YourInterest';
 import PasswordSent from './Pages/Passwordsent/PasswordSent';
 import ResetPassword from './Pages/resetPassword/resetPassword';
+import ResetSuccess from "./Pages/resetSuccess/ResetSuccess";
+import RequestUser from './Pages/requestUser/requestUser';
 import './normalize.css';
 
-import ResetSuccess from "./Pages/resetSuccess/ResetSuccess"
+
 
 function App() {
   
@@ -31,7 +33,9 @@ function App() {
           <Route exact path="/Signup">
             <Signup />
           </Route>
-          
+          <Route exact path="/requestuser">
+            <RequestUser />
+          </Route>
           <Route exact path="/signin">
             <SignIn />
           </Route>

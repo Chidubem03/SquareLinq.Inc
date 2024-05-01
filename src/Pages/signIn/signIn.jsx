@@ -32,6 +32,8 @@ return(
                     <div id="sign-in-inner1" className="welcomeText-cont">
                         <h1 id="sign-in-h1">Welcome back Sharon!</h1>
                     </div>
+                    <br />
+                    <br />
                     <div id="sign-in-inner2" className="sign-in-input" >
                     <input type="password" placeholder="Enter your password" />
                     </div>
@@ -49,7 +51,7 @@ return(
                     <div id="sign-in-inner4">
                         <button className="btn">Sign In</button>
                     </div>
-                    
+                    <br /><br />
                     <div id="sign-in-inner5" className="sign-in-inner5">
                         <h2>OR</h2>
                     </div>
