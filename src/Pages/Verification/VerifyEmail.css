@@ -8,7 +8,6 @@
 
 .containerInnerLeft{
     flex: 1;
-    border: 2px solid #333;
 }
 
 .containerInnerRight{
@@ -63,10 +62,14 @@ gap: 1rem;
 
 }
 
-/* inputs styling */
+/* inputs styling section */
+
 .inputs{
   width: 30px;
   height: 35px;
+  font-size: 20px;
+  border: 1px solid #33333395;
+  text-align: center;
 }
 
 .errorCode{
@@ -95,11 +98,11 @@ gap: 1rem;
     
 }
 
-.containerInnerRightInnerChild3 input{
+/* .containerInnerRightInnerChild3 input{
     font-size: 20px;
     border: 1px solid #33333395;
     text-align: center;
-}
+} */
 
 .containerInnerRightInnerChild4{
     width: 100%;
