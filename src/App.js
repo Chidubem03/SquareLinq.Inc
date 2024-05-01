@@ -17,7 +17,7 @@ import ResetPassword from './Pages/resetPassword/resetPassword';
 import ResetSuccess from "./Pages/resetSuccess/ResetSuccess";
 import RequestUser from './Pages/requestUser/requestUser';
 import './normalize.css';
-
+import SetNewPassword from './Pages/SetNewPassword/SetNewPassword';
 
 
 function App() {
@@ -39,7 +39,6 @@ function App() {
           <Route exact path="/signin">
             <SignIn />
           </Route>
-
           <Route exact path="/preloader">
             <Preloader />
           </Route>
@@ -70,6 +69,11 @@ function App() {
           <Route exact path="/resetsucess">
             <ResetSuccess />
             </Route>
+
+            <Route exact path="/setnewpassword">
+            <SetNewPassword />
+            </Route>
+
           <Route exact path='/passwordSent'>
             <PasswordSent />  
           </Route>

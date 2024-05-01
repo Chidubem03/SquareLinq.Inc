@@ -78,9 +78,7 @@ class VerfyEmail extends React.Component {
         inputs[5].focus(); //focus the cursor on the last button
 
         VerificationStatusBar.classList.add('VerificationStatus_display')
-       
-
-
+      
       } else {
         //Navigate to next page 
         const { history } = this.props;
@@ -89,7 +87,6 @@ class VerfyEmail extends React.Component {
 
       allInputValues = "";
     });
-
        
 
   }
@@ -118,14 +115,6 @@ class VerfyEmail extends React.Component {
         return "phone No.";
       }
     };
-
-    //  const emailContent = document.getElementById('emailContent');
-    //  if(emailContent){
-    //    emailContent.innerHTML = emailAddresss;
-    //  }
-    // const handleClick = () =>{
-    //   console.log(document.referrer)
-    // }
 
     return (
       <div className="container">
