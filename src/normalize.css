@@ -43,7 +43,7 @@ font-family: 'Apercu', 'Times New Roman', Times, serif;;
 }
 
 /* all h1 content with there specific word entrance */
-h1 {
+    h1 {
     font-family: 'Gluten';
     font-style: normal;
     font-weight: 600;
@@ -51,33 +51,87 @@ h1 {
     line-height: 53px;
     color: #fff;
 }
-.logoCon {
+    .logoCon {
     display: none;
 }
 @media (max-width: 600px) {
-    .user-invite-info {
+
+    /* the selector below are set to none so that the form in the authentication pages will have only there form path to display, every authentication page is split in two, each half has a width of 50% when one half is removed which is the one below, the other half will still be 50% */
+    .user-invite-info,
+    .interactive-sec {
         display: none;
     }
-    .user-invite-input {
-        width: 100%;
+
+    #reset-password-con {
         flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
+    /* this is the second halves that will expand from 50% to 100vw */
+    .user-invite-input,
+    .sign-up,
+    .reset-password-sent-con {
+        width: 100vw;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    /* These styling belongs to the logo icon at sign in and sign up pages */
     .logoCon {
         display: flex;
         align-items: center;
         justify-content: space-around;
         margin-bottom: 30px;
     }
+
     .logoIcon {
         width: 30.06px;
         height: 31px;
     }
+
     .logoText {
     font-family: Gluten;
     font-size: 17.02px;
     font-weight: 600;
     line-height: 15.02px;
     text-align: left;
+    }
+
+    /* input boxes of sign-up and sign-in pages */
+    .input-boxes {
+    width: 95vw;
+    height: 25px;
+    }
+
+    #checked-password-validation > div {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    #checked-password-validation p {
+        height: auto;
+        width: 300px;
+    }
+
+    form p {
+        font-size: 12px;
+    }
+
+    #input-boxes {
+        display: flex;
+        align-items: center;
+    }
+
+    #or, .or {
+        width: 70%;
+    }
+    /* buttons */
+
+    /* the google sign in button */
+    .google-btn {
+        width: 70%;
+        height: 38px;
     }
 }

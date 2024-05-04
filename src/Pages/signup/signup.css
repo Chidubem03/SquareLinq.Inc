@@ -10,7 +10,7 @@
     format: format('opentype');
   }
 #sign-up-container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     font-style: normal;
@@ -52,7 +52,7 @@
     justify-content: center;
     align-items: center;
 }
-form {
+.sign-up-form {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -60,16 +60,16 @@ form {
     text-align: center;
     padding: 10px;
 }
-form > div {
+.sign-up-form > div {
     text-align: left;
     flex-direction: column;
 }
-form p {
+.sign-up-form p {
     color: #919192;
     padding: 10px;
     font-size: 15px;
 }
-.create-account-text {
+#create-account-text {
     font-family: 'myFont';
     font-style: normal;
     font-weight: 500;
@@ -135,19 +135,6 @@ width: 465px;
 text-align: center;
 }
 
-.shake {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
-    border: 1px solid red;
-    outline: 1px solid red;
-}
-@keyframes shake {
-    0% { transform: translateX(0) }
-    25% { transform: translateX(-5px) }
-    50% { transform: translateX(+10px) }
-    75% { transform: translateX(-10px) }
-    100% { transform: translateX(0) }
-}
 .checkedIcon {
   height: 15px;
   width: 15px;

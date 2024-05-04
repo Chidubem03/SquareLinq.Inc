@@ -6,6 +6,7 @@ import checked from "../Images/checked.svg";
 import eyeOpen from "../Images/eye-open.svg";
 import eyeClose from "../Images/eye-close.svg";
 import slider from "../Images/auth-pagination-slider.png";
+import squareLinq from '../Images/squarelink-logo.png';
 import "./signup.css";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 
@@ -222,8 +223,12 @@ const Signup = () => {
         </div>
       </div>
       <div className="con sign-up">
-        <form onSubmit={handleSubmit}>
-          <p className="create-account-text">Create your account</p>
+      <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
+        <form onSubmit={handleSubmit} className="sign-up-form">
+          <p id="create-account-text">Create your account</p>
           <p>Stay connected with friends and family. LET'S GET YOU STARTED</p>
           <div id="input-boxes">
             <label>
