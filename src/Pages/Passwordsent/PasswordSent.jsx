@@ -2,11 +2,16 @@ import React from 'react';
 import shineLogo from '../Images/shineLogo.png';
 import slider from '../Images/auth-pagination-slider4.png';
 import tickImg from '../Images/tick.png';
+import squareLinq from '../Images/squarelink-logo.png';
 import './reset.css';
 
 function PasswordSent() {
   return (
     <div id='reset-password-con'>
+               <div className="logoCon-password-sent">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
        <div className="con interactive-sec">
         <div className="text-con">
           <h1>

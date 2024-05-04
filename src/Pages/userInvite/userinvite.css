@@ -124,3 +124,14 @@ left: 222px;
  margin-bottom: 15px;
  width: 100%;
 }
+
+@media (max-width: 600px) {
+    #or {
+        text-align: center;
+        margin-block: 20px;
+    }
+    .invite-container-input {
+        width: 365px;
+        height: 30px;
+    }
+}
