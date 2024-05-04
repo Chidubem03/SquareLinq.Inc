@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import shineLogo from '../Images/shineLogo.png';
 import slider from '../Images/auth-pagination-slider4.png';
 import link from '../Images/link-i.png';
+import squareLinq from '../Images/squarelink-logo.png';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './userinvite.css'
 
@@ -50,6 +51,10 @@ export default function UserInvite() {
           <img src={slider} alt="" />
       </div>
       <div className='user-invite-input'>
+              <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
         <form id="user-invite-form" onSubmit={handleSubmit}>
          <div>
          <p className='welcome-text'>Welcome to SquareLinq</p>
