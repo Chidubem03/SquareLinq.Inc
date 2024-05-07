@@ -59,7 +59,9 @@ font-family: 'Apercu', 'Times New Roman', Times, serif;;
     /* the selector below are set to none so that the form in the authentication pages will have only there form path to display, every authentication page is split in two, each half has a width of 50% when one half is removed which is the one below, the other half will still be 50% */
     .user-invite-info,
     .interactive-sec,
-    .sendVerification-leftside {
+    .sendVerification-leftside,
+    .resetPassword-leftside,
+    .containerInnerLeft_imgColor {
         display: none;
     }
 
@@ -73,7 +75,10 @@ font-family: 'Apercu', 'Times New Roman', Times, serif;;
     .user-invite-input,
     .sign-up,
     .reset-password-sent-con,
-    .sendVerfication-rightside {
+    .sendVerfication-rightside,
+    .resetPassword-rightside,
+    .sign-in,
+    .containerInnerRightInner {
         width: 100vw;
         flex-direction: column;
         text-align: center;

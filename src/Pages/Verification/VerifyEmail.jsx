@@ -1,6 +1,7 @@
 import React from "react";
 import "./VerifyEmail.css";
 import VerifyImage from "../Images/verify_img.png";
+import squareLinq from '../Images/squarelink-logo.png';
 import WarningImg from '../Images/warning.png';
 import { Link, withRouter } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -168,6 +169,10 @@ class VerfyEmail extends React.Component {
             {/* ............................................................................... */}
 
             <div className="containerInnerRightInner">
+            <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
               <div className="containerInnerRightInnerChild">
                 <section className="containerInnerRightInnerChild1">
                   <h2 id="verify-email-h1" >Verification Code Sent!</h2>

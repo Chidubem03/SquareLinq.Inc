@@ -345,7 +345,7 @@ const Signup = () => {
         </form>
         <p className="or">OR</p>
         <button type="button" className="google-btn">
-          Continue with Google{" "}
+          Continue with Google
           <img src={googleIcon} alt="google icon" className="google_icon" />
         </button>
       </div>

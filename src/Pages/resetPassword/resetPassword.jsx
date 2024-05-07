@@ -1,6 +1,6 @@
 import leftsideImg from "../Images/selfie.png";
-import shineLogo from "../Images/shineLogo.png";
 import slides from "../Images/auth-pagination-slider.png";
+import squareLinq from '../Images/squarelink-logo.png';
 import './resetPassword.css';
 
 
@@ -13,7 +13,7 @@ const ResetPassword = () => {
             <div className="resetPassword-leftside" style={{ backgroundImage: `url(${leftsideImg})` }}>
              <div className="resetPassword-leftside_container">
                 <h1>
-                    Interactive <img src={shineLogo} alt="shineLogo" />{" "}
+                    Interactive
                 </h1>
                 <p className="paragraph-info">
                     Join a community of like minded people
@@ -26,6 +26,10 @@ const ResetPassword = () => {
               </div>
             </div>
             <div className="resetPassword-rightside">
+            <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
               <div className="resetPassword-rightside_content">
                 <h1 id="reset-pswd-1">
                     Reset Password
@@ -35,10 +39,11 @@ const ResetPassword = () => {
                 </p>
               </div>
                 <form id="resetPassword-form">
-                    <label htmlFor="email">
+                    <label htmlFor="email" className="input-email-label">
                         <input 
                         type="email" 
-                        placeholder="Enter your mail" 
+                        placeholder="Enter your mail"
+                        id="reset-password-email-input"
                         /> 
                     </label>
         <button onClick={handleSend} className="btn">
