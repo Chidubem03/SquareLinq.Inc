@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import shineLogo from "../Images/shineLogo.png";
 import googleIcon from "../Images/google_icon.png";
 import cancel from "../Images/cancel.svg";
 import checked from "../Images/checked.svg";
@@ -210,7 +209,7 @@ const Signup = () => {
       <div className="con interactive-sec">
         <div id="con-1">
           <h1 className="signup-h1">
-            Interactive <img src={shineLogo} alt="shine logo" id="shine-logo" />{" "}
+            Interactive
           </h1>
           <br />
           <p className="paragraph-info">
