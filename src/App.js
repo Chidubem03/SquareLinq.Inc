@@ -16,8 +16,8 @@ import PasswordSent from './Pages/Passwordsent/PasswordSent';
 import ResetPassword from './Pages/resetPassword/resetPassword';
 import ResetSuccess from "./Pages/resetSuccess/ResetSuccess";
 import RequestUser from './Pages/requestUser/requestUser';
-import './normalize.css';
 import SetNewPassword from './Pages/SetNewPassword/SetNewPassword';
+import './normalize.css';
 
 
 function App() {

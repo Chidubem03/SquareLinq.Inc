@@ -1,7 +1,7 @@
 import leftsideImg from "../Images/selfie.png";
-import shineLogo from "../Images/shineLogo.png";
 import slides from "../Images/auth-pagination-slider.png";
-import googleLogo from '../Images/google_icon.png';
+import googleIcon from "../Images/google_icon.png";
+import squareLinq from '../Images/squarelink-logo.png';
 import "./requestUser.css";
 
 const RequestUser = () => {
@@ -16,7 +16,7 @@ const RequestUser = () => {
              <div className="requestUser-leftside" style={{ backgroundImage: `url(${leftsideImg})` }}>
              <div className="requestUser-leftside_container">
                 <h1>
-                    Interactive <img src={shineLogo} alt="shineLogo" />{" "}
+                    Interactive
                 </h1>
                 <p className="paragraph-info">
                     Join a community of like minded people
@@ -29,6 +29,10 @@ const RequestUser = () => {
               </div>
             </div>
             <div className="requestUser-rightside">
+              <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
               <div className="requestUser-rightside_content">
                 <h1 id="reset-pswd-1">
                     Sign In to your account
@@ -45,15 +49,10 @@ const RequestUser = () => {
         <button onClick={handleNext} className="btn">
         Next 
         </button>
-        
-        <div id="sign-in-inner6" className="sign-in-inner6">
-               <div className="Google-btn"> 
-              <div className="Google-btn_txt"><a href="/#">Continue with Google</a></div>
-              <div className="Google-btn_logo"> 
-            <img src= {googleLogo} alt="Google"/>
-        </div>
-        </div>
-        </div>
+        <button type="button" className="google-btn">
+          Continue with Google
+          <img src={googleIcon} alt="google icon" className="google_icon" />
+        </button>
         </form>
       </div>
     </div>

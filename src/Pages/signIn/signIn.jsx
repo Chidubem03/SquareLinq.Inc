@@ -58,13 +58,13 @@ return(
                     <br />
                         <p className="or">or</p>
                     <br />
+                </div>
                 <button type="button" 
                 id="google-signIn-btn"
                 className="google-btn">
                   Continue with Google
                   <img src={googleIcon} alt="google icon" className="google_icon" />
                 </button>
-                </div>
             </div>
 
     </div>

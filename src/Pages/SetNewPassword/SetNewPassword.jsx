@@ -1,5 +1,4 @@
 import React from 'react'
-import shineLogo from "../Images/shineLogo.png";
 import slider from "../Images/auth-pagination-slider.png";
 import SetNewPasswordImg from "../Images/selfie.png"
  import "./SetNewPassword.css"
@@ -36,6 +35,7 @@ const SetNewPassword = ()=>{
                       teammates as you strengthen the bond between one
                       another...
                     </p>
+                    <img src={slider} alt="" />
                   </section>
 
                   <section className="slider-bar"></section>

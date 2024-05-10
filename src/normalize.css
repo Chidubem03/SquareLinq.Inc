@@ -54,6 +54,20 @@ font-family: 'Apercu', 'Times New Roman', Times, serif;;
     .logoCon {
     display: none;
 }
+/* Google-button */
+.google-btn {
+    width: 465px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: none;
+    margin-block: 10px;
+}
+.google-btn:hover{
+    box-shadow: 0px 0px 10px #e3e3e3;
+    }
 @media (max-width: 800px) {
 
     /* the selector below are set to none so that the form in the authentication pages will have only there form path to display, every authentication page is split in two, each half has a width of 50% when one half is removed which is the one below, the other half will still be 50% */
@@ -61,7 +75,8 @@ font-family: 'Apercu', 'Times New Roman', Times, serif;;
     .interactive-sec,
     .sendVerification-leftside,
     .resetPassword-leftside,
-    .containerInnerLeft_imgColor {
+    .containerInnerLeft_imgColor,
+    .requestUser-leftside {
         display: none;
     }
 
@@ -78,7 +93,8 @@ font-family: 'Apercu', 'Times New Roman', Times, serif;;
     .sendVerfication-rightside,
     .resetPassword-rightside,
     .sign-in,
-    .containerInnerRightInner {
+    .containerInnerRightInner,
+    .requestUser-rightside {
         width: 100vw;
         flex-direction: column;
         text-align: center;
