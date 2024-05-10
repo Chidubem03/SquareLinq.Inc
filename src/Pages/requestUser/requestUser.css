@@ -89,8 +89,7 @@
     flex-direction: row;
     margin-bottom: .5rem;
 }
-.requestUser-rightside #requestUser-form label input{
-    width: inherit;
+  .requestUser-input {
     width: 100%;
     padding: 10px;
     border: none;
@@ -108,5 +107,11 @@
     width: 100%;
     margin-top: 5.5rem;
 }
-
-
+.gge-btn {
+    transform: translateY(30px);
+}
+@media (max-width: 800px) {
+    .requestUser-input {
+        width: 70%;
+    }
+}

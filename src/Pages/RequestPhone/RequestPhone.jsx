@@ -1,9 +1,9 @@
 import React from "react";
+import squareLinq from '../Images/squarelink-logo.png';
+import slider from '../Images/auth-pagination-slider3.png';
 import "./requestPhone.css";
-import shineLogo from "../Images/shineLogo.png";
 import { useCountries } from "use-react-countries";
 import { RiArrowDownSLine } from "react-icons/ri";
-
 const RequestPhone = () => {
   //for state management
   const { countries } = useCountries();
@@ -34,8 +34,6 @@ const RequestPhone = () => {
     //concating the country code and the inputed phoneno
     const requestedPhoneNo = countryCallingCode.concat(phoneNo);
     localStorage.setItem('phone-no', requestedPhoneNo);
-    
-    console.log(requestedPhoneNo);
   };
 
   const handleChange = (e) => {
@@ -55,8 +53,7 @@ const RequestPhone = () => {
         <div className="request-phone-overlay">
           <div className="hero-title">
             <h1>
-              Professional{" "}
-              <img src={shineLogo} alt="shine logo" className="shine-logo" />{" "}
+              Professional
             </h1>
             <br/>
             <p className="paragraph-info">
@@ -66,10 +63,15 @@ const RequestPhone = () => {
               strengthen the bond between one another...
             </p>
           </div>
+          <img src={slider} className="auth-slide" alt="" />
         </div>
       </article>
       {/**container for the phone request */}
       <article className="request-phone-main">
+      <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
         <main className="request-phone-main-container">
           <div>
             <h1 id="request-phone-h1">Enter your phone number</h1>

@@ -57,12 +57,6 @@
     line-height: 25px;
 }
 
-.VerificationComplete-leftside_container .slides{
-    width: 100px;
-    height: 5px;
-    background: transparent;
-}
-
 .VerificationComplete-rightside{
     position: relative;
     display: flex;
@@ -101,19 +95,9 @@
 .VerificationComplete-rightside .rightside-minicontainer .tick{
     width: 40px;
 }
-.VerificationComplete-rightside .rightside-minicontainer button{
-    border: none;
-    width: 20%;
-    margin-top: 2rem;
-    border-radius: 20px;
-    font-family: "Apercu";
-    font-size: 15px;
-    padding: 7px;
-    background-color: rgb(151, 71, 207);
-    cursor: pointer;
-    color: #fff;
+.vcBtn {
+    transform: translateY(30px);
 }
-
 .VerificationComplete-rightside .rightside-minicontainer button:hover{
     color: burlywood;
 }

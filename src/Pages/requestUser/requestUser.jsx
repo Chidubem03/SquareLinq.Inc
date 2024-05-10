@@ -42,14 +42,15 @@ const RequestUser = () => {
                     <label htmlFor="username">
                         <input 
                         type="name" 
-                        placeholder="Enter your username" 
+                        placeholder="Enter your username"
+                        className="requestUser-input"
                         /> 
                         
                     </label>
         <button onClick={handleNext} className="btn">
         Next 
         </button>
-        <button type="button" className="google-btn">
+        <button type="button" className="google-btn gge-btn">
           Continue with Google
           <img src={googleIcon} alt="google icon" className="google_icon" />
         </button>
