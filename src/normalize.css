@@ -78,7 +78,9 @@ font-family: 'Apercu', 'Times New Roman', Times, serif;;
     .containerInnerLeft_imgColor,
     .requestUser-leftside,
     .VerificationComplete-leftside,
-    .request-phone-hero {
+    .request-phone-hero,
+    .yourInterest-leftside,
+    .SetNewPassword_containerInnerLeft_imgColor {
         display: none;
     }
 
@@ -99,7 +101,8 @@ font-family: 'Apercu', 'Times New Roman', Times, serif;;
     .requestUser-rightside,
     .VerificationComplete-rightside,
     .request-phone-main,
-    .getstarted-section {
+    .getstarted-section,
+    .yourInterest-rightside {
         width: 100vw;
         flex-direction: column;
         text-align: center;
