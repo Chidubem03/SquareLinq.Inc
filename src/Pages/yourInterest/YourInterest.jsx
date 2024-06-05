@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import leftsideImg from '../Images/leftside-img.png';
-import shineLogo from '../Images/shineLogo.png';
-import './yourInterest.css';
 import { useState } from 'react';
 import slides from '../Images/slider-img.png';
 import goodSign from '../Images/Good.png';
 import addSign from '../Images/Add.png';
+import squareLinq from '../Images/squarelink-logo.png';
+import './yourInterest.css';
 
 const YourInterest = () => {
  
@@ -95,7 +95,6 @@ const YourInterest = () => {
           
             <div className="yourInterest-leftside" style={{ backgroundImage: `url(${leftsideImg})` }}>
              <div className="yourInterest-leftside_container">
-                <img src={shineLogo} alt="shineLogo" />
                 <h1 className="leftside-header">
                     Explore
                 </h1>
@@ -111,6 +110,10 @@ const YourInterest = () => {
             </div>
             <div className="yourInterest-rightside">
               <div className="yourInterest-rightside_content">
+                <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
                 <p className="questions">
                     What are your Interests?
                 </p>

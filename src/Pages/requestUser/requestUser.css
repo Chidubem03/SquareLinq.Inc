@@ -75,6 +75,9 @@
     margin: 0;
     width: 500px;
     padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .requestUser-rightside #requestUser-form label{
     padding: 10px;
@@ -86,8 +89,7 @@
     flex-direction: row;
     margin-bottom: .5rem;
 }
-.requestUser-rightside #requestUser-form label input{
-    width: inherit;
+  .requestUser-input {
     width: 100%;
     padding: 10px;
     border: none;
@@ -105,40 +107,11 @@
     width: 100%;
     margin-top: 5.5rem;
 }
-
-.Google-btn{
-    /* height: 35px; */
-    border: 1px solid #333;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-    gap: 10px;
-    cursor: pointer;
-    
+.gge-btn {
+    transform: translateY(30px);
 }
-
-.Google-btn:hover{
-box-shadow: 0px 0px 10px #e3e3e3;
-
-}
-
-.Google-btn_txt a {
-    font-size: 13px;
-    color: #333;
-    font-family: 'Apercu';
-
-}
-
-.Google-btn_logo{
-display: flex;
-justify-content: center;
-align-items: center;
-
-}
-
-.Google-btn_logo img{
-    width: 20px;
-
+@media (max-width: 800px) {
+    .requestUser-input {
+        width: 70%;
+    }
 }

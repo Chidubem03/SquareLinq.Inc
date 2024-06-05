@@ -1,14 +1,8 @@
 import React from "react";
-import shineLogo from "../Images/shineLogo.png";
-// import googleIcon from "../Images/google_icon.png";
-// import cancel from "../Images/cancel.svg";
-// import checked from "../Images/checked.svg";
-// import eyeOpen from "../Images/eye-open.svg";
-// import eyeClose from "../Images/eye-close.svg";
 import slider from "../Images/auth-pagination-slider.png";
+import squareLinq from '../Images/squarelink-logo.png';
 import "./getStarted.css";
 import { IoIosClose, IoIosCheckmark } from "react-icons/io";
-// import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const GetStarted = () => {
   const handleNext = () =>{
@@ -55,12 +49,12 @@ const GetStarted = () => {
   return (
     <div className="getstarted-container">
       <div className="con interactive-sec">
-        <div>
+        <div className="getstarted-left-container">
           <h1>
-            Interactive <img src={shineLogo} alt="shine logo" id="shine-logo" />{" "}
+            Interactive
           </h1>
           <br />
-          <p>
+          <p className="paragraph-info">
             Join a community of like minded people where you can free air you
             opinions, discuss new trends and shared interests. Interact with
             your friends, family, colleagues and teammates as you you strengthen
@@ -70,14 +64,19 @@ const GetStarted = () => {
         </div>
       </div>
       <section className="getstarted-section">
+              <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
         <article className="getstarted-article">
-          <h1>Start a convo now!</h1>
-          <p>
+          {/* gs is short for get started */}
+          <h1 className="gs-h1">Start a convo now!</h1>
+          <p className="text-contents">
             Import contacts and select friends to start your first conversation
             with{" "}
           </p>
           <div className="import-div">
-            <p>Import my contacts</p>
+            <p className="text-contents">Import my contacts</p>
             <div className="toggle">
               <span className="close-x">
                 <IoIosClose />
@@ -111,7 +110,7 @@ const GetStarted = () => {
             <p className="skip1">Skip</p>
           </div>
           <div className="suggested-btn-div">
-            <button className="suggested-btn" onClick={handleNext}>Next</button>
+            <button className="btn" onClick={handleNext}>Next</button>
           </div>
         </article>
       </section>

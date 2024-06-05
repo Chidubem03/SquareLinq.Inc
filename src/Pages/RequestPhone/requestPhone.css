@@ -9,6 +9,9 @@
   width: 100vw;
 }
 
+.auth-slide {
+  margin-top: 15px;
+}
 .request-phone-overlay {
   height: 100vh;
   background-color:#23194299;

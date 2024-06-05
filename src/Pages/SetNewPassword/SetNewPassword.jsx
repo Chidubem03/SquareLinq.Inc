@@ -1,7 +1,7 @@
 import React from 'react'
-import shineLogo from "../Images/shineLogo.png";
 import slider from "../Images/auth-pagination-slider.png";
 import SetNewPasswordImg from "../Images/selfie.png"
+import squareLinq from '../Images/squarelink-logo.png';
  import "./SetNewPassword.css"
 
 const SetNewPassword = ()=>{
@@ -36,6 +36,7 @@ const SetNewPassword = ()=>{
                       teammates as you strengthen the bond between one
                       another...
                     </p>
+                    <img src={slider} alt="" />
                   </section>
 
                   <section className="slider-bar"></section>
@@ -47,6 +48,10 @@ const SetNewPassword = ()=>{
 
             <div className="containerInnerRightInner">
               <div className="containerInnerRightInnerChild">
+              <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <span className='logoText'>Squarelinq</span>
+              </div>
                 <section className="containerInnerRightInnerChild1">
                   <h2 id="verify-email-h1" >Set New Password</h2>
                 </section>

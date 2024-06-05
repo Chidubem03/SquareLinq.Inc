@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom/cjs/react-router-dom";
-import shineLogo from "../Images/shineLogo.png";
 import tick from "../Images/tick.png";
 import slides from "../Images/VerifyComplete-slider.png";
 import Green_tick from '../Images/green-tick.png';
-import "./VerifyComplete.css";
 import leftsideImg from "../Images/left-side-img.png";
+import "./VerifyComplete.css";
 
 const VerifyComplete = () => {
     const handleContinue = () =>{
@@ -15,18 +14,17 @@ const VerifyComplete = () => {
         <div className="VerificationComplete-container">
             <div className="VerificationComplete-leftside" style={{ backgroundImage: `url(${leftsideImg})` }}>
              <div className="VerificationComplete-leftside_container">
-                <img src={shineLogo} alt="shineLogo" className='shine' />
                 <h1 className="leftside-header">
                     Community
                 </h1>
-                <p className="leftside-paragraph">
+                <p className="paragraph-info">
                     Join a community of like minded people
                     where you can free air you opinions, discuss
                     new trends and shared interests. Interact with
                     your friends, family, colleagues and teammates
                     as you you strengthen the bond between one another...
                 </p>
-                <img src={slides} alt="slide" className='slides' />
+                <img src={slides} alt="slide" />
               </div>
             </div>
             <div className="VerificationComplete-rightside">
@@ -59,7 +57,8 @@ const VerifyComplete = () => {
                 </p>
                 <div className="rightside-minicontainer">
                    <img src={tick} alt="GoodTick" className="tick" />
-                     <button onClick={handleContinue}>Continue</button>
+                   {/* vcBtn is short for verify complete btn, a separated styling was added to this btn to make align for this page alone */}
+                     <button className="btn vcBtn" onClick={handleContinue}>Continue</button>
                 </div>
             </div>
         </div>

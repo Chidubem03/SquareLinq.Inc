@@ -1,6 +1,6 @@
 import slides from '../Images/slider-img.png';
 import leftsideImg from '../Images/leftside-img.png';
-import shineLogo from '../Images/shineLogo.png';
+import squareLinq from '../Images/squarelink-logo.png';
 import "./SendVerificationCode.css";
 
 function SendVerificationCode() {
@@ -27,7 +27,6 @@ function SendVerificationCode() {
         <div className="sendVerification-container">
             <div className="sendVerification-leftside" style={{ backgroundImage: `url(${leftsideImg})` }}>
              <div className="sendVerification-leftside_container">
-                <img src={shineLogo} alt="shineLogo" className='shine' />
                 <h1 className="leftside-header">
                     Explore
                 </h1>
@@ -42,13 +41,17 @@ function SendVerificationCode() {
               </div>
             </div>
             <div className="sendVerfication-rightside">
+            <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
                 <h1 className="send-verification-post">
                     Get a verification code
                 </h1>
                 <p className="rightside-paragraph">
                     Select where you would like your verification code to be sent
                 </p>
-                <form action="Post">
+                <form action="Post" className='send-verification-form'>
 
                     <label htmlFor="email">
                         <input type="radio" name='verify' value='Email' id='email' />

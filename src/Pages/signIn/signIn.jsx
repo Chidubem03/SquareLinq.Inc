@@ -1,7 +1,7 @@
-import React from "react"
-import shineLogo from "../Images/shineLogo.png";
+import React from "react";
+import squareLinq from '../Images/squarelink-logo.png';
 import slider from "../Images/auth-pagination-slider.png";
-import googleLogo from '../Images/google_icon.png'
+import googleIcon from "../Images/google_icon.png";
 import "./signIn.css";
 
 
@@ -14,7 +14,7 @@ return(
             <div className="con interactive-sec">
             <div id="con-2">
           <h1>
-            Interactive <img src={shineLogo} alt="shine logo" id="shine-logo" />{" "}
+            Interactive 
           </h1>
           <br />
           <p className="paragraph-info">
@@ -29,6 +29,10 @@ return(
             
             <div className="con sign-in">
                 <div className="sign-in-inner">
+                <div className="logoCon">
+                <img src={squareLinq} className='logoIcon' alt="" />
+                <p className='logoText'>Squarelinq</p>
+              </div>
                     <div id="sign-in-inner1" className="welcomeText-cont">
                         <h1 id="sign-in-h1">Welcome back Sharon!</h1>
                     </div>
@@ -45,31 +49,22 @@ return(
                         <div className="sign-in-inner3_right">
                             <a href="/resetpassword">Forgot password?</a>
                         </div>
-
                     </div>
-
+                    <br />
+                    <br />
                     <div id="sign-in-inner4">
-                        <button className="btn">Sign In</button>
+                        <button className="btn" >Sign In</button>
                     </div>
-                    <br /><br />
-                    <div id="sign-in-inner5" className="sign-in-inner5">
-                        <h2>OR</h2>
-                    </div>
-
-                    <div className="horizontal-line"></div>
-
-                    <div id="sign-in-inner6" className="sign-in-inner6">
-                        <div className="Google-btn"> 
-                        <div className="Google-btn_txt"><a href="/#">Continue with Google</a></div>
-                        <div className="Google-btn_logo"> 
-                        <img src= {googleLogo} alt="Google"/>
-                        </div>
-                        
-                        </div>
-                    </div>
-
+                    <br />
+                        <p className="or">or</p>
+                    <br />
                 </div>
-                
+                <button type="button" 
+                id="google-signIn-btn"
+                className="google-btn">
+                  Continue with Google
+                  <img src={googleIcon} alt="google icon" className="google_icon" />
+                </button>
             </div>
 
     </div>

@@ -152,10 +152,13 @@ height: 10%;
     
 }
 
-
-
-
 .danger-sign img{
 width: 16px;
+}
 
+@media(max-width: 800px){
+    .containerInnerRightInnerChild4{
+        justify-content: space-between;
+        gap: 0;
+    }
 }

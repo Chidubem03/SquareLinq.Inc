@@ -97,13 +97,11 @@ form .tags{
     display: flex;
     place-items: center;
 }
-form .tags .tags-content{
+.tags-content{
     position: relative;
-    left: -6rem;
-    max-height: 80%; 
-    width: 50%;
+    left: 3rem;
+    width: 90%;
     display: grid;
-    place-items: left;
     grid-template-columns: repeat(4, 1fr);
     gap: .5rem;
 }
@@ -250,4 +248,23 @@ form label.input .div p.error{
     border-bottom: 1px solid red;
     width: fit-content;
     margin-top: .5rem;
+}
+
+@media (max-width: 650px) {
+    .tags-content {
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: scroll;
+    padding: 10px 20px;
+    left: 10px;
+    }
+    .yourInterest-form {
+     width: auto;
+     gap: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .tags-content {
+        left: 30px;
+        }
 }
